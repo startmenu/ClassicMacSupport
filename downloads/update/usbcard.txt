@@ -1,0 +1,109 @@
+USB Adapter Card Support 1.4.1: Document and Software
+
+This article has been archived and is no longer updated by Apple.
+
+This document provides the software and important information about USB Adapter Card Support. If you use Mac OS 9.1 or later, read the important notes in the Requirements section before installing.
+
+USB Adapter Card Support is a set of software extensions that provide support for USB adapter cards installed in the PCI bus or CardBus slots in Macintosh computers.
+
+Universal Serial Bus (USB) is a new standard for connecting peripheral devices to Macintosh computers. Common USB devices include ink jet and laser printers, digital still cameras, scanners, game pads, joysticks, keyboards, mouse devices, storage devices, and hubs. USB provides many advantages, including the ability to "hot plug" and unplug devices without shuttting down or restarting the computer, support for up to 127 attached devices, and up to 12 megabits per second throughput.
+
+Requirements
+
+USB Adapter Card Support requires a PowerPC(TM)-based Macintosh computer with PCI or CardBus slots, Mac OS 8.6 or later, and a USB adapter card.
+
+This software cannot be installed on Macintosh computers with built-in USB ports. These computers already include support for built-in USB ports and USB PCI adapter cards.
+
+Important: Mac OS versions 9.1 and later include a later version of this software. Installing USB Adapter Card Support 1.4.1 over Mac OS 9.1, 9.2 or later could result in the USB adapter card not working.
+
+Important: This software supports only USB cards that comply with the Open Host Controller Interface (OHCI) specification and may not work with every USB adapter card. Contact the manufacturer of your USB adapter card if necessary to verify that your card is OHCI-compliant and supported by this software.
+
+Installing USB Adapter Card Support
+
+If you haven't already done so, install the USB adapter card following the instructions provided by the manufacturer. Then download the USB Adapter Card Support software from the Apple Downloads web site: www.apple.com/support/downloads/.
+
+To install the USB Adapter Card Support software, follow these steps:
+
+    Double-click the Apple SW Install icon.
+    Choose Recommended Installation.
+    Click Start to install the USB Adapter Card Support software on your startup disk.
+    When the installation is complete, restart your computer.
+
+After your computer restarts, the USB Adapter Card Support software is ready for use.
+
+What Is Installed
+
+    USB Adapter Card Support installs the following extensions in your System Folder.
+    USB Support
+    USB Device Extension
+    USB Software Locator (requires Mac OS 9)
+    HID Library
+    Serial ShimLib
+    USB Mass Storage Support
+    USB Mass Storage Extension
+
+Using USB Adapter Card Support
+
+After you install the USB card and the USB Adapter Card Support software, you can begin using USB devices. Follow the instructions for using the device provided by the manufacturer.
+
+Some devices require additional software. If the message "The software needed to use the USB device 'name of the device' can not be found" appears when you plug in a USB device, the device you are using requires additional software. Contact the device manufacturer to obtain the software required to operate the device.
+
+Warning: Do not disconnect a mass storage device from the USB port while copying files to or from the device, while files or applications stored on the device are in use, or while the device has volumes mounted on the desktop. Doing so may result in the loss of data.
+
+Devices That Work With USB Adapter Card Support
+
+The following types of devices work with USB Adapter Card Support.
+
+    Keyboards
+    Mouse devices
+    Hubs
+    Printers
+        Supports native USB printers and USB/parallel adapters.
+        For PostscriptTM printers, use the Desktop Print Utility to configure for use
+        For non-Postscript printers, use the Chooser extension supplied by the manufacturer
+    Modems
+        Supports communications-class modems.
+        Apple supplies support via the Modem Control Panel (Communication Toolbox). You may need to select your particular modem script in the Modem Control Panel. Generic modem scripts are also available.
+    Joysticks and other gaming controllers
+        Supports games that use Apple's InputSprocket.
+    Mass storage
+        Only devices that are compliant with the USB Mass Storage Class specifications will work with this software. Some compliant devices may have unique features beyond what is defined in the USB Mass Storage Class specifications and require additional software provided by the manufacturer.
+
+Tips and Troubleshooting
+
+Some Macintosh G3 models may not wake from sleep correctly with this software installed. Use the Energy Saver control panel to set the system sleep to "never", or uninstall the USB Adapter Card Support software to avoid this issue.
+
+PowerBook G3 computers with CardBus cards will hang with USB Adapter Card Support installed if processor cycling is allowed. Use the Energy Saver control panel to turn off processor cycling. You need to set this for both battery and power adapter operation.
+
+The Power key on the Apple USB keyboard will start up the computer only when it is attached directly to a Macintosh computer's built-in USB port. It will not start up the computer when attached to a USB PCI or CardBus adapter card.
+
+Although the USB Adapter Card Support software supports USB keyboards and mouse devices, it is recommended that you use an ADB keyboard and mouse as your primary input devices. You may experience limited functionality using some USB input devices in certain applications, including Easy Access and the Keyboard control panel.
+
+If a USB device does not function after you install a USB PCI adapter card and this software, open Apple System Profiler and click the Devices and Volumes tab to view the names of attached USB devices. Verify that the device has been detected. If the device name does not appear, it has not been detected. Confirm that the device has been attached correctly to the USB adapter card and that the USB adapter card is firmly seated in the PCI slot. If the device still does not appear in the Apple System Profiler, contact the device manufacturer to determine if additional software is required to operate the device.
+
+To mount or remount a USB mass storage volume on the desktop, unplug and replug the device that contains the volume into a USB port on the computer, or into a hub attached to the computer. The volume should appear on the desktop in a few seconds. If the device uses removable media, the volume will not appear until the removable media is reinserted into the mass storage device.
+
+To eject removable storage media in drives with manual eject mechanisms, drag the icon of the media volume to the Trash. Eject the media only after a message says it is safe to do so.
+
+Important: Do not remove the media from the device until the message indicates that it is safe.
+
+The clock on a USB adapter card may sometimes fall out of synchronization with the computer's clock. USB-based audio will then lose synchronization, resulting in either an inaccurate sample rate, or gaps in the audio data stream. If more precision is required when capturing or playing USB-based audio, a Macintosh with built-in USB ports is highly recommended.
+
+For additional information, go to http://www.apple.com/support
+
+Note: Alternate keyboard layouts, such as Dvorak and AZERTY, do not work with a USB keyboard that is connected to a USB adapter card. For more information, please see article TA22171: "USB Adapter Cards: Limited Functionality With Some Input Devices".
+
+Earlier versions of this software may be available at http://support.apple.com/downloads.
+
+Downloading Help: Software downloads: Formats and common error messages.
+
+All software available from this site is covered by a software license agreement included with this software.
+
+Post Date: Apr 4, 2000
+
+File Size: 694 KB
+System Requirements
+
+    Power PC (TM)-based Macintosh computer with PCI or CardBus slots
+    Mac OS 8.6 or later
+    USB adapter card

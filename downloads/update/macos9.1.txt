@@ -1,0 +1,111 @@
+Mac OS 9.1: Software and Before You Install document
+Download
+This article has been archived and is no longer updated by Apple.
+
+This document contains the Software download links, how to prepare for installing Mac OS 9.1, and provides compatibility and basic troubleshooting information.
+
+Important: This software update requires you to have Mac OS 9.0 - 9.0.4 installed on your Macintosh prior to installing the update.
+
+Note: A Mac OS 9.1 CD is required for installation on NuBus-based Power Macintosh computers; see Mac OS 9.1: Start Up from CD to Install on Original Power Macintosh Computers.
+
+Important: You must agree to the export compliance agreement prior to downloading this software. If you have not agreed to the export compliance agreement prior to coming to this document, you will be redirected to the export compliance agreement when you click on the download. After agreeing to the export compliance agreement, you will be redirected back to this document. You must select your download option again to begin downloading the software.
+
+Tip: Mac OS 9 was a great operating system years ago, but there's so much you can do in Mac OS X that you can't do in Mac OS 9. Check out the Mac OS X Overview website for more information about all the cool features you'll find in Mac OS X. Every new Mac comes with Mac OS X¡ªor you can purchase it at the online Apple Store or your local retail Apple Store. Mac OS X upgrade instructions and system requirements can be found here. (Note: Not every Mac can start up in Mac OS 9 and Mac OS X. For more information, see Some Computers Only Start Up in Mac OS X.).
+
+Before You Install
+
+This document tells you how to prepare for installing Mac OS 9.1 and gives compatibility information and basic troubleshooting. For additional information, see the Mac OS installation manual.
+
+Before installing Mac OS 9.1, do these tasks:
+
+    Turn off any security software that you may have installed on your computer.
+    If you have a PowerBook, make sure that it is plugged into AC power and set not to go to sleep.
+    Start up your computer using the Mac OS CD. See your installation manual for instructions.
+
+If you can't start up from the Mac OS CD, or you're installing from a network, be sure to do the following additional tasks:
+
+    Turn off file sharing.
+    Turn off any virus-protection software that you may have installed on your computer.
+    Turn off all non-Apple extensions and control panels. Open the Extensions Manager control panel, then open the Selected Set pop-up menu and choose Mac OS All.
+    Restart your computer.
+
+To ensure a smooth upgrade, check with the manufacturers of any non-Apple software you use to make sure it is compatible with Mac OS 9.1. If you do experience a problem, see the troubleshooting chapter in your installation manual for information on isolating compatibility problems.
+
+Compatibility information
+
+IMPORTANT
+
+    PowerBook 3400s running Mac OS 9.04.
+    If you are installing Mac OS 9.1 on a PowerBook 3400 running Mac OS 9.04, you must perform the installation without updating your hard disk drivers or you may experience a hang during installation. To prevent the Installer from updating your hard disk drivers, click Options in the Install Software panel of the Mac OS 9.1 Installer and deselect the option to update your hard disk drivers.
+    PowerBook 1400s and Password Security
+    Password Security is not supported on PowerBook 1400s with Mac OS 9.1. If you have Password Security installed on a PowerBook 1400, you should turn off password protection before installing Mac OS 9.1.
+    Apple language kits and Mac OS 9.1.
+    Apple's language kits are now included with the Mac OS. If you use language kits, you must upgrade both your system software and your language kits at the same time using the Mac OS 9.1 CD. Previous versions of Apple's language kits are not compatible with Mac OS 9.1. To upgrade your system software and language kits, start up from the Mac OS 9.1 CD by inserting the CD and holding down the C key as you restart the computer. Continue holding down the C key until you see the CD background. Open the Mac OS Installer and click Customize in the Install Software panel. Select both the Mac OS Install and Language Kits, and remember to select the specific language kits you want to upgrade.
+    Apple language kits and ATM Deluxe 4.5
+    ATM Deluxe 4.5 is not compatible with WorldScript I, the system extension used to support certain languages in Mac OS. Use ATM Deluxe 4.6 or later if you plan on using any of the following language kits: Arabic, Hebrew, Devanagari, Gurmukhi, Gujarati, Persian.
+    GX desktop printers
+    If you have a GX desktop printer set up on your hard disk, a crash may occur during installation of Mac OS 9.1. Drag the GX desktop printer icon to the trash before you install. You can set up the GX desktop printer again after installation is complete.
+    Twentieth Anniversary Macs
+    Installing Mac OS 9.1 on a Twentieth Anniversary Macintosh with Virtual Memory turned on may result in a crash. To avoid the crash, turn off Virtual Memory and then install Mac OS 9.1
+    Installing Mac OS 9.1 on accelerated NuBus PowerPC computers
+    If you have a Power Macintosh 6100, 7100, 8100, or 9150 with a third-party accelerator card that increases the speed of your computer, the Installer may not install Mac OS 9.1. Contact the accelerator card's manufacturer for help.
+    A Mac OS 9.1 CD is required for installation on NuBus-based Power Macintosh computers; see Mac OS 9.1: Start Up from CD to Install on Original Power Macintosh Computers.
+
+If you are upgrading from Mac OS 8.1 or earlier using a Mac OS 9.1 full install CD
+
+    Installing Mac OS 9.1 on computers with Ultra Wide SCSI cards
+    Some older Ultra Wide SCSI cards require a firmware update before they will work with Mac OS 9.1. If the card's firmware is not compatible, your computer will crash during installation or when you start up from the CD. Before installing Mac OS 9.1, contact the manufacturer of your Ultra Wide SCSI card to determine if a firmware update is necessary.
+    Third-party Finder and utility software
+    Some third-party programs that extend or add features to the Mac OS may be incompatible with Mac OS 9.1. Examples include programs that change the way menus work, change how files are stored, or alter the way you work with files in the Finder. Contact the software's manufacturer for information about using such programs with Mac OS 9.1. This is especially important if you're using a program that automatically alters the way files are stored (such as compressing them) because you might not be able to access those files until you obtain updated software for use with Mac OS 9.1.
+    Computers with DOS Compatibility cards
+    Apple DOS Compatibility cards do not work with Mac OS 9.1. After you install Mac OS 9.1, you will no longer be able to use your DOS Compatibility Card to run DOS or Windows software.
+    Performa or Power Macintosh 5000 and 6000 series computers
+    Some Performa or Power Macintosh 5200 series, 5300 series, 6200 series, and 6300 series models cannot use Mac OS 9.1 until a hardware problem is fixed. The repairs are covered under the Apple repair extension program. To see if your computer has this hardware problem, use the 5xxx/6xxx Tester utility in the Utilities folder on the CD before installation.
+
+IMPORTANT
+
+The Power Macintosh or Performa 5260, 6320, and 6360 do not have this hardware problem and do not need to use the tester program.
+
+Tips and troubleshooting suggestions
+
+If you experience problems during installation, be sure to start up with the Mac OS CD. See your installation manual for instructions.
+
+Finding folders
+
+The new folder structure in Mac OS 9.1 makes it easier to find all your files and applications. Here are some changes you'll notice: the Applications folder is named "Applications (Mac OS 9);" the Apple Extras and Utilities folders are in the Applications (Mac OS 9) folder; Netscape Communicator and Internet Explorer are in the Applications (Mac OS 9) folder. Browse your hard disk to get familiar with your new Mac OS, and use Sherlock to locate all your files and folders
+
+Updating your disk drivers
+
+Some Apple-branded disks manufactured by third parties, including the Apple 365 MB external hard disk, are not supported by the Apple disk utilities. If your disk cannot be updated with the Apple utilities, you'll need to use a third-party disk utility to update the driver.
+
+Repairing disks
+
+If you see a message that your disk has problems and cannot be repaired, make sure file sharing is off, then try installing again. If that doesn't work, try using another disk-repair utility. If you don't have another utility, or if that utility also doesn't work, you may need to reinitialize the disk. Copy all your files to another disk first, as reinitializing erases the disk. For more information about reinitializing, see the manual that came with your computer.
+
+Installing over a network
+
+If you're installing over a network, or if you have a non-Apple CD-ROM drive and can't start up with the CD, turn off all extensions that weren't provided with your system software, then restart your computer.
+
+Updating your firmware
+
+If you receive a message during installation that your firmware is out of date, follow the instructions for updating your firmware in the CD Extras folder on your Mac OS CD.
+
+Additional troubleshooting information is available in the installation manual.
+
+Earlier versions of this software may be available at http://support.apple.com/downloads/
+
+For help with downloading, see Software downloads: Formats and common error messages.
+
+All software available from this site is covered by a software license agreement included with this software.
+
+Keywords: kbdload kmos91 ksysupdate kupdate
+
+Post Date: Jan 9, 2001
+
+File Size: 71 MB
+
+System Requirements
+
+    Mac OS 9.0 or later
+
+
