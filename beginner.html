@@ -60,8 +60,14 @@
         <p>Classic Mac因为文件系统不同，与PC进行文件交换时比较麻烦。<br /> 可参考：<a href="docs/file_exchange.html">文件交换指南</a> 。</p>
         <br />
 
-<h2>Classic Mac支持的字体<h2>
+<h2>Classic Mac的字体支持<h2>
         <p>一般来说，Classic Mac的字体存放在resource fork中。<br />待续……</p>
+
+<h2>Classic Mac的多语言支持</h2>
+        <p>Classic Mac OS实际上是单语言系统，只支持该版本本身的语言。System 5-6的中文实现是通过一个叫“中文Talk”的组件实现的。后来System 7开始使用WorldScript和WorldScript II来实中文支持。</p>
+        <p>苹果开发了Language Kit（语言套件）来为Mac OS添加其他语言的支持，例如Chinese Language Kit等。英文系统安装Chinese Language Kit之后可以显示和输入中文。简体中文系统如果需要处理繁体中文信息，那需要安装繁体中文的Language Kit，反过来说繁体系统处理简体也需要安装简体的Language Kit。</p>
+        <p>最早Language Kit是作为单独的软件发布的，各种语言有相应的Language Kit。后来Mac OS 8.5/8.6的安装盘也集成了“Language Kit”，叫“Multilingual Internet Access”（多语言互联网访问），只是只提供语言显示，没有输入法支持。后来Mac OS 9的安装盘里则有各语言完整的Language Kit。</p>
+        <p>虽然Mac OS 9后来也提供对Unicode的有限支持，但中文Mac OS基本还是只能支持GB2312和Big5编码。中文系统的输入法只支持GB2312和Big5字符集，中文字体同样也只有GB2312和Big5的。<br />待续……</p>
         
 <h2>获取Mac机型配置信息</h2>
         <p>如果需要了解具体Mac机型的配置，可以访问<a href="http://www.everymac.com">Everymac网站</a>，该网站需要使用较新的浏览器才能访问。</p>
