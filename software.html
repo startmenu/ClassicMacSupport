@@ -33,7 +33,8 @@
         </p>
         <p>文件名以.toast或.cdr结尾的，大多数可以直接改为.iso进行刻录，建议在Mac下刻录。
             <br />如需在Classic Mac中挂装这种光盘镜像，请使用<a href="#Utilities">Roxio Toast</a>工具。</p>
-        <p>软盘镜像有Disk Copy 4.2格式，Disk Copy 6格式和RAW格式。其中RAW格式即标准img格式，400K软盘，800K软盘和1440K软盘。Disk Copy 4.2格式会在RAW镜像的头部加上84字节的额外信息，使镜像变成401K，801K和1441K，只需用十六进制编辑器删去前84字节内容即可转换回RAW格式。而Disk Copy 6格式的软盘镜像大小并不规则，只能使用Disk Copy 6进行挂载或写入。</p>
+        <p>软盘镜像有Disk Copy 4.2格式，Disk Copy 6格式和RAW格式。其中RAW格式即标准img格式，400K软盘，800K软盘和1440K软盘。Disk Copy 4.2格式会在RAW镜像的头部加上额外数据，使镜像变成409K，819K和1441K等非标准大小，对于1441K的镜像只需用十六进制编辑器删去前84字节内容即可转换回RAW格式。而Disk Copy 6格式（NDIF）的软盘镜像大小并不规则，只能使用Disk Copy 6进行挂载或写入。Disk Copy 4.2格式的软盘镜像不依赖resource fork，即使只有data fork也能正常使用， Mini vMac模拟器也能直接使用Disk Copy 4.2镜像。但Disk Copy
+        6格式的镜像会将镜像的部分内容存入resource fork，因此只打包data fork会使Disk Copy 6镜像无效。</p>
         <p>如需在PC和现代Mac（Intel）上写入Disk Copy 4.2格式的镜像，可以使用<a href="https://www.bigmessowires.com/2013/12/16/macintosh-diskcopy-4-2-floppy-image-converter/">此工具</a>将镜像转换成标准IMG格式。</p>
         <p>本站System 5和System 6镜像使用了Disk Copy 6.2进行制作，然而这种镜像格式不适合软盘镜像，<b>因此正使用Disk Copy 4.2重做中</b>。</p>
         
