@@ -35,6 +35,7 @@
         <p><a href="https://www.zhihu.com/column/classicMac">“老Mac与Mac OS收藏”知乎专栏</a>中有不少关于老Mac的优质文章，该网站需要现代浏览器才能访问。在此之外，难以找到一个此类内容的聚集地。
             <br />如果发现了其他好的文章，也会在此贴出地址。</p>
         <p><b>酷站推荐：</b>
+<br /><a href="http://legacy.cnvintage.org/">CNVintage Legacy站</a> - 中文古董电脑交流论坛的简易版，无https；
 <br /><a href="http://main.system7today.com/">System 7 Today</a> - 英文网站，介绍System 7相关信息，老浏览器可以访问；
 <br /><a href="http://www.cornica.org/">Cornica</a> - 英文网站，老Mac能访问的视频网站，安装QuickTime插件后可在浏览器上观看视频；
 <br /><a href="http://macintoshgarden.org">Macintosh Garden</a> - 英文网站，提供软件、游戏等资源的下载，内容以英文和其他欧洲语言为主；
@@ -53,12 +54,13 @@
         <br />
         
 <h2>Mac文件系统的特殊性</h2>
-        <p>与PC世界大多数文件系统不同的是，Mac的文件系统中，一个文件可以有两个fork —— Data fork和Resource fork。
-            <br />其中Resource fork存储结构化的数据，例如图标、图片、字体、对话框、菜单、可执行代码等数据。而Data fork存放非结构化的数据。
-            <br />PC的大多数文件系统是没有Resource fork的，如果直接将Mac的文件拷贝到Windows的磁盘中，Resource fork中的数据会丢失。
-            <br />有些文字处理软件可能会将文本放在Data fork中，而将文字格式的定义和插入的图片放入Resource fork中。此时，如果只拷贝了data fork中的数据，此文件会丢失文字格式和图片。如果是一个应用程序文件只拷贝了data fork中的数据，它将无法运行。
-            <br />可见，Resource fork对于Mac来说十分重要。在将Mac文件拷贝到PC或服务器之前，一般需要先用MacBinary、BinHex、Stuffit等软件将文件打包，这样就能同时将文件的data fork和resource fork中的数据同时保存到一个文件里，文件传输后再用这些软件解包也能正常使用。
-            <br />当然，有些文件只有data fork也能正常使用，例如MP3音频，MP4视频等等。PC世界的大部分文件对于Mac来说都只有data fork。PC的文件拷贝到Mac上将只有data fork的内容，然而这并不影响使用。</p>
+        <p>与PC世界大多数文件系统不同的是，Mac的文件系统中，一个文件可以有两个fork（分叉） —— Data fork（数据分叉）和Resource fork（资源分叉）。</p>
+        <p>其中Resource fork存储结构化的数据，例如图标、图片、字体、对话框、菜单、可执行代码等数据。而Data fork存放非结构化的数据。</p>
+        <p>PC的大多数文件系统是没有Resource fork的，如果直接将Mac的文件拷贝到Windows的磁盘中，Resource fork中的数据会丢失。</p>
+        <p>有些文字处理软件可能会将文本放在Data fork中，而将文字格式的定义和插入的图片放入Resource fork中。此时，如果只拷贝了data fork中的数据，此文件会丢失文字格式和图片。如果是一个应用程序文件只拷贝了data fork中的数据，它将无法运行。</p>
+        <p>可见，Resource fork对于Mac来说十分重要。在将Mac文件拷贝到PC或服务器之前，一般需要先用MacBinary、BinHex、Stuffit等软件将文件打包，这样就能同时将文件的data fork和resource fork中的数据同时保存到一个文件里，文件传输后再用这些软件解包也能正常使用。</p>
+        <p>当然，有些文件只有data fork也能正常使用，例如MP3音频，MP4视频等等。PC世界的大部分文件对于Mac来说都只有data fork。PC的文件拷贝到Mac上将只有data fork的内容，然而这并不影响使用。</p>
+        <p>在Mac文件系统中，一个文件的属性（Get info信息）也与PC的不同。最明显的一点是，PC通过文件扩展名来区分文件类型，而Mac是通过OS Type来区分文件类型以及确定文件打开方式的。文件有type code（类型代码）和creator code（创建者代码）两个属性，均使用四个字符来表示。例如使用SimpleText程序创建的文本文件，其文件类型为TEXT，创建者为ttxt。Finder打开该文件时会使用creator type为ttxt的程序（即SimpleText或其他创建者类型为ttxt的程序打开）打开。<br />待续……</p>
         <br />
         
 <h2>与现代PC/Mac进行文件交换</h2>
@@ -66,10 +68,16 @@
         <br />
 
 <h2>Classic Mac的字体支持</h2>
-        <p>一般来说，Classic Mac的字体存放在resource fork中。<br />待续……</p>
+        <p>一般来说，Classic Mac的字体存放在resource fork中，一个字体文件可能没有data fork。有些应用程序也可以在resource fork中存放字体。</p>
+        <p>System 6之前的系统只能支持点阵字体，System 6可以通过TrueType功能扩展支持TrueType字体。System 7.1系统开始支持TrueType字体。通过Adobe Type Manager，Mac可以支持PostScript Type 1字体。</p>
+        <p>System 7.1之前，系统使用的字体文件是存放在系统文件夹的System手提箱中的，需要通过Font/DA Mover（字体/桌面附件搬运器）来添加和删除字体，从System文件中移除来的字体需要存放在Suitcase（手提箱）文件中，不能单独存在。</p>
+        <p>从System 7.1开始，系统文件夹中增加了“字体”文件夹用于存放字体文件。字体文件一般叫“字体手提箱”，每个手提箱可以存放多个字体。System 7到Mac OS 9最多支持128个字体文件。</p>
+        <p>Mac OS 8.5开始支持data fork字体，包括了Windows版TrueType字体和OpenType字体，苹果还推出了data fork TureType格式（.dfont）。</p>
+        <p>相关帮助：<a href="machelp/SC_IM_Help/Font/pgs/FontInfo.htm">Macintosh 字体</a>
+<br />待续……</p>
 
 <h2>Classic Mac的多语言支持</h2>
-        <p>Classic Mac OS实际上是单语言系统，只支持该版本本身的语言。System 5-6的中文实现是通过一个叫“中文Talk”的组件实现的。后来System 7开始使用WorldScript和WorldScript II来实中文支持。</p>
+        <p>Classic Mac OS实际上是单语言系统，只支持该版本本身的语言。System 5-6的中文实现是通过一个叫“中文Talk”的组件实现的。后来System 7开始使用WorldScript II来实中文支持。</p>
         <p>苹果开发了Language Kit（语言套件）来为Mac OS添加其他语言的支持，例如Chinese Language Kit等。英文系统安装Chinese Language Kit之后可以显示和输入中文。简体中文系统如果需要处理繁体中文信息，那需要安装繁体中文的Language Kit，反过来说繁体系统处理简体也需要安装简体的Language Kit。</p>
         <p>最早Language Kit是作为单独的软件发布的，各种语言有相应的Language Kit。后来Mac OS 8.5/8.6的安装盘也集成了“Language Kit”，叫“Multilingual Internet Access”（多语言互联网访问），只是只提供语言显示，没有输入法支持。后来Mac OS 9的安装盘里则有各语言完整的Language Kit。</p>
         <p>虽然Mac OS 9后来也提供对Unicode的有限支持，但中文Mac OS基本还是只能支持GB2312和Big5编码。中文系统的输入法只支持GB2312和Big5字符集，中文字体同样也只有GB2312和Big5的。<br />待续……</p>
