@@ -1,0 +1,46 @@
+Name:         Mac OS 8.5.1 Update
+
+Version:      n/a
+
+Released:     December 7, 1998
+
+Requires:
+North American English Mac 8.5
+
+Description:
+In response to initial customer and developer feedback, Apple has
+investigated reports concerning data loss and corruption and in
+response has made improvements to Drive Setup and provided updates to
+correct other customer issues. Mac OS 8.5.1 Update fixes a memory leak
+in AppleScript, a memory problem in the file system, and a Mac OS
+Extended format corruption issue, re-enables the use of many third
+party ADB devices, and provides some improved communication through
+Internet proxy firewalls for Sherlock. In addition, Apple has
+developed a number of additional Sherlock plug-ins that are included
+in this update. Watch for new plug-ins on the Sherlock Plug-in
+Directory at . For
+complete information, please see the document included with this
+software.
+
+Instructions:
+This software is available two different ways. Either method of
+obtaining this software will provide you the exact same software.
+
+(a.) One self-mounting Disk Copy image
+(b.) 3 parts of a self-mounting Disk Copy image
+
+If you choose (a.), download this self-mounting image to
+your hard drive and then double-click it to mount the compressed
+disk image on your desktop. Please read the documents included on
+this disk image before installing the software.
+
+If you choose (b.), download all 3 parts to your hard
+drive and then double-click on the first part to mount the
+compressed disk image on your desktop. Read the documents
+included on this disk image before installing the software.
+
+You may wish to download the 3 parts instead of the individual
+self-mounting image if you are a using a modem connection or
+if you wish to transport Mac OS 8.5.1 Update to another machine
+via floppy.
+		
