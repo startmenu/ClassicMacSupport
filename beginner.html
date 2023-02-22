@@ -43,6 +43,7 @@
 <br /><a href="http://mirror.macintosharchive.org">Macintosh Archive Mirror</a> - 英文网站，提供各种老Mac站点的镜像，里面有许多未分类的宝藏，可配合Google的站点搜索使用。
 <br /><a href="http://ppcarchive.dyniform.net/">PowrPC Archive</a> - 英文网站，提供PowerPC Mac和早期Intel Mac的软硬件信息。
 <br /><a href="http://mac-classic.com/">Classic Mac</a> - 英文网站，Classic Mac 综合信息站点，推荐浏览。
+<br /><a href="http://lowendmac.com">Low End Mac</a> - 英文网站，提供旧Mac的信息，如机型参数，使用技巧等。
 
 <br />先介绍这么多，慢慢更新…… </p>
         <br />
@@ -62,11 +63,13 @@
         <p>有些文字处理软件可能会将文本放在Data fork中，而将文字格式的定义和插入的图片放入Resource fork中。此时，如果只拷贝了data fork中的数据，此文件会丢失文字格式和图片。如果是一个应用程序文件只拷贝了data fork中的数据，它将无法运行。</p>
         <p>可见，Resource fork对于Mac来说十分重要。在将Mac文件拷贝到PC或服务器之前，一般需要先用MacBinary、BinHex、Stuffit等软件将文件打包，这样就能同时将文件的data fork和resource fork中的数据同时保存到一个文件里，文件传输后再用这些软件解包也能正常使用。</p>
         <p>当然，有些文件只有data fork也能正常使用，例如MP3音频，MP4视频等等。PC世界的大部分文件对于Mac来说都只有data fork。PC的文件拷贝到Mac上将只有data fork的内容，然而这并不影响使用。</p>
-        <p>在Mac文件系统中，一个文件的属性（Get info信息）也与PC的不同。最明显的一点是，PC通过文件扩展名来区分文件类型，而Mac是通过OS Type来区分文件类型以及确定文件打开方式的。文件有type code（类型代码）和creator code（创建者代码）两个属性，均使用四个字符来表示。例如使用SimpleText程序创建的文本文件，其文件类型为TEXT，创建者为ttxt。Finder打开该文件时会使用creator type为ttxt的程序（即SimpleText或其他创建者类型为ttxt的程序打开）打开。<br />待续……</p>
+        <p>在Mac文件系统中，一个文件的属性（Get info信息）也与PC的不同。最明显的一点是，PC通过文件扩展名来区分文件类型，而Mac是通过OS Type来区分文件类型以及确定文件打开方式的。文件有type code（类型代码）和creator code（创建者代码）两个属性，均使用四个字符来表示。例如使用SimpleText程序创建的文本文件，其文件类型为TEXT，创建者为ttxt。Finder打开该文件时会使用creator type为ttxt的程序（即SimpleText或其他创建者类型为ttxt的程序打开）打开。后来从Mac OS X 10.6开始，Finder就不再靠type code和creator code来区分文件类型与设置打开方式了。</p>
+        <p>对于外来文件，例如DOS和Windows的文件，Mac的PC Exchange（文件交换程序）会根据其扩展名为其设置type cod。但是很多情况并不会默认触发这一机制，Finder中会将这些外来文件显示为空白文件图标，双击也会提示没有找到创建该文件的应用程序。</p>
+        <p>如果需要手动修改文件的type code和creator code，可以使用<a href="http://macintoshgarden.org/apps/resedit">ResEdit</a>工具，在File菜单中可以选择Get File/Folder Info，然后打开要修改的文件。其他的工具还有<a href="http://macintoshgarden.org/apps/filetyper-501">FileTyper</a>, <a href="http://macintoshgarden.org/apps/creator-changer">Creator Changer</a>, <a href="http://macintoshgarden.org/apps/ilikeyoumore">iLikeYouMre</a>等等；如果需要查询Type和Creator信息，可以使用<a href="http://macintoshgarden.org/apps/typecreator-database">Type/Creator Database</a>。这些工具在Macintosh Garden上都能找到。</p>
         <br />
         
 <h2>与现代PC/Mac进行文件交换</h2>
-        <p>Classic Mac因为文件系统不同，与PC进行文件交换时比较麻烦。<br /> 请参考：<a href="docs/file_exchange.html">文件交换指南</a> 。</p>
+        <p>正是因为Classic Mac文件系统与众不同，Mac与PC进行文件交换时比较麻烦。<br /> 请参考：<a href="docs/file_exchange.html">文件交换指南</a> 。</p>
         <br />
 
 <h2>Classic Mac的字体支持</h2>
@@ -84,8 +87,8 @@
         <p>Classic Mac OS实际上是单语言系统，只支持该版本本身的语言。System 5-6的中文实现是通过一个叫“中文Talk”的组件实现的。后来System 7开始使用WorldScript II来实中文支持。</p>
         <p>苹果开发了Language Kit（语言套件）来为Mac OS添加其他语言的支持，例如Chinese Language Kit等。英文系统安装Chinese Language Kit之后可以显示和输入中文。简体中文系统如果需要处理繁体中文信息，那需要安装繁体中文的Language Kit，反过来说繁体系统处理简体也需要安装简体的Language Kit。</p>
         <p>最早Language Kit是作为单独的软件发布的，各种语言有相应的Language Kit。后来Mac OS 8.5/8.6的安装盘也集成了“Language Kit”，叫“Multilingual Internet Access”（多语言互联网访问），只是只提供语言显示，没有输入法支持。后来Mac OS 9的安装盘里则有各语言完整的Language Kit，安装后能够显示相应语言的字体，并能够输入相应的语言。</p>
-        <p>虽然Mac OS 9后来也提供对Unicode的有限支持，但中文Mac OS基本还是只能支持GB2312和Big5编码。中文系统的输入法只支持GB2312和Big5字符集，中文字体同样也只有GB2312和Big5的。但是在安装了Unicode扩展之后，浏览器和应用程序在访问Unicode时至少能够支持编码，并调用已有GB2312和Big5及其他CJK字体中的相应字符来显示对应的Unicode字符。Unicode在Mac OS 9安装光盘的“光盘附加程序”文件夹中可找到。<br />苹果也有World Text软件可以编辑多语言文档，World Text II能够支持Unicode文档。
-        <br />待续……</p>
+        <p>虽然Mac OS 9后来也提供对Unicode的有限支持，但中文Mac OS基本还是只能支持GB2312和Big5编码。中文系统的输入法只支持GB2312和Big5字符集，中文字体同样也只有GB2312和Big5的。但是在安装了Unicode扩展之后，浏览器和应用程序在访问Unicode时至少能够支持编码，并调用已有GB2312和Big5及其他CJK字体中的相应字符来显示对应的Unicode字符。Unicode在Mac OS 9安装光盘的“光盘附加程序”文件夹中可找到。<p/>
+        <p>苹果也有World Text软件可以编辑多语言文档，World Text II能够支持Unicode文档。</p>
         
 <h2>获取Mac机型配置信息</h2>
         <p>如果需要了解具体Mac机型的配置，可以访问<a href="http://www.everymac.com">Everymac网站</a>，该网站需要使用较新的浏览器才能访问。</p>
