@@ -47,13 +47,11 @@
 <br />先介绍这么多，慢慢更新…… </p>
         <br />
         
-<h2>不同架构的Mac</h2>
-        <p>从1984年1月诞生以来，Macintosh走过了三十多个年头，期间也换过不少次处理器架构。从1984年到1994年，苹果使用摩托罗拉68000系列(m68k)作为Mac的处理器。1994年，为了提升Mac的性能，苹果从m68k迁移到PowerPC架构。（嗯，本网站也侧重于提供PowerPC架构Mac的信息和资源。）2006年，苹果又因为性能与功耗，将Intel处理器装进了Mac电脑。最近2020年，苹果宣布让Mac使用自家Apple Silicon处理器，当然本站也不打算讨论这些Mac电脑。<br />待续……</p>
-        <br/>
-        
 <h2>Mac OS —— Mac魅力之所在</h2>
         <p>Mac之所以是Mac， Mac OS功不可没。</p>
-        <p>从Macintosh System Software到Mac OS，再到Mac OS X脱胎换骨，Mac操作系统的名字也几经变换。本站也不会多讨论OS X和macOS，虽然它们也是Mac OS X的后续。<br />待续……
+        <p>从Macintosh System Software到Mac OS，再到Mac OS X脱胎换骨，Mac操作系统的名字也几经变换。本站的重点当然也在Classic。<br />关于Classic Mac OS，之前在知乎上也写过浅谈Classic的文章，这里将修订版本贴出。
+        <br /><a href="docs/classicmacos1.html">浅谈 Classic Mac OS （上）</a>
+        <br /><a href="docs/classicmacos2.html">浅谈 Classic Mac OS （下）</a>
         </p>
         <br />
         
@@ -68,7 +66,7 @@
         <br />
         
 <h2>与现代PC/Mac进行文件交换</h2>
-        <p>Classic Mac因为文件系统不同，与PC进行文件交换时比较麻烦。<br /> 可参考：<a href="docs/file_exchange.html">文件交换指南</a> 。</p>
+        <p>Classic Mac因为文件系统不同，与PC进行文件交换时比较麻烦。<br /> 请参考：<a href="docs/file_exchange.html">文件交换指南</a> 。</p>
         <br />
 
 <h2>Classic Mac的字体支持</h2>
@@ -78,13 +76,16 @@
         <p>从System 7.1开始，系统文件夹中增加了“字体”文件夹用于存放字体文件。字体文件一般叫“字体手提箱”，每个手提箱可以存放多个字体。System 7到Mac OS 9最多支持128个字体文件。</p>
         <p>Mac OS 8.5开始支持data fork字体，包括了Windows版TrueType字体和OpenType字体，苹果还推出了data fork TureType格式（.dfont）。</p>
         <p>相关帮助：<a href="machelp/SC_IM_Help/Font/pgs/FontInfo.htm">Macintosh 字体</a>
-<br />待续……</p>
+<br />如果需要更多字体以满足文档和设计的需要，可以在软件指南中找到Classic Mac的字体包。对于Windows上的TrueType字体，Classic实际上是不支持的。但是老版本的OpenType字体，Classic还是可以支持的，前提是先安装Adobe Type Manager 4.6以及更高版本。otf文件需要用ResEdit等工具，修改文件的type code为sfnt。
+<br /> 参考： <a href="http://chinesemac.org/pages/fonts.html">Fonts - Chinese Mac</a>， <a href="http://whitefiles.org/mac/pgs/t03.htm">Using Fonts</a> 
+</p>
 
 <h2>Classic Mac的多语言支持</h2>
         <p>Classic Mac OS实际上是单语言系统，只支持该版本本身的语言。System 5-6的中文实现是通过一个叫“中文Talk”的组件实现的。后来System 7开始使用WorldScript II来实中文支持。</p>
         <p>苹果开发了Language Kit（语言套件）来为Mac OS添加其他语言的支持，例如Chinese Language Kit等。英文系统安装Chinese Language Kit之后可以显示和输入中文。简体中文系统如果需要处理繁体中文信息，那需要安装繁体中文的Language Kit，反过来说繁体系统处理简体也需要安装简体的Language Kit。</p>
-        <p>最早Language Kit是作为单独的软件发布的，各种语言有相应的Language Kit。后来Mac OS 8.5/8.6的安装盘也集成了“Language Kit”，叫“Multilingual Internet Access”（多语言互联网访问），只是只提供语言显示，没有输入法支持。后来Mac OS 9的安装盘里则有各语言完整的Language Kit。</p>
-        <p>虽然Mac OS 9后来也提供对Unicode的有限支持，但中文Mac OS基本还是只能支持GB2312和Big5编码。中文系统的输入法只支持GB2312和Big5字符集，中文字体同样也只有GB2312和Big5的。<br />待续……</p>
+        <p>最早Language Kit是作为单独的软件发布的，各种语言有相应的Language Kit。后来Mac OS 8.5/8.6的安装盘也集成了“Language Kit”，叫“Multilingual Internet Access”（多语言互联网访问），只是只提供语言显示，没有输入法支持。后来Mac OS 9的安装盘里则有各语言完整的Language Kit，安装后能够显示相应语言的字体，并能够输入相应的语言。</p>
+        <p>虽然Mac OS 9后来也提供对Unicode的有限支持，但中文Mac OS基本还是只能支持GB2312和Big5编码。中文系统的输入法只支持GB2312和Big5字符集，中文字体同样也只有GB2312和Big5的。但是在安装了Unicode扩展之后，浏览器和应用程序在访问Unicode时至少能够支持编码，并调用已有GB2312和Big5及其他CJK字体中的相应字符来显示对应的Unicode字符。Unicode在Mac OS 9安装光盘的“光盘附加程序”文件夹中可找到。<br />苹果也有World Text软件可以编辑多语言文档，World Text II能够支持Unicode文档。
+        <br />待续……</p>
         
 <h2>获取Mac机型配置信息</h2>
         <p>如果需要了解具体Mac机型的配置，可以访问<a href="http://www.everymac.com">Everymac网站</a>，该网站需要使用较新的浏览器才能访问。</p>
