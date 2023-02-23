@@ -64,7 +64,7 @@
         <p>可见，Resource fork对于Mac来说十分重要。在将Mac文件拷贝到PC或服务器之前，一般需要先用MacBinary、BinHex、Stuffit等软件将文件打包，这样就能同时将文件的data fork和resource fork中的数据同时保存到一个文件里，文件传输后再用这些软件解包也能正常使用。</p>
         <p>当然，有些文件只有data fork也能正常使用，例如MP3音频，MP4视频等等。PC世界的大部分文件对于Mac来说都只有data fork。PC的文件拷贝到Mac上将只有data fork的内容，然而这并不影响使用。</p>
         <p>在Mac文件系统中，一个文件的属性（Get info信息）也与PC的不同。最明显的一点是，PC通过文件扩展名来区分文件类型，而Mac是通过OS Type来区分文件类型以及确定文件打开方式的。文件有type code（类型代码）和creator code（创建者代码）两个属性，均使用四个字符来表示。例如使用SimpleText程序创建的文本文件，其文件类型为TEXT，创建者为ttxt。Finder打开该文件时会使用creator type为ttxt的程序（即SimpleText或其他创建者类型为ttxt的程序打开）打开。后来从Mac OS X 10.6开始，Finder就不再靠type code和creator code来区分文件类型与设置打开方式了。</p>
-        <p>对于外来文件，例如DOS和Windows的文件，Mac的PC Exchange（文件交换程序）会根据其扩展名为其设置type cod。但是很多情况并不会默认触发这一机制，Finder中会将这些外来文件显示为空白文件图标，双击也会提示没有找到创建该文件的应用程序。</p>
+        <p>对于外来文件，例如DOS和Windows的文件，Mac的PC Exchange（文件交换程序）会根据其扩展名为其设置type code。但是很多情况并不会默认触发这一机制，Finder中会将这些外来文件显示为空白文件图标，双击也会提示没有找到创建该文件的应用程序。</p>
         <p>如果需要手动修改文件的type code和creator code，可以使用<a href="http://macintoshgarden.org/apps/resedit">ResEdit</a>工具，在File菜单中可以选择Get File/Folder Info，然后打开要修改的文件。其他的工具还有<a href="http://macintoshgarden.org/apps/filetyper-501">FileTyper</a>, <a href="http://macintoshgarden.org/apps/creator-changer">Creator Changer</a>, <a href="http://macintoshgarden.org/apps/ilikeyoumore">iLikeYouMre</a>等等；如果需要查询Type和Creator信息，可以使用<a href="http://macintoshgarden.org/apps/typecreator-database">Type/Creator Database</a>。这些工具在Macintosh Garden上都能找到。</p>
         <br />
         
