@@ -1,1 +1,438 @@
-<HTML lang="zh"><HEAD><meta http-equiv="Content-Type" content="text/html" ; charset="gb2312" /><TITLE>Open Transport/PPP 1.0</TITLE></HEAD><BODY> <BR><BR><STRONG>Open Transport/PPP 1.0<BR></STRONG><STRONG>请先阅读</STRONG><BR><BR><BR><STRONG>简介</STRONG><BR><BR>这份文稿包含 Open Transport/PPP 的最新信息。要获取如何使用 Open Transport/PPP（包括“调制解调器”和“PPP”控制板）－请参阅 Open Transport/PPP 用户手册。也可以从“Mac OS 使用指南”获得屏幕上的说明。从“指南”（屏幕右上角的问号图象）菜单中选取“Mac OS 使用指南”。关于 Open Transport/PPP 的信息出现在“远程通讯”标题域。或者您可以点按在“调制解调器”和“PPP”控制板中出现的问号图象。<BR><BR>关于 Open Transport/PPP 的附加信息也可从 Open Transport/PPP 起始页面得到，网址为：&lt;http://devworld.apple.com/dev/opentransport/ppp.html&gt;。发布注释的登录包含在这个起始页面上，它描述了 Open Transport/PPP 软件每个 beta 版本中所作的更改。<BR><BR><BR> <STRONG>授权协议</STRONG><BR><BR>这次发布的 Open Transport/PPP 受“授权协议”中的条款和条件约束，“授权协议”在“授权”文件中，随软件所附带。使用该软件，就表示您同意遵守“授权协议”中的条款和条件。<BR><BR><BR><STRONG>系统需求</STRONG><BR><BR>Open Transport/PPP 被设计在 Mac OS 兼容计算机上工作，这些计算机装有 68030 或 68040 系列微处理器，或者 PowerPC 601、603e、604 或 604e 微处理器。<BR><BR>对 Open Transport/PPP 推荐的系统软件版本是 Open Transport 1.1.1 更新过的 7.5.3 或以后版本。用 Open Transport 1.1.1 更新过的系统软件版本 7.1、7.1.1 和 7.1.2 也与 Open Transport/PPP 兼容。<BR><BR><STRONG>重要信息：</STRONG>安装 Open Transport/PPP 之前一定要用 Open Transport 1.1.1 更新系统。请参阅后面的章节获取更新到 Open Transport 1.1.1 的信息。<BR><BR><STRONG>注意：</STRONG>Open Transport/PPP 不能与系统软件版本 7.5、7.5.1 或 7.5.2 一起使用。在这样的一个系统上安装 Open Transport/PPP 之前，请运行最新的 7.5.3（或以后版本）系统更新程序。<BR><BR>Open Transport/PPP 1.0 要求使用最少 500K 内存（对基于 68030 或 68040的计算机）或 600K 内存（对基于 PowerPC 的计算机）。Open Transport/PPP 的内存需求是基于系统内存大小的总和，包括虚拟内存，再减去正在使用的任何 RAM 磁盘或磁盘高速缓存的大小。<BR><BR><BR><STRONG>Open Transport 需求</STRONG><BR><BR>您需要有 Open Transport/PPP 才能使用 Open Transport 1.1.1。<BR><BR><STRONG>注意：</STRONG>随 Open Transport/PPP 安装器提供的 Open Transport 1.1.1 更新，要求计算机上已安装有 Open Transport 1.1。<BR><BR>这里是安装 Open Transport 1.1.1 要求的步骤，它取决于您使用的系统软件：<BR><BR>·System 7.1.x<BR>　⒈安装 Open Transport 1.1。<BR>　⒉安装 Open Transport 1.1.1 Update（ Open Transport 1.1.1 更新）。<BR><BR>·System 7.5、7.5.1 或 7.5.2<BR>　⒈安装 System 7.5, Update 2.0。（可从免费联机的 Apple Software Update 节点得到。请参阅后面的章节获得如何找到这些节点的信息。）<BR>　⒉使用 Network Software Switcher（网络软件切换器）打开 Open Transport（如果它未打开的话）。网络软件选择程序（Network Software Selector）在“Apple Extras”文件夹中。<BR>　⒊安装 Open Transport 1.1.1 Update（ Open Transport 1.1.1 更新）。<BR><BR>·System 7.5.3 或 7.5.5<BR>　⒈安装 Open Transport 1.1.1 Update（ Open Transport 1.1.1 更新）。<BR><BR>·如果执行了自定安装而未安装 Open Transport 的 System 7.5.3<BR>　⒈使用 System 7.5.3 或 System 7.5.2, Update 2.0 安装器来自定安装 Open Transport 1.1。<BR>　⒉安装 Open Transport 1.1.1 Update（ Open Transport 1.1.1 更新）。<BR><BR>·如果您已更新了系统，而在上面由于进行自定安装而未安装 Open Transport 的 System 7.5.5。<BR>　⒈使用随机附带的系统软件磁盘重新安装系统软件。<BR>　⒉根据随机附带的系统软件版本，使用上面的一种步骤来安装 Open Transport 1.1.1。<BR><BR><BR><STRONG>Apple Software Update 节点</STRONG><BR><BR>更新苹果软件的信息可从 World Wide Web 上的联机服务或其它联机服务得到。在 Web 上，请进入以下任一个节点：<BR><BR>　www.info.apple.com<BR>　www.support.apple.com<BR><BR>这两个节点都提供到“Apple Software Updates”（苹果软件更新）页面的联接。<BR><BR>这些节点也提供到 Technical Info Library (TIL)（技术信息库）的联接。在 TIL 中查找“find apple software updates”（查找苹果软件更新），您可以在 Internet、America Online、CompuServe 和其它联机服务上找到 Apple Software Updates 的位置。<BR><BR>在到达 Apple Software Updates 节点后，请使用以下的路径来找到 Open Transport 软件：<BR><BR>　Apple SW Updates<BR>　    US<BR>　      Macintosh<BR> 　       Networking-Communications<BR>   　       Open Transport<BR><BR><BR><STRONG>在安装 Open Transport/PPP 1.0 之前</STRONG><BR><BR>·在安装本软件之前备份拷贝硬盘上的软件和文稿（特别是“系统文件夹”）。<BR><BR>·如果已使用 SLIP 或 PPP 软件访问 Internet，请记下输入到以前的“SLIP”或“PPP”控制板中的配置信息。配置不会自动从非苹果的 SLIP 或 PPP 软件转换过来。<BR><BR><BR><STRONG>已知的不兼容性和局限性</STRONG><BR><BR>·Open Transport/PPP 要求与 Open Transport 1.1.1 一起使用。不应该试图与 Open Transport 1.1 一起使用 Open Transport/PPP。<BR><BR>·ARA 2.x 调制解调器 CCL 命令语言可以与 Open Transport/PPP 一起使用。但是，一些 ARA 2.x 命令语言不支持基于调制解调器的纠错和数据压缩，因此不会优化性能。您应该尝试使用 Open Transport/PPP 提供的一种调制解调器命令语言。如果找不到匹配您的调制解调器的那种，您可以修改现存的命令以满足需要。<BR><BR>·如果正在使用 ARA 2.1 和 Open Transport/PPP 两者，请确保在 ARA 2.1 之后安装 Open Transport/PPP，以为两种产品获得调制解调器命令语言的正确设置。<BR><BR>·如果正在有睡眠功能的台式 Macintosh 上运行 Open Transport/PPP，当您从“其它”菜单中选取“睡眠”时，Open Transport/PPP 连接不会自动中断，因为使台式计算机睡眠仍可以使网络继续活跃（不像 PowerBook 机型）。如果使台式机睡眠时不想保留连接到 PPP 服务器，请使用“PPP”控制板手动中断连接。<BR><BR>·如果安装了比 1.0f1c2 版本更早的 Open Transport/PPP 的拷贝，您必需扔掉旧的 Open Transport/PPP 预置文件。要这样做，请从现用“预置”文件夹中移走“远程访问”文件夹。重新启动计算机，然后使用“调制解调器”和“PPP”控制板来自定配置。<BR><BR>·Open Transport/PPP 1.0 与 Apple Express Modem 存在一些不兼容性。如果在“调制解调器”控制板的“端口”按动式菜单中不出现“内置调制解调器”选项，请在“Express Modem”控制板中取消“使用内置调制解调器而不是调制解调器／打印机端口”（Use internal modem instead of Modem/Printer port）框中的注记，再重新启动，然后再次打开“调制解调器”控制板。<BR><BR>·部分旧的程序没有使用 Open Transport，而在连接 PPP 时会尝试使用串行端口；您可能在使用这些程序时会遇到困难。解决方法是在启动串行应用程序之前使用“PPP”控制板来中断连接 PPP。<BR><BR>·Claris Emailer 1.1v3 或以后版本与 Open Transport 1.1.1 不兼容。早期版本的 Claris Emailer 的“Quit”（退出）命令中的问题有时会导致 Open Transport 1.1.1 死机（对 Open Transport/PPP 可能死机，也可能不死机）。为了方便，Claris Emailer 1.1v3 修补程序和 Claris Emailer Lite 1.1v3 修补程序已提供在“Open Transport Extras”文件夹中。<BR><BR>·当您从 Performa 6300CD 计算机拨号入 Internet 服务提供者时，可能会遇到光盘和电视的声音问题。解决方法是在尝试连接之前启动 Megaphone。<BR><BR>·当输入 Motorola BitSURFR Pro 56K 和 64K ISDN 终端适配器的电话号码时，不要在号码之间使用破折号和空格。例如，“555-9999”应该输入为“5559999”。输入空格和破折号会阻止 BitSURFR Pro 的成功连接，特别当两个 ISDN 频道在使用时。<BR><BR>·如果使用来自 Stalker GmbH 的 PortShare Pro 来设置虚拟调制解调器或虚拟打印机端口，端口会在“调制解调器”控制板中相应地出现为“调制解调器”或“打印机”，而不是出现为“虚拟调制解调器”或“虚拟打印机”。PortShare Pro 会用自身的驱动程序替换机载调制解调器／打印机端口的串行驱动程序，因此选择“调制解调器”或“打印机”会导致 Open Transport/PPP（和任何其它原生性 Open Transport 串行应用程序）使用替换后的驱动程序。<BR><BR>·Open Transport/PPP 会报告 56Kbps 或 64Kbps 的单个频道速度。当用多链路 PPP 使用第二个 ISDN 频道时，可以使用 112Kbps 或 128Kbps 的速度，但不能显示。请使用终端适配器来找出第二个频道的速度。<BR><BR><BR><STRONG>与 Apple Internet Connection Kit 的兼容性</STRONG><BR><BR>您可以在计算机上同时安装 Open Transport/PPP 和 Apple Internet Connection Kit (AICK)（苹果 Internet 连接套件） 。两种产品使您能用调制解调器拨号并连接到 Internet。<BR><BR>发布这个版本时，AICK 没有使用 Open Transport/PPP 软件来拨号和连接到 Internet。AICK 有其自身的拨号程序，拨号程序使用 MacPPP 软件来建立远程连接。MacPPP 是“点对点协议”（Point-to-Point Protocol）的非苹果实现。<BR><BR>但是，所有 AICK 应用程序与 Open Transport/PPP 1.0 兼容。要与 AICK 应用程序一起使用 Open Transport/PPP，您必需按 Open Transport/PPP 用户手册和“Mac OS 使用指南”的“连接到 Internet”中描述的，来配置 Open Transport/PPP。<BR><BR>目前现用的 PPP 软件是在“TCP/IP”控制板中使用“连接经由”按动式菜单来选择的。MacPPP 出现为 MacPPP，OT/PPP 出现为 PPP。MacPPP 由使用“ConfigPPP”控制板、Apple Internet Dialer 应用程序或 Apple Internet Status 应用程序所控制。Open Transport/PPP 由使用“调制解调器”和“PPP”控制板所控制，这控制板不会修改 MacPPP 配置信息。<BR><BR>如果使用两种 PPP 软件包（一次使用一种），请注意启动 Apple Internet Dialer 或 Apple Internet Status 会使 MacPPP 成为现用。更进一步地，每次从 PPP 软件包切换到其它软件包时，您需要切换 TCP/IP 配置。（更改 TCP/IP 配置的信息出现在“Mac OS 使用指南”的“网络”标题域。）<BR><BR><BR><STRONG>与非苹果软件交互作用</STRONG><BR><BR>Netscape 2.x 在 Mac OS System 7.5.3 以前的版本或 Open Transport 1.1 以前的版本上不能可靠工作。如果您想使用 Netscape 2.0.1 或以后版本，应该确保也使用 Mac OS System 7.5.3 或以后版本和 Open Transport 1.1.1 或以后版本。不遵照这个推荐会导致系统死机。<BR><BR><BR><STRONG>调制解调器支持</STRONG><BR><BR>支持许多常用调制解调器的命令提供在 Open Transport/PPP 安装磁盘上。命令语言包括：<BR><BR> 3Com Impact Analog 14.4<BR> 3Com Impact ISDN 56K<BR> 3Com Impact ISDN 56K MLPPP <BR> 3Com Impact ISDN 64K<BR> 3Com Impact ISDN 64K MLPPP<BR> Apple Personal Modem<BR> AT&amp;T Dataport 288<BR> AT&amp;T KeepInTouch<BR> Best Data Smart One 28.8/33.6<BR> Dayna CommuniCard 28800<BR> Farallon Netopia 56K<BR> Farallon Netopia 56K MLPPP<BR> Farallon Netopia 64K<BR> Farallon Netopia 64K MLPPP<BR> GeoPort/Express Modem<BR> GeoPort/Express Modem CNG<BR> Global Village Gold/Silver/Merc<BR> Global Village Platinum/Gold II<BR> Hayes Accura 288<BR> Hayes Optima 288<BR> Megahertz CruiseCard 14.4<BR> Megahertz CruiseCard 28.8<BR> Metricom Ricochet Wireless<BR> Microcom DeskPorte Fast/288<BR> Microcom QX/4232bis<BR> Motorola BitSURFR 56K<BR> Motorola BitSURFR 56K MLPPP<BR> Motorola BitSURFR 64K<BR> Motorola BitSURFR 64K MLPPP<BR> Motorola ModemSURFR 28.8<BR> Motorola Power/Lifestyle 28.8<BR> Null Modem 9600<BR> Null Modem 19200<BR> Null Modem 57600<BR> Null Modem 115200<BR> Practical Peripherals V.34<BR> Smart One 28.8<BR> Supra 14.4<BR> Supra 28.8/33.6<BR> TDK DF2814<BR> Telebit QBlazer<BR> US Robotics Universal<BR> Zoom V-Series<BR><BR>苹果现在将所有调制解调器命令语言安装在“modem scripts”（调制解调器命令语言）文件夹（在“功能扩展”文件夹中）中，而不是直接安装在“功能扩展”文件夹中。将来的苹果产品会以同样方式操纵调制解调器命令语言。Open Transport/PPP 不识别存储在“调制解调器命令语言”文件夹以外的调制解调器命令语言。<BR><BR>安装器已停用调制解调器命令语言的自动路径选择。在安装 Open Transport/PPP 之后，如果调制解调器命令语言被拖进现用“系统文件夹”，它不会选择路径到“功能扩展”文件夹。<BR><BR>安装器的“简易安装”模式会拷贝所有的 Open Transport/PPP 调制解调器命令语言到磁盘上。您可以选定“自定安装”来限定只安装您选择的命令语言。<BR><BR>注意：您可以从“modem scripts”文件夹中删除任何不需要的命令语言，这文件夹在“功能扩展”文件夹中。要识别命令语言，请查找名为“Modem Link Tool Personal document”（Modem Link Tool Personal 文稿）的文件。<BR><BR><BR><STRONG>附加的（不被支持的）调制解调器命令语言</STRONG><BR><BR>用户提供的命令语言可从联机得到。新命令语言会定时引进，并且苹果电脑愿意发布用户赠送的命令语言，来帮助使“苹果远程访问”和 Open Transport/PPP 较容易地与尽可能多的调制解调器一起工作。<BR><BR><STRONG>重要信息：</STRONG>Apple Computer, Inc. 没有测试或支持用户提供的命令语言，因此如果使用自不被支持的文件夹下载的命令语言遇到困难，您应该联系命令语言的作者，而不是苹果电脑。用户提供的调制解调器命令语言以“目前状态”对苹果客户提供方便。不能保证它们完备或不出错，尽管苹果电脑选定了审查和完全测试一些用户提供的命令语言，并且将它们包括在苹果软件将来的版本中。如果您想给苹果电脑提供某个用户提供的命令语言的反馈，请给下面地址发送电子邮件：msg@apple.com<BR><BR>要找到这些命令语言，请使用以下路径进入到 Apple Software Updates 位置：<BR><BR>  Apple SW Updates<BR>    US<BR>      Macintosh<BR>        Unsupported<BR>         CCL<BR><BR>如果您想提供一个调制解调器命令语言，请使用以下的步骤：<BR><BR>⒈从“User-contributed scripts”（用户提供的命令语言）文件夹下载 Read Me（请先阅读）文件样本。文件名为 CCL_README_TEMPLATE。<BR>⒉自定 Read Me（请先阅读）样本为相对应于您想提供的命令语言。<BR>⒊发送电子邮件给 msg@apple.com，并以二－十六进制格式打包邮件。<BR><BR>只有当命令语言附有解释其目的和如何联系作者的 Read Me（请先阅读），命令语言才能被邮送。<BR><BR>（请查看 Read Me 开头旁边的“Apple Software Updates Sites”，来获取如何找到“Apple Software Updates”位置。）<BR><BR><BR><STRONG>调制解调器电缆要求</STRONG><BR><BR>大多数调制解调器要求支持数据终端预备（data terminal ready－DTR）信号的电缆。另外，某些调制解调器要求支持 CTS/RTS 硬件流控制的电缆。要支持 DTR，电缆必需将 DB-25 端子上的第 20 个孔连接到 Mini DIN-8 上的第个 1 孔。要支持 CTS/RTS，电缆必需将 DB-25 端子上的第个 5 孔连接到 Mini DIN-8 上的第 2 个孔，并且将 DB-25 端子上的第个 4 孔连接到 Mini DIN-8 上的第 1 个孔。请与调制解调器供应商或苹果电脑认可的分销商联系以获得必需的电缆。<BR><BR><BR><STRONG>Open Transport/PPP 与“苹果远程访问”的兼容性</STRONG><BR><BR>Open Transport/PPP 与 ARA 1.0、2.0、2.0.1 和 2.1 完全兼容，并且可以在同一系统上使用。每次只能使用一个。<BR><BR>ARA 2.1 以前的版本直接将调制解调器命令语言安装在“功能扩展”文件夹中。要确保这些命令语言在“调制解调器”控制板中出现为选项，请将它们移到“功能扩展”文件夹的“modem scripts”文件夹中。<BR><BR>ARA 2.1 将其命令语言安装在“功能扩展”文件夹的“modem scripts”文件夹中。如果使用 ARA 2.1，您必需在 ARA 2.1 之后安装 Open Transport/PPP，才能在“modem scripts”文件夹中获得对两种产品都能优化操作的命令语言集。Open Transport/PPP 命令语言支持某些基于调制解调器的功能，比如能提高性能的纠错和数据压缩。ARA 2.X 命令语言不支持这些功能。<BR><BR>而且，包含在 ARA 2.1 中的命令语言不再随 Open Transport/PPP 一起安装。这些命令语言由 Open Transport/PPP 安装器留在磁盘上。它们对 Open Transport/PPP 可用，但未被苹果电脑测试过兼容性。<BR><BR><BR><STRONG>注册用户或客人？</STRONG><BR><BR>如果 PPP 服务器没有要求用户名称和密码，或者如果服务器只要求在终端窗口中输入名称和密码，您可以在“PPP”控制板中选择“客人”模式。这样就会在一输入电话号码就隐藏“名称”和“密码”栏并且会启用“连接”按钮。<BR><BR>如果服务器要求 PPP 用户名称和密码，或者还要加上终端服务器登录，您必需输入“PPP”控制板的“注册用户”模式。在这种模式下，您必需在“名称”和“密码”栏中输入内容才能启用“连接”按钮。如果使“密码”栏空着，且未给“存储密码”作注记，您会得到提示以确认您想不带密码连接。<BR><BR><BR><STRONG>连接命令语言</STRONG><BR><BR>下列 varStrings 已增加到用户名称和密码的 CCL 命令语言中：<BR><BR>名称：^11 或 ^U<BR>密码：^12 或 ^P<BR><BR>当执行连接命令语言时，这些 varStrings 由存储在“PPP”控制板的“名称”和“密码”栏的串取代。<BR><BR>当记录连接命令语言，并且您已在“PPP”控制板中输入了名称和密码时，终端窗口记录的连接命令语言会用相应的 varStrings 取代那些串。<BR><BR>^U 和 ^P varStrings 被作为用户名称和密码的记忆码，但它们不能用作一些 CCL 命令的参数，如 IFSTR。对于那些命令，请使用 ^11 和 ^12 varStrings。<BR><BR>在“WRITE”（写）命令中使用密码 varString (^12) 的连接 CCL 命令语言不能以清晰文本登录密码。密码被登录为圆点。无论用户记录命令语言或键入命令语言，这种情况都存在。<BR><BR>用于调制解调器命令语言和连接命令语言两者的 CCL 语言句法更详细的信息在“OT/PPP Extras”文件夹的“ARA Modem Scripting Guide.PDF”文件中。这文件用的是 Adobe Acrobat 格式。<BR><BR><BR> <STRONG>手动拨号</STRONG><BR><BR>用手动拨号建立 Open Transport/PPP 连接的步骤取决于使用的调制解调器类型。要确保使用手动拨号能连接上，在听到远程调制解调器应答电话之前或之后，您需要轻轻地按下“连接”按钮来试验一下。<BR><BR><BR> <STRONG>使用 Express Modem 或 GeoPort Telecom Adapter</STRONG><BR><BR>如果与 Express Modem 或 GeoPort Telecom Adapter 之任一个一起使用 Express Modem 软件，您必需在“存储器”控制板中打开 32 位寻址方式。使用 24 位寻址方式会导致错误行为。<BR><BR><BR> <STRONG>使用 Global Village PC 卡产品</STRONG><BR><BR>包含在调制解调器中的 Global Village 软件给“调制解调器”控制板的“连接经由”按动式菜单增加了一个入口，叫作“PowerPort PC Card”（PowerPort PC 卡）。在某些环境下，PC 被插入的实际插槽的入口也会显示（“上插槽”、“下插槽”）。不应该使用这些按插槽分别的项目，而应该使用“PowerPort PC Card”，否则错误报告为正忙。<BR><BR><BR> <STRONG>使用 ISDN 终端适配器</STRONG><BR><BR>Open Transport/PPP 和 ARA 2.1 两者都支持速度为 115,200 和 230,400 bps 的串行连接。如果两端的 ISDN 终端适配器都支持频道连接且使用了适当的调制解调器命令语言，苹果电脑这样做，就使 Macintosh 用户以 64 kbps 甚至 112 kbps 通过 ISDN 行来建立 ARA 和 PPP 连接。<BR><BR><STRONG>注意：</STRONG>“PPP”控制板的状态框的“连接时间”行不会精确反映 ISDN 连接的连接速度。显示出的可能是较慢的速度，因为 ISDN 终端适配器硬件不会报告建立至 CCL 命令语言机制的第二个频道连接。如果您使用 ISDN 命令语言的 Multilink PPP (MLPPP) 版本，通常就会发生这种情况。<BR><BR>大多数早期的 Macintosh 计算机上的串行端口不支持 115,200 和 230,400 bps 的连接速度。这是对快速串行端口支持的 Macintosh 机型的部分列表：<BR><BR>·Macintosh Centris 660av、Macintosh Quadra 660av 和 Macintosh Quadra 840av 机型<BR>·Macintosh Performa 6100CD 系列<BR>·Power Macintosh 6100、7100、7200、7500、7600、8100、8500 和 9500 机型<BR>·Workgroup Server 6150、7250、8150、8550 和 9150 机型<BR><BR>要以 115,200 或 230,400 bps 设置内建串行端口，必需安装叫作 SerialDMA 的新的串行驱动程序，来取代标准 Macintosh 串行设备驱动程序。SerialDMA 由苹果电脑提供，目前版本是 2.0.2。也高度推荐在装有 PCI 插槽的 Macintosh 机型上的“功能扩展”文件夹中安装文件 Serial (Built-in)，来支持这些高速度（38,400 bps 和以上）。System 7.5.3 或以后版本包含最新版本的 SerialDMA 和文件 Serial (Built-in)。<BR><BR><STRONG>注意：</STRONG>一般来讲，ISDN 终端适配器比常规调制解调器有更多的配置选项。苹果电脑现在不可能为所有被支持的 ISDN 终端适配器而支持这些选项的全部组合。我们已努力写了能在大多数常见 ISDN 配置下工作的命令语言。如果您的服务器使用了不同的选项，您需要从Internet 服务提供者或网络管理员处获得修改的命令语言。您也可以使用 Modem Script Generator（命令语言发生器）或直接编辑命令语言文本，来自己修改命令语言。<BR><BR><BR><STRONG>如何关闭或移走 Open Transport/PPP</STRONG><BR><BR>要使用“安装器”中的“自定移走”选项来停用或移走 Open Transport/PPP，请按照以下步骤进行：<BR><BR>⒈打开包含在 Open Transport/PPP 1.0 中的“Installer”（安装器）应用程序。<BR>　会出现“Welcome to the Apple Installer”（欢迎使用苹果安装器）屏幕。<BR>⒉点按“Continue...”（继续…）按钮。<BR>　会出现“Open Transport PPP Installation”（Open Transport PPP 安装）屏幕。<BR>⒊从左上角的按动式菜单中选取“Custom Remove”（自定移走）。<BR>⒋在出现的列表中，点按每个文件旁边的框以使里面出现“X”，来选择您想移走的文件。要完全移走 Open Transport/PPP，您应该选择列出的全部文件。<BR>⒌点按“Remove”（移走）按钮。<BR>　如果出现一个窗口询问您是否要退出所有打开的应用程序，请点按“Continue...”（继续…）。<BR>　会出现一个窗口告诉您重新启动计算机。<BR>⒍点按“Restart”（重新启动）按钮。<BR>⒎按要求重新安装并配置以前的 SLIP/PPP 软件。<BR><BR>要不使用“Installer”（安装器）来停用 Open Transport/PPP，请按照以下步骤进行：<BR><BR><STRONG>注意：</STRONG>尽管“PPP”和“调制解调器”控制板出现在“功能管理程序”中，但“功能管理程序”中没有让您停用 Open Transport/PPP 的组件。要不使用“Installer”（安装器）来停用 Open Transport/PPP，您需要按照这里的指示进行。<BR><BR>⒈从现用“系统文件夹”的“功能扩展”文件夹中移走 OpenTpt Remote Access、OpenTpt Modem 和 OpenTpt Serial Arbitrator 共享库文件。<BR>⒉从“功能扩展”文件夹的“Scripting Additions”（附加命令语言）文件夹中移走“PPP Commands”（PPP 命令）文件。<BR>⒊从现用“系统文件夹”的“控制板”文件夹中移走“PPP”和“调制解调器”控制板。<BR>⒋重新启动计算机。<BR><BR>无需从“功能扩展”文件夹中移走“调制解调器命令语言”文件夹。<BR><BR><BR><BR>� 1996 Apple Computer, Inc.<BR>� 1996 苹果电脑国际有限公司<BR><BR>苹果、苹果标记、Apple、 AppleScript、 Mac、 Macintosh、 Performa、 Power Macintosh 和 PowerBook 是 Apple Computer, Inc. 在美国和其它国家的注册商标。At Ease 是 Apple Computer, Inc. 的商标。Claris 和 Emailer 分别是 Claris Corporation 的注册商标和商标。PowerPC 是国际商用机器公司（IBM）的商标，授权方可使用。所有其它产品是其相应拥有者的商标或注册商标。提及非苹果产品是为参考目的，并没有签署认可或推荐。苹果电脑对这些产品的选择、性能或使用概不负责。<BR><BR>更新于 10/28/96</BODY></HTML>
+<HTML lang="zh">
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html" ; charset="gb2312" />
+<TITLE>Open Transport/PPP 1.0</TITLE>
+</HEAD>
+<BODY>
+ <BR>
+<BR>
+<STRONG>Open Transport/PPP 1.0<BR>
+</STRONG>
+<STRONG>请先阅读</STRONG>
+<BR>
+<BR>
+<BR>
+<STRONG>简介</STRONG>
+<BR>
+<BR>
+这份文稿包含 Open Transport/PPP 的最新信息。要获取如何使用 Open Transport/PPP（包括“调制解调器”和“PPP”控制板）－请参阅 
+Open Transport/PPP 用户手册。也可以从“Mac OS 使用指南”获得屏幕上的说明。从“指南”（屏幕右上角的问号图象）菜单中选取“Mac 
+OS 使用指南”。关于 Open Transport/PPP 的信息出现在“远程通讯”标题域。或者您可以点按在“调制解调器”和“PPP”控制板中出现的问号图象。<BR>
+<BR>
+关于 Open Transport/PPP 的附加信息也可从 Open Transport/PPP 起始页面得到，网址为：&lt;http://devworld.apple.com/dev/opentransport/ppp.html&gt;。发布注释的登录包含在这个起始页面上，它描述了 
+Open Transport/PPP 软件每个 beta 版本中所作的更改。<BR>
+<BR>
+<BR>
+ <STRONG>授权协议</STRONG>
+<BR>
+<BR>
+这次发布的 Open Transport/PPP 受“授权协议”中的条款和条件约束，“授权协议”在“授权”文件中，随软件所附带。使用该软件，就表示您同意遵守“授权协议”中的条款和条件。<BR>
+<BR>
+<BR>
+<STRONG>系统需求</STRONG>
+<BR>
+<BR>
+Open Transport/PPP 被设计在 Mac OS 兼容计算机上工作，这些计算机装有 68030 或 68040 
+系列微处理器，或者 PowerPC 601、603e、604 或 604e 微处理器。<BR>
+<BR>
+对 Open Transport/PPP 推荐的系统软件版本是 Open Transport 1.1.1 更新过的 7.5.3 或以后版本。用 
+Open Transport 1.1.1 更新过的系统软件版本 7.1、7.1.1 和 7.1.2 也与 Open Transport/PPP 
+兼容。<BR>
+<BR>
+<STRONG>重要信息：</STRONG>
+安装 Open Transport/PPP 之前一定要用 Open Transport 1.1.1 更新系统。请参阅后面的章节获取更新到 
+Open Transport 1.1.1 的信息。<BR>
+<BR>
+<STRONG>注意：</STRONG>
+Open Transport/PPP 不能与系统软件版本 7.5、7.5.1 或 7.5.2 一起使用。在这样的一个系统上安装 
+Open Transport/PPP 之前，请运行最新的 7.5.3（或以后版本）系统更新程序。<BR>
+<BR>
+Open Transport/PPP 1.0 要求使用最少 500K 内存（对基于 68030 或 68040的计算机）或 600K 
+内存（对基于 PowerPC 的计算机）。Open Transport/PPP 的内存需求是基于系统内存大小的总和，包括虚拟内存，再减去正在使用的任何 
+RAM 磁盘或磁盘高速缓存的大小。<BR>
+<BR>
+<BR>
+<STRONG>Open Transport 需求</STRONG>
+<BR>
+<BR>
+您需要有 Open Transport/PPP 才能使用 Open Transport 1.1.1。<BR>
+<BR>
+<STRONG>注意：</STRONG>
+随 Open Transport/PPP 安装器提供的 Open Transport 1.1.1 更新，要求计算机上已安装有 
+Open Transport 1.1。<BR>
+<BR>
+这里是安装 Open Transport 1.1.1 要求的步骤，它取决于您使用的系统软件：<BR>
+<BR>
+·System 7.1.x<BR>
+　⒈安装 Open Transport 1.1。<BR>
+　⒉安装 Open Transport 1.1.1 Update（ Open Transport 1.1.1 更新）。<BR>
+<BR>
+·System 7.5、7.5.1 或 7.5.2<BR>
+　⒈安装 System 7.5, Update 2.0。（可从免费联机的 Apple Software Update 节点得到。请参阅后面的章节获得如何找到这些节点的信息。）<BR>
+　⒉使用 Network Software Switcher（网络软件切换器）打开 Open Transport（如果它未打开的话）。网络软件选择程序（Network 
+Software Selector）在“Apple Extras”文件夹中。<BR>
+　⒊安装 Open Transport 1.1.1 Update（ Open Transport 1.1.1 更新）。<BR>
+<BR>
+·System 7.5.3 或 7.5.5<BR>
+　⒈安装 Open Transport 1.1.1 Update（ Open Transport 1.1.1 更新）。<BR>
+<BR>
+·如果执行了自定安装而未安装 Open Transport 的 System 7.5.3<BR>
+　⒈使用 System 7.5.3 或 System 7.5.2, Update 2.0 安装器来自定安装 Open Transport 
+1.1。<BR>
+　⒉安装 Open Transport 1.1.1 Update（ Open Transport 1.1.1 更新）。<BR>
+<BR>
+·如果您已更新了系统，而在上面由于进行自定安装而未安装 Open Transport 的 System 7.5.5。<BR>
+　⒈使用随机附带的系统软件磁盘重新安装系统软件。<BR>
+　⒉根据随机附带的系统软件版本，使用上面的一种步骤来安装 Open Transport 1.1.1。<BR>
+<BR>
+<BR>
+<STRONG>Apple Software Update 节点</STRONG>
+<BR>
+<BR>
+更新苹果软件的信息可从 World Wide Web 上的联机服务或其它联机服务得到。在 Web 上，请进入以下任一个节点：<BR>
+<BR>
+　www.info.apple.com<BR>
+　www.support.apple.com<BR>
+<BR>
+这两个节点都提供到“Apple Software Updates”（苹果软件更新）页面的联接。<BR>
+<BR>
+这些节点也提供到 Technical Info Library (TIL)（技术信息库）的联接。在 TIL 中查找“find 
+apple software updates”（查找苹果软件更新），您可以在 Internet、America Online、CompuServe 
+和其它联机服务上找到 Apple Software Updates 的位置。<BR>
+<BR>
+在到达 Apple Software Updates 节点后，请使用以下的路径来找到 Open Transport 软件：<BR>
+<BR>
+　Apple SW Updates<BR>
+　    US<BR>
+　      Macintosh<BR>
+ 　       Networking-Communications<BR>
+   　       Open Transport<BR>
+<BR>
+<BR>
+<STRONG>在安装 Open Transport/PPP 1.0 之前</STRONG>
+<BR>
+<BR>
+·在安装本软件之前备份拷贝硬盘上的软件和文稿（特别是“系统文件夹”）。<BR>
+<BR>
+·如果已使用 SLIP 或 PPP 软件访问 Internet，请记下输入到以前的“SLIP”或“PPP”控制板中的配置信息。配置不会自动从非苹果的 
+SLIP 或 PPP 软件转换过来。<BR>
+<BR>
+<BR>
+<STRONG>已知的不兼容性和局限性</STRONG>
+<BR>
+<BR>
+·Open Transport/PPP 要求与 Open Transport 1.1.1 一起使用。不应该试图与 Open Transport 
+1.1 一起使用 Open Transport/PPP。<BR>
+<BR>
+·ARA 2.x 调制解调器 CCL 命令语言可以与 Open Transport/PPP 一起使用。但是，一些 ARA 
+2.x 命令语言不支持基于调制解调器的纠错和数据压缩，因此不会优化性能。您应该尝试使用 
+Open Transport/PPP 提供的一种调制解调器命令语言。如果找不到匹配您的调制解调器的那种，您可以修改现存的命令以满足需要。<BR>
+<BR>
+·如果正在使用 ARA 2.1 和 Open Transport/PPP 两者，请确保在 ARA 2.1 之后安装 Open 
+Transport/PPP，以为两种产品获得调制解调器命令语言的正确设置。<BR>
+<BR>
+·如果正在有睡眠功能的台式 Macintosh 上运行 Open Transport/PPP，当您从“其它”菜单中选取“睡眠”时，Open 
+Transport/PPP 连接不会自动中断，因为使台式计算机睡眠仍可以使网络继续活跃（不像 PowerBook 
+机型）。如果使台式机睡眠时不想保留连接到 PPP 服务器，请使用“PPP”控制板手动中断连接。<BR>
+<BR>
+·如果安装了比 1.0f1c2 版本更早的 Open Transport/PPP 的拷贝，您必需扔掉旧的 Open Transport/PPP 
+预置文件。要这样做，请从现用“预置”文件夹中移走“远程访问”文件夹。重新启动计算机，然后使用“调制解调器”和“PPP”控制板来自定配置。<BR>
+<BR>
+·Open Transport/PPP 1.0 与 Apple Express Modem 存在一些不兼容性。如果在“调制解调器”控制板的“端口”按动式菜单中不出现“内置调制解调器”选项，请在“Express 
+Modem”控制板中取消“使用内置调制解调器而不是调制解调器／打印机端口”（Use internal 
+modem instead of Modem/Printer port）框中的注记，再重新启动，然后再次打开“调制解调器”控制板。<BR>
+<BR>
+·部分旧的程序没有使用 Open Transport，而在连接 PPP 时会尝试使用串行端口；您可能在使用这些程序时会遇到困难。解决方法是在启动串行应用程序之前使用“PPP”控制板来中断连接 
+PPP。<BR>
+<BR>
+·Claris Emailer 1.1v3 或以后版本与 Open Transport 1.1.1 不兼容。早期版本的 Claris 
+Emailer 的“Quit”（退出）命令中的问题有时会导致 Open Transport 1.1.1 死机（对 Open 
+Transport/PPP 可能死机，也可能不死机）。为了方便，Claris Emailer 1.1v3 修补程序和 
+Claris Emailer Lite 1.1v3 修补程序已提供在“Open Transport Extras”文件夹中。<BR>
+<BR>
+·当您从 Performa 6300CD 计算机拨号入 Internet 服务提供者时，可能会遇到光盘和电视的声音问题。解决方法是在尝试连接之前启动 
+Megaphone。<BR>
+<BR>
+·当输入 Motorola BitSURFR Pro 56K 和 64K ISDN 终端适配器的电话号码时，不要在号码之间使用破折号和空格。例如，“555-9999”应该输入为“5559999”。输入空格和破折号会阻止 
+BitSURFR Pro 的成功连接，特别当两个 ISDN 频道在使用时。<BR>
+<BR>
+·如果使用来自 Stalker GmbH 的 PortShare Pro 来设置虚拟调制解调器或虚拟打印机端口，端口会在“调制解调器”控制板中相应地出现为“调制解调器”或“打印机”，而不是出现为“虚拟调制解调器”或“虚拟打印机”。PortShare 
+Pro 会用自身的驱动程序替换机载调制解调器／打印机端口的串行驱动程序，因此选择“调制解调器”或“打印机”会导致 Open Transport/PPP（和任何其它原生性 
+Open Transport 串行应用程序）使用替换后的驱动程序。<BR>
+<BR>
+·Open Transport/PPP 会报告 56Kbps 或 64Kbps 的单个频道速度。当用多链路 PPP 使用第二个 
+ISDN 频道时，可以使用 112Kbps 或 128Kbps 的速度，但不能显示。请使用终端适配器来找出第二个频道的速度。<BR>
+<BR>
+<BR>
+<STRONG>与 Apple Internet Connection Kit 的兼容性</STRONG>
+<BR>
+<BR>
+您可以在计算机上同时安装 Open Transport/PPP 和 Apple Internet Connection Kit (AICK)（苹果 
+Internet 连接套件） 。两种产品使您能用调制解调器拨号并连接到 Internet。<BR>
+<BR>
+发布这个版本时，AICK 没有使用 Open Transport/PPP 软件来拨号和连接到 Internet。AICK 
+有其自身的拨号程序，拨号程序使用 MacPPP 软件来建立远程连接。MacPPP 是“点对点协议”（Point-to-Point 
+Protocol）的非苹果实现。<BR>
+<BR>
+但是，所有 AICK 应用程序与 Open Transport/PPP 1.0 兼容。要与 AICK 应用程序一起使用 
+Open Transport/PPP，您必需按 Open Transport/PPP 用户手册和“Mac OS 使用指南”的“连接到 
+Internet”中描述的，来配置 Open Transport/PPP。<BR>
+<BR>
+目前现用的 PPP 软件是在“TCP/IP”控制板中使用“连接经由”按动式菜单来选择的。MacPPP 
+出现为 MacPPP，OT/PPP 出现为 PPP。MacPPP 由使用“ConfigPPP”控制板、Apple Internet 
+Dialer 应用程序或 Apple Internet Status 应用程序所控制。Open Transport/PPP 由使用“调制解调器”和“PPP”控制板所控制，这控制板不会修改 MacPPP 配置信息。<BR>
+<BR>
+如果使用两种 PPP 软件包（一次使用一种），请注意启动 Apple Internet Dialer 或 Apple 
+Internet Status 会使 MacPPP 成为现用。更进一步地，每次从 PPP 软件包切换到其它软件包时，您需要切换 
+TCP/IP 配置。（更改 TCP/IP 配置的信息出现在“Mac OS 使用指南”的“网络”标题域。）<BR>
+<BR>
+<BR>
+<STRONG>与非苹果软件交互作用</STRONG>
+<BR>
+<BR>
+Netscape 2.x 在 Mac OS System 7.5.3 以前的版本或 Open Transport 1.1 以前的版本上不能可靠工作。如果您想使用 
+Netscape 2.0.1 或以后版本，应该确保也使用 Mac OS System 7.5.3 或以后版本和 Open Transport 
+1.1.1 或以后版本。不遵照这个推荐会导致系统死机。<BR>
+<BR>
+<BR>
+<STRONG>调制解调器支持</STRONG>
+<BR>
+<BR>
+支持许多常用调制解调器的命令提供在 Open Transport/PPP 安装磁盘上。命令语言包括：<BR>
+<BR>
+ 3Com Impact Analog 14.4<BR>
+ 3Com Impact ISDN 56K<BR>
+ 3Com Impact ISDN 56K MLPPP <BR>
+ 3Com Impact ISDN 64K<BR>
+ 3Com Impact ISDN 64K MLPPP<BR>
+ Apple Personal Modem<BR>
+ AT&amp;T Dataport 288<BR>
+ AT&amp;T KeepInTouch<BR>
+ Best Data Smart One 28.8/33.6<BR>
+ Dayna CommuniCard 28800<BR>
+ Farallon Netopia 56K<BR>
+ Farallon Netopia 56K MLPPP<BR>
+ Farallon Netopia 64K<BR>
+ Farallon Netopia 64K MLPPP<BR>
+ GeoPort/Express Modem<BR>
+ GeoPort/Express Modem CNG<BR>
+ Global Village Gold/Silver/Merc<BR>
+ Global Village Platinum/Gold II<BR>
+ Hayes Accura 288<BR>
+ Hayes Optima 288<BR>
+ Megahertz CruiseCard 14.4<BR>
+ Megahertz CruiseCard 28.8<BR>
+ Metricom Ricochet Wireless<BR>
+ Microcom DeskPorte Fast/288<BR>
+ Microcom QX/4232bis<BR>
+ Motorola BitSURFR 56K<BR>
+ Motorola BitSURFR 56K MLPPP<BR>
+ Motorola BitSURFR 64K<BR>
+ Motorola BitSURFR 64K MLPPP<BR>
+ Motorola ModemSURFR 28.8<BR>
+ Motorola Power/Lifestyle 28.8<BR>
+ Null Modem 9600<BR>
+ Null Modem 19200<BR>
+ Null Modem 57600<BR>
+ Null Modem 115200<BR>
+ Practical Peripherals V.34<BR>
+ Smart One 28.8<BR>
+ Supra 14.4<BR>
+ Supra 28.8/33.6<BR>
+ TDK DF2814<BR>
+ Telebit QBlazer<BR>
+ US Robotics Universal<BR>
+ Zoom V-Series<BR>
+<BR>
+苹果现在将所有调制解调器命令语言安装在“modem scripts”（调制解调器命令语言）文件夹（在“功能扩展”文件夹中）中，而不是直接安装在“功能扩展”文件夹中。将来的苹果产品会以同样方式操纵调制解调器命令语言。Open 
+Transport/PPP 不识别存储在“调制解调器命令语言”文件夹以外的调制解调器命令语言。<BR>
+<BR>
+安装器已停用调制解调器命令语言的自动路径选择。在安装 Open Transport/PPP 之后，如果调制解调器命令语言被拖进现用“系统文件夹”，它不会选择路径到“功能扩展”文件夹。<BR>
+<BR>
+安装器的“简易安装”模式会拷贝所有的 Open Transport/PPP 调制解调器命令语言到磁盘上。您可以选定“自定安装”来限定只安装您选择的命令语言。<BR>
+<BR>
+注意：您可以从“modem scripts”文件夹中删除任何不需要的命令语言，这文件夹在“功能扩展”文件夹中。要识别命令语言，请查找名为“Modem 
+Link Tool Personal document”（Modem Link Tool Personal 文稿）的文件。<BR>
+<BR>
+<BR>
+<STRONG>附加的（不被支持的）调制解调器命令语言</STRONG>
+<BR>
+<BR>
+用户提供的命令语言可从联机得到。新命令语言会定时引进，并且苹果电脑愿意发布用户赠送的命令语言，来帮助使“苹果远程访问”和 
+Open Transport/PPP 较容易地与尽可能多的调制解调器一起工作。<BR>
+<BR>
+<STRONG>重要信息：</STRONG>
+Apple Computer, Inc. 没有测试或支持用户提供的命令语言，因此如果使用自不被支持的文件夹下载的命令语言遇到困难，您应该联系命令语言的作者，而不是苹果电脑。用户提供的调制解调器命令语言以“目前状态”对苹果客户提供方便。不能保证它们完备或不出错，尽管苹果电脑选定了审查和完全测试一些用户提供的命令语言，并且将它们包括在苹果软件将来的版本中。如果您想给苹果电脑提供某个用户提供的命令语言的反馈，请给下面地址发送电子邮件：msg@apple.com<BR>
+<BR>
+要找到这些命令语言，请使用以下路径进入到 Apple Software Updates 位置：<BR>
+<BR>
+  Apple SW Updates<BR>
+    US<BR>
+      Macintosh<BR>
+        Unsupported<BR>
+         CCL<BR>
+<BR>
+如果您想提供一个调制解调器命令语言，请使用以下的步骤：<BR>
+<BR>
+⒈从“User-contributed scripts”（用户提供的命令语言）文件夹下载 Read Me（请先阅读）文件样本。文件名为 
+CCL_README_TEMPLATE。<BR>
+⒉自定 Read Me（请先阅读）样本为相对应于您想提供的命令语言。<BR>
+⒊发送电子邮件给 msg@apple.com，并以二－十六进制格式打包邮件。<BR>
+<BR>
+只有当命令语言附有解释其目的和如何联系作者的 Read Me（请先阅读），命令语言才能被邮送。<BR>
+<BR>
+（请查看 Read Me 开头旁边的“Apple Software Updates Sites”，来获取如何找到“Apple 
+Software Updates”位置。）<BR>
+<BR>
+<BR>
+<STRONG>调制解调器电缆要求</STRONG>
+<BR>
+<BR>
+大多数调制解调器要求支持数据终端预备（data terminal ready－DTR）信号的电缆。另外，某些调制解调器要求支持 
+CTS/RTS 硬件流控制的电缆。要支持 DTR，电缆必需将 DB-25 端子上的第 20 个孔连接到 Mini 
+DIN-8 上的第个 1 孔。要支持 CTS/RTS，电缆必需将 DB-25 端子上的第个 5 孔连接到 Mini DIN-8 上的第 2 个孔，并且将 DB-25 端子上的第个 4 孔连接到 Mini DIN-8 
+上的第 1 个孔。请与调制解调器供应商或苹果电脑认可的分销商联系以获得必需的电缆。<BR>
+<BR>
+<BR>
+<STRONG>Open Transport/PPP 与“苹果远程访问”的兼容性</STRONG>
+<BR>
+<BR>
+Open Transport/PPP 与 ARA 1.0、2.0、2.0.1 和 2.1 完全兼容，并且可以在同一系统上使用。每次只能使用一个。<BR>
+<BR>
+ARA 2.1 以前的版本直接将调制解调器命令语言安装在“功能扩展”文件夹中。要确保这些命令语言在“调制解调器”控制板中出现为选项，请将它们移到“功能扩展”文件夹的“modem 
+scripts”文件夹中。<BR>
+<BR>
+ARA 2.1 将其命令语言安装在“功能扩展”文件夹的“modem scripts”文件夹中。如果使用 
+ARA 2.1，您必需在 ARA 2.1 之后安装 Open Transport/PPP，才能在“modem scripts”文件夹中获得对两种产品都能优化操作的命令语言集。Open 
+Transport/PPP 命令语言支持某些基于调制解调器的功能，比如能提高性能的纠错和数据压缩。ARA 2.X 命令语言不支持这些功能。<BR>
+<BR>
+而且，包含在 ARA 2.1 中的命令语言不再随 Open Transport/PPP 一起安装。这些命令语言由 
+Open Transport/PPP 安装器留在磁盘上。它们对 Open Transport/PPP 可用，但未被苹果电脑测试过兼容性。<BR>
+<BR>
+<BR>
+<STRONG>注册用户或客人？</STRONG>
+<BR>
+<BR>
+如果 PPP 服务器没有要求用户名称和密码，或者如果服务器只要求在终端窗口中输入名称和密码，您可以在“PPP”控制板中选择“客人”模式。这样就会在一输入电话号码就隐藏“名称”和“密码”栏并且会启用“连接”按钮。<BR>
+<BR>
+如果服务器要求 PPP 用户名称和密码，或者还要加上终端服务器登录，您必需输入“PPP”控制板的“注册用户”模式。在这种模式下，您必需在“名称”和“密码”栏中输入内容才能启用“连接”按钮。如果使“密码”栏空着，且未给“存储密码”作注记，您会得到提示以确认您想不带密码连接。<BR>
+<BR>
+<BR>
+<STRONG>连接命令语言</STRONG>
+<BR>
+<BR>
+下列 varStrings 已增加到用户名称和密码的 CCL 命令语言中：<BR>
+<BR>
+名称：^11 或 ^U<BR>
+密码：^12 或 ^P<BR>
+<BR>
+当执行连接命令语言时，这些 varStrings 由存储在“PPP”控制板的“名称”和“密码”栏的串取代。<BR>
+<BR>
+当记录连接命令语言，并且您已在“PPP”控制板中输入了名称和密码时，终端窗口记录的连接命令语言会用相应的 
+varStrings 取代那些串。<BR>
+<BR>
+^U 和 ^P varStrings 被作为用户名称和密码的记忆码，但它们不能用作一些 CCL 命令的参数，如 
+IFSTR。对于那些命令，请使用 ^11 和 ^12 varStrings。<BR>
+<BR>
+在“WRITE”（写）命令中使用密码 varString (^12) 的连接 CCL 命令语言不能以清晰文本登录密码。密码被登录为圆点。无论用户记录命令语言或键入命令语言，这种情况都存在。<BR>
+<BR>
+用于调制解调器命令语言和连接命令语言两者的 CCL 语言句法更详细的信息在“OT/PPP Extras”文件夹的“ARA 
+Modem Scripting Guide.PDF”文件中。这文件用的是 Adobe Acrobat 格式。<BR>
+<BR>
+<BR>
+ <STRONG>手动拨号</STRONG>
+<BR>
+<BR>
+用手动拨号建立 Open Transport/PPP 连接的步骤取决于使用的调制解调器类型。要确保使用手动拨号能连接上，在听到远程调制解调器应答电话之前或之后，您需要轻轻地按下“连接”按钮来试验一下。<BR>
+<BR>
+<BR>
+ <STRONG>使用 Express Modem 或 GeoPort Telecom Adapter</STRONG>
+<BR>
+<BR>
+如果与 Express Modem 或 GeoPort Telecom Adapter 之任一个一起使用 Express Modem 软件，您必需在“存储器”控制板中打开 
+32 位寻址方式。使用 24 位寻址方式会导致错误行为。<BR>
+<BR>
+<BR>
+ <STRONG>使用 Global Village PC 卡产品</STRONG>
+<BR>
+<BR>
+包含在调制解调器中的 Global Village 软件给“调制解调器”控制板的“连接经由”按动式菜单增加了一个入口，叫作“PowerPort 
+PC Card”（PowerPort PC 卡）。在某些环境下，PC 被插入的实际插槽的入口也会显示（“上插槽”、“下插槽”）。不应该使用这些按插槽分别的项目，而应该使用“PowerPort PC Card”，否则错误报告为正忙。<BR>
+<BR>
+<BR>
+ <STRONG>使用 ISDN 终端适配器</STRONG>
+<BR>
+<BR>
+Open Transport/PPP 和 ARA 2.1 两者都支持速度为 115,200 和 230,400 bps 的串行连接。如果两端的 
+ISDN 终端适配器都支持频道连接且使用了适当的调制解调器命令语言，苹果电脑这样做，就使 
+Macintosh 用户以 64 kbps 甚至 112 kbps 通过 ISDN 行来建立 ARA 和 PPP 连接。<BR>
+<BR>
+<STRONG>注意：</STRONG>
+“PPP”控制板的状态框的“连接时间”行不会精确反映 ISDN 连接的连接速度。显示出的可能是较慢的速度，因为 
+ISDN 终端适配器硬件不会报告建立至 CCL 命令语言机制的第二个频道连接。如果您使用 ISDN 
+命令语言的 Multilink PPP (MLPPP) 版本，通常就会发生这种情况。<BR>
+<BR>
+大多数早期的 Macintosh 计算机上的串行端口不支持 115,200 和 230,400 bps 的连接速度。这是对快速串行端口支持的 
+Macintosh 机型的部分列表：<BR>
+<BR>
+·Macintosh Centris 660av、Macintosh Quadra 660av 和 Macintosh Quadra 840av 机型<BR>
+·Macintosh Performa 6100CD 系列<BR>
+·Power Macintosh 6100、7100、7200、7500、7600、8100、8500 和 9500 机型<BR>
+·Workgroup Server 6150、7250、8150、8550 和 9150 机型<BR>
+<BR>
+要以 115,200 或 230,400 bps 设置内建串行端口，必需安装叫作 SerialDMA 的新的串行驱动程序，来取代标准 
+Macintosh 串行设备驱动程序。SerialDMA 由苹果电脑提供，目前版本是 2.0.2。也高度推荐在装有 
+PCI 插槽的 Macintosh 机型上的“功能扩展”文件夹中安装文件 Serial (Built-in)，来支持这些高速度（38,400 bps 和以上）。System 7.5.3 或以后版本包含最新版本的 
+SerialDMA 和文件 Serial (Built-in)。<BR>
+<BR>
+<STRONG>注意：</STRONG>
+一般来讲，ISDN 终端适配器比常规调制解调器有更多的配置选项。苹果电脑现在不可能为所有被支持的 
+ISDN 终端适配器而支持这些选项的全部组合。我们已努力写了能在大多数常见 ISDN 配置下工作的命令语言。如果您的服务器使用了不同的选项，您需要从Internet 
+服务提供者或网络管理员处获得修改的命令语言。您也可以使用 Modem Script Generator（命令语言发生器）或直接编辑命令语言文本，来自己修改命令语言。<BR>
+<BR>
+<BR>
+<STRONG>如何关闭或移走 Open Transport/PPP</STRONG>
+<BR>
+<BR>
+要使用“安装器”中的“自定移走”选项来停用或移走 Open Transport/PPP，请按照以下步骤进行：<BR>
+<BR>
+⒈打开包含在 Open Transport/PPP 1.0 中的“Installer”（安装器）应用程序。<BR>
+　会出现“Welcome to the Apple Installer”（欢迎使用苹果安装器）屏幕。<BR>
+⒉点按“Continue...”（继续…）按钮。<BR>
+　会出现“Open Transport PPP Installation”（Open Transport PPP 安装）屏幕。<BR>
+⒊从左上角的按动式菜单中选取“Custom Remove”（自定移走）。<BR>
+⒋在出现的列表中，点按每个文件旁边的框以使里面出现“X”，来选择您想移走的文件。要完全移走 
+Open Transport/PPP，您应该选择列出的全部文件。<BR>
+⒌点按“Remove”（移走）按钮。<BR>
+　如果出现一个窗口询问您是否要退出所有打开的应用程序，请点按“Continue...”（继续…）。<BR>
+　会出现一个窗口告诉您重新启动计算机。<BR>
+⒍点按“Restart”（重新启动）按钮。<BR>
+⒎按要求重新安装并配置以前的 SLIP/PPP 软件。<BR>
+<BR>
+要不使用“Installer”（安装器）来停用 Open Transport/PPP，请按照以下步骤进行：<BR>
+<BR>
+<STRONG>注意：</STRONG>
+尽管“PPP”和“调制解调器”控制板出现在“功能管理程序”中，但“功能管理程序”中没有让您停用 
+Open Transport/PPP 的组件。要不使用“Installer”（安装器）来停用 Open Transport/PPP，您需要按照这里的指示进行。<BR>
+<BR>
+⒈从现用“系统文件夹”的“功能扩展”文件夹中移走 OpenTpt Remote Access、OpenTpt Modem 
+和 OpenTpt Serial Arbitrator 共享库文件。<BR>
+⒉从“功能扩展”文件夹的“Scripting Additions”（附加命令语言）文件夹中移走“PPP Commands”（PPP 
+命令）文件。<BR>
+⒊从现用“系统文件夹”的“控制板”文件夹中移走“PPP”和“调制解调器”控制板。<BR>
+⒋重新启动计算机。<BR>
+<BR>
+无需从“功能扩展”文件夹中移走“调制解调器命令语言”文件夹。<BR>
+<BR>
+<BR>
+<BR>
+� 1996 Apple Computer, Inc.<BR>
+� 1996 苹果电脑国际有限公司<BR>
+<BR>
+苹果、苹果标记、Apple、 AppleScript、 Mac、 Macintosh、 Performa、 Power Macintosh 
+和 PowerBook 是 Apple Computer, Inc. 在美国和其它国家的注册商标。At Ease 是 Apple 
+Computer, Inc. 的商标。Claris 和 Emailer 分别是 Claris Corporation 的注册商标和商标。PowerPC 是国际商用机器公司（IBM）的商标，授权方可使用。所有其它产品是其相应拥有者的商标或注册商标。提及非苹果产品是为参考目的，并没有签署认可或推荐。苹果电脑对这些产品的选择、性能或使用概不负责。<BR>
+<BR>
+更新于 10/28/96
+</BODY>
+</HTML>

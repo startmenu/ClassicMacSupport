@@ -1,1 +1,120 @@
-<html lang="zh">        <head>        <meta http-equiv="Content-Type" content="text/html"; charset="gb2312" />        <title>Mac 入门 — Classic Mac 非官方支持</title>    </head>        <body>        <h1 align=center>Classic Mac 非官方支持站</h1>            <table align="center" border="0" cellspacing="8">                <tr>                    <td><a href="index.html">主页</a>                    </td>                    <td><a href="beginner.html">入门</a>                    </td>                    <td><a href="hardware.html">硬件指南</a>                    </td>                    <td><a href="software.html">软件指南</a>                    </td>                    <td><a href="help.html">Mac帮助</a>                    </td>                    <td><a href="about.html">关于本站</a>                    </td>                </tr>            </table>        <h2>Mac入门</h2>        <p>关于Mac的基础知识可以参考各版本<a href="help.html">Mac OS的帮助</a>，本页面将介绍一些Mac的基本常识。</p>        <p>页面还在建设中，随缘更新……</p>        <br />        <h2>国内的老Mac交流圈子</h2>        <p>相比国外有Macintosh Garden，E-Maculation，Low End Mac等网站交流老Mac，国内这方面的讨论就冷清得多了。相关的论坛、贴吧少之又少，玩家之间也是小规模讨论，这些社群小而分散，远不及国外的老Mac社区。</p>        <p><a href="https://www.zhihu.com/column/classicMac">“老Mac与Mac OS收藏”知乎专栏</a>中有不少关于老Mac的优质文章，该网站需要现代浏览器才能访问。在此之外，难以找到一个此类内容的聚集地。            <br />如果发现了其他好的文章，也会在此贴出地址。</p>        <p><b>国内外酷站推荐：</b><br /><a href="http://legacy.cnvintage.org/">CNVintage Legacy站</a> - 中文古董电脑交流论坛的简易版，无https；<br /><a href="http://main.system7today.com/">System 7 Today</a> - 英文网站，介绍System 7相关信息，老浏览器可以访问；<br /><a href="http://www.cornica.org/">Cornica</a> - 英文网站，老Mac能访问的视频网站，安装QuickTime插件后可在浏览器上观看视频；<br /><a href="http://macintoshgarden.org">Macintosh Garden</a> - 英文网站，提供软件、游戏等资源的下载，内容以英文和其他欧洲语言为主；<br /><a href="http://macos9lives.com">Mac OS 9 Lives</a> - 英文网站，交流Classic Mac OS的论坛，DAW（数字音频工作站）讨论区是它的一大亮点；<br /><a href="http://mirror.macintosharchive.org">Macintosh Archive Mirror</a> - 英文网站，提供各种老Mac站点的镜像，里面有许多未分类的宝藏，可配合Google的站点搜索使用。<br /><a href="http://ppcarchive.dyniform.net/">PowrPC Archive</a> - 英文网站，提供PowerPC Mac和早期Intel Mac的软硬件信息。<br /><a href="http://mac-classic.com/">Classic Mac</a> - 英文网站，Classic Mac 综合信息站点，推荐浏览。<br /><a href="http://lowendmac.com">Low End Mac</a> - 英文网站，提供旧Mac的信息，如机型参数，使用技巧等。<br />先介绍这么多，慢慢更新…… </p>        <br />        <h2>Mac OS —— Mac魅力之所在</h2>        <p>Mac之所以是Mac， Mac OS功不可没。</p>        <p>从Macintosh System Software到Mac OS，再到Mac OS X脱胎换骨，Mac操作系统的名字也几经变换。本站的重点当然也在Classic。<br />关于Classic Mac OS，之前在知乎上也写过浅谈Classic的文章，这里将修订版本贴出。        <br /><a href="docs/classicmacos1.html">浅谈 Classic Mac OS （上）</a>        <br /><a href="docs/classicmacos2.html">浅谈 Classic Mac OS （下）</a>        </p>        <br /><h2>Mac OS的启动和文件夹结构</h2>    <p>早期System非常简单，只需要一个System文件和一个Finder就能启动，这两个文件通常位于系统文件夹（System folder）内。Macintosh的ROM在启动自检后通过后播放启动声音。然后会寻找有效的系统文件夹，找到后显示happy mac图标并启动系统。如果自检失败，有些型号则会播放死机声音，显示sad mac图标并显示错误代码。如果系统文件夹损坏，则显示破损的系统文件夹图标。如果没有找到有效的系统文件夹，则显示闪烁问号的软盘图标，让用户插入可以启动的软盘或光盘。</p><p>Macintosh ROM除了充当固件，启动系统和自检硬件，ROM内还包括Macintosh Toolbox，包含用于实现图形界面的基本驱动，各种Manager和基础库等部分。Macintosh Toolbox启动后会自动检查内存，查找和初始化硬件设备，再之后就是启动系统文件夹了。</p><p>早期Macintosh System的目录结构比较简单，磁盘根目录下一般就是一个系统文件夹，存放系统文件。根分区下可能还有其他文件和文件夹，可能是安装了应用程序也可能是用户存放了数据。System 6及之前的版本，各种功能扩展、控制板等文件是直接放在系统文件夹下的。而字体和桌面附件是位于System文件内的，需要使用Font/DA Mover来增删。</p><p>从System 7开始，为了避免系统文件夹过于凌乱，苹果为各种类型的文件创建了子文件夹。例如功能扩展，控制板，苹果菜单项目，预置，启动项目等等。将相应的项目都放进了这些文件夹。Finder还能自动识别部分文件的类型，根据类型放入系统文件夹的相应子文件夹内。<br />关于系统文件夹内的项目，请参考：<br /><a href="docs/sys7readmes.html">Mac OS 7.6及其组件的关于文档</a></p><p>后续版本的系统（Mac OS 8和9.0.x），磁盘根目录也有了更多的文件夹。如Apple Extra、应用程序、实用程序、Internet、助理、Web页面等等。这使得硬盘根目录更加有序。Apple Extra文件夹存放苹果的附加程序；实用程序文件夹存放诸如磁盘设置和磁盘修理工具等程序；应用程序则是存放大多数软件的地方；助理文件夹存放设置助理，如Internet设置助理等帮助用户联网和设置局域网的工具；Web页面文件夹是如果用户安装了个人Web共享组件后会出现的，用于存放个人网站；Internet文件夹则是存放与互联网有关的软件，内有Internet应用程序文件夹用于存放浏览器和电子邮件客户端，而Internet实用程序文件夹存放Stuffit Expander之类的打包解包工具。</p><p>Mac OS 9.1发布时，考虑到Mac OS X也同期发布，苹果将硬盘目录进行了一次大改。默认只留了三个文件夹，系统文件夹、Applications (Mac OS 9)、文稿。之前大部分的文件夹都整合到了Applications (Mac OS 9)中，IE和Netscape浏览器也直接位于此文件夹中，而Web页面放在了文稿文件夹。这些变化也是为Mac OS X做准备，因为通常Mac OS X和Mac OS 9是安装在同一分区的。如果需要切换启动的系统，Mac OS 9.1的启动磁盘控制板也能够直接列出一个分区内的不同系统，以便切换下次启动的系统。</p>        <h2>Mac文件系统的特殊性</h2>        <p>与PC世界大多数文件系统不同的是，Mac的文件系统中，一个文件可以有两个fork（分叉） —— Data fork（数据分叉）和Resource fork（资源分叉）。</p>        <p>其中Resource fork存储结构化的数据，例如图标、图片、字体、对话框、菜单、可执行代码等数据。而Data fork存放非结构化的数据。</p>        <p>PC的大多数文件系统是没有Resource fork的，如果直接将Mac的文件拷贝到Windows的磁盘中，Resource fork中的数据会丢失。</p>        <p>有些文字处理软件可能会将文本放在Data fork中，而将文字格式的定义和插入的图片放入Resource fork中。此时，如果只拷贝了data fork中的数据，此文件会丢失文字格式和图片。如果是一个应用程序文件只拷贝了data fork中的数据，它将无法运行。</p>        <p>可见，Resource fork对于Mac来说十分重要。在将Mac文件拷贝到PC或服务器之前，一般需要先用MacBinary、BinHex、Stuffit等软件将文件打包，这样就能同时将文件的data fork和resource fork中的数据同时保存到一个文件里，文件传输后再用这些软件解包也能正常使用。</p>        <p>当然，有些文件只有data fork也能正常使用，例如MP3音频，MP4视频等等。PC世界的大部分文件对于Mac来说都只有data fork。PC的文件拷贝到Mac上将只有data fork的内容，然而这并不影响使用。</p>        <p>在Mac文件系统中，一个文件的属性（Get info信息）也与PC的不同。最明显的一点是，PC通过文件扩展名来区分文件类型，而Mac是通过OS Type来区分文件类型以及确定文件打开方式的。文件有type code（类型代码）和creator code（创建者代码）两个属性，均使用四个字符来表示。例如使用SimpleText程序创建的文本文件，其文件类型为TEXT，创建者为ttxt。Finder打开该文件时会使用creator type为ttxt的程序（即SimpleText或其他创建者类型为ttxt的程序打开）打开。后来从Mac OS X 10.6开始，Finder就不再靠type code和creator code来区分文件类型与设置打开方式了。</p>        <p>对于外来文件，例如DOS和Windows的文件，Mac的PC Exchange（文件交换程序）会根据其扩展名为其设置type code。但是很多情况并不会默认触发这一机制，Finder中会将这些外来文件显示为空白文件图标，双击也会提示没有找到创建该文件的应用程序。</p>        <p>如果需要手动修改文件的type code和creator code，可以使用<a href="http://macintoshgarden.org/apps/resedit">ResEdit</a>工具，在File菜单中可以选择Get File/Folder Info，然后打开要修改的文件。其他的工具还有<a href="http://macintoshgarden.org/apps/filetyper-501">FileTyper</a>, <a href="http://macintoshgarden.org/apps/creator-changer">Creator Changer</a>, <a href="http://macintoshgarden.org/apps/ilikeyoumore">iLikeYouMre</a>等等；如果需要查询Type和Creator信息，可以使用<a href="http://macintoshgarden.org/apps/typecreator-database">Type/Creator Database</a>。这些工具在Macintosh Garden上都能找到。</p>        <br />        <h2>与现代PC/Mac进行文件交换</h2>        <p>正是因为Classic Mac文件系统与众不同，Mac与PC进行文件交换时比较麻烦。<br /> 请参考：<a href="docs/file_exchange.html">文件交换指南</a> 。</p>        <br /><h2>Classic Mac的字体支持</h2>        <p>一般来说，Classic Mac的字体存放在resource fork中，一个字体文件可能没有data fork。有些应用程序也可以在resource fork中存放字体。</p>        <p>System 6之前的系统只能支持点阵字体，System 6可以通过TrueType功能扩展支持TrueType字体。System 7.1系统开始支持TrueType字体。通过Adobe Type Manager，Mac可以支持PostScript Type 1字体。</p>        <p>System 7.1之前，系统使用的字体文件是存放在系统文件夹的System手提箱中的，需要通过Font/DA Mover（字体/桌面附件搬运器）来添加和删除字体，从System文件中移除来的字体需要存放在Suitcase（手提箱）文件中，不能单独存在。</p>        <p>从System 7.1开始，系统文件夹中增加了“字体”文件夹用于存放字体文件。字体文件一般叫“字体手提箱”，每个手提箱可以存放多个字体。System 7到Mac OS 9最多支持128个字体文件。</p>        <p>Mac OS 8.5开始支持data fork字体，包括了Windows版TrueType字体和OpenType字体，苹果还推出了data fork TureType格式（.dfont）。</p>        <p>相关帮助：<a href="machelp/SC_IM_Help/Font/pgs/FontInfo.htm">Macintosh 字体</a><br />如果需要更多字体以满足文档和设计的需要，可以在软件指南中找到Classic Mac的字体包。对于Windows上的TrueType字体，Classic实际上是不支持的。但是老版本的OpenType字体，Classic还是可以支持的，前提是先安装Adobe Type Manager 4.6以及更高版本。otf文件需要用ResEdit等工具，修改文件的type code为sfnt。<br /> 参考： <a href="http://chinesemac.org/pages/fonts.html">Fonts - Chinese Mac</a>， <a href="http://whitefiles.org/mac/pgs/t03.htm">Using Fonts</a> </p><h2>Classic Mac的多语言支持</h2>        <p>Classic Mac OS实际上是单语言系统，只支持该版本本身的语言。System 5-6的中文实现是通过一个叫“中文Talk”的组件实现的。后来System 7开始使用WorldScript II来实中文支持。</p>        <p>苹果开发了Language Kit（语言套件）来为Mac OS添加其他语言的支持，例如Chinese Language Kit等。英文系统安装Chinese Language Kit之后可以显示和输入中文。简体中文系统如果需要处理繁体中文信息，那需要安装繁体中文的Language Kit，反过来说繁体系统处理简体也需要安装简体的Language Kit。</p>        <p>最早Language Kit是作为单独的软件发布的，各种语言有相应的Language Kit。后来Mac OS 8.5/8.6的安装盘也集成了“Language Kit”，叫“Multilingual Internet Access”（多语言互联网访问），只是只提供语言显示，没有输入法支持。后来Mac OS 9的安装盘里则有各语言完整的Language Kit，安装后能够显示相应语言的字体，并能够输入相应的语言。</p>        <p>虽然Mac OS 9后来也提供对Unicode的有限支持，但中文Mac OS基本还是只能支持GB2312和Big5编码。中文系统的输入法只支持GB2312和Big5字符集，中文字体同样也只有GB2312和Big5的。但是在安装了Unicode扩展之后，浏览器和应用程序在访问Unicode时至少能够支持编码，并调用已有GB2312和Big5及其他CJK字体中的相应字符来显示对应的Unicode字符。Unicode在Mac OS 9安装光盘的“光盘附加程序”文件夹中可找到。<p/>        <p>苹果也有World Text软件可以编辑多语言文档，World Text II能够支持Unicode文档。</p>        <h2>获取Mac机型配置信息</h2>        <p>如果需要了解具体Mac机型的配置，可以访问<a href="http://www.everymac.com">Everymac网站</a>，该网站需要使用较新的浏览器才能访问。</p>        <p>MacTracker软件同样提供了Mac机型配置的详细信息。其4.0.2版兼容Mac OS 8.5至9.2.2系统。新款Mac电脑和iOS/iPad OS设备可以在苹果App Store上找到这款软件。</p>        <p>国内的paizhang君也开发了一款用于查询Mac配置信息的Android App —— MacIndex，可在<a href="https://paizhang.info">paizhang的网站</a>上以及酷安上找到。</p>        <br />        <h2>获得一台老Mac</h2>        <p>如果没有老Mac，可以先使用模拟器体验Mac OS。实在有兴趣，可以考虑购买一台老Mac。<br />国内老Mac保有量并不算多，大多数的老Mac都是G3到G5的，台式机多为当年单位或工作室淘汰的，笔记本多为“洋垃圾”（从国外“进口”的二手旧货）。早于G3的机器非常罕见。<br />待续……</p>        <br />        <hr>        <p align="center"><img src="logo.gif"></p>        <p align="center">Apple logo、Macintosh、Mac、Mac OS是Apple Inc.的商标。本站是非官方支持站点，与Apple Inc.无任何关系。<br />感谢@Mation Wang制作Logo</p>    </body></html>
+<html lang="zh">
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html"; charset="gb2312" />
+        <title>Mac 入门 — Classic Mac 非官方支持</title>
+    </head>
+    
+    <body>
+        
+<h1 align=center>Classic Mac 非官方支持站</h1>
+            <table align="center" border="0" cellspacing="8">
+                <tr>
+                    <td><a href="index.html">主页</a>
+                    </td>
+                    <td><a href="beginner.html">入门</a>
+                    </td>
+                    <td><a href="hardware.html">硬件指南</a>
+                    </td>
+                    <td><a href="software.html">软件指南</a>
+                    </td>
+                    <td><a href="help.html">Mac帮助</a>
+                    </td>
+                    <td><a href="about.html">关于本站</a>
+                    </td>
+                </tr>
+            </table>
+        
+<h2>Mac入门</h2>
+        <p>关于Mac的基础知识可以参考各版本<a href="help.html">Mac OS的帮助</a>，本页面将介绍一些Mac的基本常识。</p>
+        <p>页面还在建设中，随缘更新……</p>
+        <br />
+        
+<h2>国内的老Mac交流圈子</h2>
+        <p>相比国外有Macintosh Garden，E-Maculation，Low End Mac等网站交流老Mac，国内这方面的讨论就冷清得多了。相关的论坛、贴吧少之又少，玩家之间也是小规模讨论，这些社群小而分散，远不及国外的老Mac社区。</p>
+        <p><a href="https://www.zhihu.com/column/classicMac">“老Mac与Mac OS收藏”知乎专栏</a>中有不少关于老Mac的优质文章，该网站需要现代浏览器才能访问。在此之外，难以找到一个此类内容的聚集地。
+            <br />如果发现了其他好的文章，也会在此贴出地址。</p>
+        <p><b>国内外酷站推荐：</b>
+<br /><a href="http://legacy.cnvintage.org/">CNVintage Legacy站</a> - 中文古董电脑交流论坛的简易版，无https；
+<br /><a href="http://main.system7today.com/">System 7 Today</a> - 英文网站，介绍System 7相关信息，老浏览器可以访问；
+<br /><a href="http://www.cornica.org/">Cornica</a> - 英文网站，老Mac能访问的视频网站，安装QuickTime插件后可在浏览器上观看视频；
+<br /><a href="http://macintoshgarden.org">Macintosh Garden</a> - 英文网站，提供软件、游戏等资源的下载，内容以英文和其他欧洲语言为主；
+<br /><a href="http://macos9lives.com">Mac OS 9 Lives</a> - 英文网站，交流Classic Mac OS的论坛，DAW（数字音频工作站）讨论区是它的一大亮点；
+<br /><a href="http://mirror.macintosharchive.org">Macintosh Archive Mirror</a> - 英文网站，提供各种老Mac站点的镜像，里面有许多未分类的宝藏，可配合Google的站点搜索使用。
+<br /><a href="http://ppcarchive.dyniform.net/">PowrPC Archive</a> - 英文网站，提供PowerPC Mac和早期Intel Mac的软硬件信息。
+<br /><a href="http://mac-classic.com/">Classic Mac</a> - 英文网站，Classic Mac 综合信息站点，推荐浏览。
+<br /><a href="http://lowendmac.com">Low End Mac</a> - 英文网站，提供旧Mac的信息，如机型参数，使用技巧等。
+
+<br />先介绍这么多，慢慢更新…… </p>
+        <br />
+        
+<h2>Mac OS —— Mac魅力之所在</h2>
+        <p>Mac之所以是Mac， Mac OS功不可没。</p>
+        <p>从Macintosh System Software到Mac OS，再到Mac OS X脱胎换骨，Mac操作系统的名字也几经变换。本站的重点当然也在Classic。<br />关于Classic Mac OS，之前在知乎上也写过浅谈Classic的文章，这里将修订版本贴出。
+        <br /><a href="docs/classicmacos1.html">浅谈 Classic Mac OS （上）</a>
+        <br /><a href="docs/classicmacos2.html">浅谈 Classic Mac OS （下）</a>
+        </p>
+        <br />
+
+<h2>Mac OS的启动和文件夹结构</h2>
+    <p>早期System非常简单，只需要一个System文件和一个Finder就能启动，这两个文件通常位于系统文件夹（System folder）内。Macintosh的ROM在启动自检后通过后播放启动声音。然后会寻找有效的系统文件夹，找到后显示happy mac图标并启动系统。如果自检失败，有些型号则会播放死机声音，显示sad mac图标并显示错误代码。如果系统文件夹损坏，则显示破损的系统文件夹图标。如果没有找到有效的系统文件夹，则显示闪烁问号的软盘图标，让用户插入可以启动的软盘或光盘。</p>
+
+<p>Macintosh ROM除了充当固件，启动系统和自检硬件，ROM内还包括Macintosh Toolbox，包含用于实现图形界面的基本驱动，各种Manager和基础库等部分。Macintosh Toolbox启动后会自动检查内存，查找和初始化硬件设备，再之后就是启动系统文件夹了。</p>
+
+<p>早期Macintosh System的目录结构比较简单，磁盘根目录下一般就是一个系统文件夹，存放系统文件。根分区下可能还有其他文件和文件夹，可能是安装了应用程序也可能是用户存放了数据。System 6及之前的版本，各种功能扩展、控制板等文件是直接放在系统文件夹下的。而字体和桌面附件是位于System文件内的，需要使用Font/DA Mover来增删。</p>
+
+<p>从System 7开始，为了避免系统文件夹过于凌乱，苹果为各种类型的文件创建了子文件夹。例如功能扩展，控制板，苹果菜单项目，预置，启动项目等等。将相应的项目都放进了这些文件夹。Finder还能自动识别部分文件的类型，根据类型放入系统文件夹的相应子文件夹内。
+<br />关于系统文件夹内的项目，请参考：
+<br /><a href="docs/sys7readmes.html">Mac OS 7.6及其组件的关于文档</a></p>
+<p>后续版本的系统（Mac OS 8和9.0.x），磁盘根目录也有了更多的文件夹。如Apple Extra、应用程序、实用程序、Internet、助理、Web页面等等。这使得硬盘根目录更加有序。Apple Extra文件夹存放苹果的附加程序；实用程序文件夹存放诸如磁盘设置和磁盘修理工具等程序；应用程序则是存放大多数软件的地方；助理文件夹存放设置助理，如Internet设置助理等帮助用户联网和设置局域网的工具；Web页面文件夹是如果用户安装了个人Web共享组件后会出现的，用于存放个人网站；Internet文件夹则是存放与互联网有关的软件，内有Internet应用程序文件夹用于存放浏览器和电子邮件客户端，而Internet实用程序文件夹存放Stuffit Expander之类的打包解包工具。</p>
+<p>Mac OS 9.1发布时，考虑到Mac OS X也同期发布，苹果将硬盘目录进行了一次大改。默认只留了三个文件夹，系统文件夹、Applications (Mac OS 9)、文稿。之前大部分的文件夹都整合到了Applications (Mac OS 9)中，IE和Netscape浏览器也直接位于此文件夹中，而Web页面放在了文稿文件夹。这些变化也是为Mac OS X做准备，因为通常Mac OS X和Mac OS 9是安装在同一分区的。如果需要切换启动的系统，Mac OS 9.1的启动磁盘控制板也能够直接列出一个分区内的不同系统，以便切换下次启动的系统。</p>
+        
+<h2>Mac文件系统的特殊性</h2>
+        <p>与PC世界大多数文件系统不同的是，Mac的文件系统中，一个文件可以有两个fork（分叉） —— Data fork（数据分叉）和Resource fork（资源分叉）。</p>
+        <p>其中Resource fork存储结构化的数据，例如图标、图片、字体、对话框、菜单、可执行代码等数据。而Data fork存放非结构化的数据。</p>
+        <p>PC的大多数文件系统是没有Resource fork的，如果直接将Mac的文件拷贝到Windows的磁盘中，Resource fork中的数据会丢失。</p>
+        <p>有些文字处理软件可能会将文本放在Data fork中，而将文字格式的定义和插入的图片放入Resource fork中。此时，如果只拷贝了data fork中的数据，此文件会丢失文字格式和图片。如果是一个应用程序文件只拷贝了data fork中的数据，它将无法运行。</p>
+        <p>可见，Resource fork对于Mac来说十分重要。在将Mac文件拷贝到PC或服务器之前，一般需要先用MacBinary、BinHex、Stuffit等软件将文件打包，这样就能同时将文件的data fork和resource fork中的数据同时保存到一个文件里，文件传输后再用这些软件解包也能正常使用。</p>
+        <p>当然，有些文件只有data fork也能正常使用，例如MP3音频，MP4视频等等。PC世界的大部分文件对于Mac来说都只有data fork。PC的文件拷贝到Mac上将只有data fork的内容，然而这并不影响使用。</p>
+        <p>在Mac文件系统中，一个文件的属性（Get info信息）也与PC的不同。最明显的一点是，PC通过文件扩展名来区分文件类型，而Mac是通过OS Type来区分文件类型以及确定文件打开方式的。文件有type code（类型代码）和creator code（创建者代码）两个属性，均使用四个字符来表示。例如使用SimpleText程序创建的文本文件，其文件类型为TEXT，创建者为ttxt。Finder打开该文件时会使用creator type为ttxt的程序（即SimpleText或其他创建者类型为ttxt的程序打开）打开。后来从Mac OS X 10.6开始，Finder就不再靠type code和creator code来区分文件类型与设置打开方式了。</p>
+        <p>对于外来文件，例如DOS和Windows的文件，Mac的PC Exchange（文件交换程序）会根据其扩展名为其设置type code。但是很多情况并不会默认触发这一机制，Finder中会将这些外来文件显示为空白文件图标，双击也会提示没有找到创建该文件的应用程序。</p>
+        <p>如果需要手动修改文件的type code和creator code，可以使用<a href="http://macintoshgarden.org/apps/resedit">ResEdit</a>工具，在File菜单中可以选择Get File/Folder Info，然后打开要修改的文件。其他的工具还有<a href="http://macintoshgarden.org/apps/filetyper-501">FileTyper</a>, <a href="http://macintoshgarden.org/apps/creator-changer">Creator Changer</a>, <a href="http://macintoshgarden.org/apps/ilikeyoumore">iLikeYouMre</a>等等；如果需要查询Type和Creator信息，可以使用<a href="http://macintoshgarden.org/apps/typecreator-database">Type/Creator Database</a>。这些工具在Macintosh Garden上都能找到。</p>
+        <br />
+        
+<h2>与现代PC/Mac进行文件交换</h2>
+        <p>正是因为Classic Mac文件系统与众不同，Mac与PC进行文件交换时比较麻烦。<br /> 请参考：<a href="docs/file_exchange.html">文件交换指南</a> 。</p>
+        <br />
+
+<h2>Classic Mac的字体支持</h2>
+        <p>一般来说，Classic Mac的字体存放在resource fork中，一个字体文件可能没有data fork。有些应用程序也可以在resource fork中存放字体。</p>
+        <p>System 6之前的系统只能支持点阵字体，System 6可以通过TrueType功能扩展支持TrueType字体。System 7.1系统开始支持TrueType字体。通过Adobe Type Manager，Mac可以支持PostScript Type 1字体。</p>
+        <p>System 7.1之前，系统使用的字体文件是存放在系统文件夹的System手提箱中的，需要通过Font/DA Mover（字体/桌面附件搬运器）来添加和删除字体，从System文件中移除来的字体需要存放在Suitcase（手提箱）文件中，不能单独存在。</p>
+        <p>从System 7.1开始，系统文件夹中增加了“字体”文件夹用于存放字体文件。字体文件一般叫“字体手提箱”，每个手提箱可以存放多个字体。System 7到Mac OS 9最多支持128个字体文件。</p>
+        <p>Mac OS 8.5开始支持data fork字体，包括了Windows版TrueType字体和OpenType字体，苹果还推出了data fork TureType格式（.dfont）。</p>
+        <p>相关帮助：<a href="machelp/SC_IM_Help/Font/pgs/FontInfo.htm">Macintosh 字体</a>
+<br />如果需要更多字体以满足文档和设计的需要，可以在软件指南中找到Classic Mac的字体包。对于Windows上的TrueType字体，Classic实际上是不支持的。但是老版本的OpenType字体，Classic还是可以支持的，前提是先安装Adobe Type Manager 4.6以及更高版本。otf文件需要用ResEdit等工具，修改文件的type code为sfnt。
+<br /> 参考： <a href="http://chinesemac.org/pages/fonts.html">Fonts - Chinese Mac</a>， <a href="http://whitefiles.org/mac/pgs/t03.htm">Using Fonts</a> 
+</p>
+
+<h2>Classic Mac的多语言支持</h2>
+        <p>Classic Mac OS实际上是单语言系统，只支持该版本本身的语言。System 5-6的中文实现是通过一个叫“中文Talk”的组件实现的。后来System 7开始使用WorldScript II来实中文支持。</p>
+        <p>苹果开发了Language Kit（语言套件）来为Mac OS添加其他语言的支持，例如Chinese Language Kit等。英文系统安装Chinese Language Kit之后可以显示和输入中文。简体中文系统如果需要处理繁体中文信息，那需要安装繁体中文的Language Kit，反过来说繁体系统处理简体也需要安装简体的Language Kit。</p>
+        <p>最早Language Kit是作为单独的软件发布的，各种语言有相应的Language Kit。后来Mac OS 8.5/8.6的安装盘也集成了“Language Kit”，叫“Multilingual Internet Access”（多语言互联网访问），只是只提供语言显示，没有输入法支持。后来Mac OS 9的安装盘里则有各语言完整的Language Kit，安装后能够显示相应语言的字体，并能够输入相应的语言。</p>
+        <p>虽然Mac OS 9后来也提供对Unicode的有限支持，但中文Mac OS基本还是只能支持GB2312和Big5编码。中文系统的输入法只支持GB2312和Big5字符集，中文字体同样也只有GB2312和Big5的。但是在安装了Unicode扩展之后，浏览器和应用程序在访问Unicode时至少能够支持编码，并调用已有GB2312和Big5及其他CJK字体中的相应字符来显示对应的Unicode字符。Unicode在Mac OS 9安装光盘的“光盘附加程序”文件夹中可找到。<p/>
+        <p>苹果也有World Text软件可以编辑多语言文档，World Text II能够支持Unicode文档。</p>
+        
+<h2>获取Mac机型配置信息</h2>
+        <p>如果需要了解具体Mac机型的配置，可以访问<a href="http://www.everymac.com">Everymac网站</a>，该网站需要使用较新的浏览器才能访问。</p>
+        <p>MacTracker软件同样提供了Mac机型配置的详细信息。其4.0.2版兼容Mac OS 8.5至9.2.2系统。新款Mac电脑和iOS/iPad OS设备可以在苹果App Store上找到这款软件。</p>
+        <p>国内的paizhang君也开发了一款用于查询Mac配置信息的Android App —— MacIndex，可在<a href="https://paizhang.info">paizhang的网站</a>上以及酷安上找到。</p>
+        <br />
+        
+<h2>获得一台老Mac</h2>
+        <p>如果没有老Mac，可以先使用模拟器体验Mac OS。实在有兴趣，可以考虑购买一台老Mac。<br />国内老Mac保有量并不算多，大多数的老Mac都是G3到G5的，台式机多为当年单位或工作室淘汰的，笔记本多为“洋垃圾”（从国外“进口”的二手旧货）。早于G3的机器非常罕见。<br />待续……</p>
+        <br />
+        <hr>
+        <p align="center"><img src="logo.gif"></p>
+        <p align="center">Apple logo、Macintosh、Mac、Mac OS是Apple Inc.的商标。本站是非官方支持站点，与Apple Inc.无任何关系。<br />感谢@Mation Wang制作Logo</p>
+    </body>
+
+</html>

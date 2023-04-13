@@ -1,1 +1,961 @@
-<html lang="zh">	<head>		<meta http-equiv="Content-Type" content="text/html" ; charset="gb2312" />		<title>软件指南 — Classic Mac 非官方支持</title>	</head>	<body>		<h1 align=center>Classic Mac 非官方支持站</h1>		<table align="center" border="0" cellspacing="8">			<tr>				<td><a href="index.html">主页</a>				</td>				<td><a href="beginner.html">入门</a>				</td>				<td><a href="hardware.html">硬件指南</a>				</td>				<td><a href="software.html">软件指南</a>				</td>				<td><a href="help.html">Mac帮助</a>				</td>				<td><a href="about.html">关于本站</a>				</td>			</tr>		</table>		<h2>软件指南</h2>		<p>中文Mac软件分享</p>		<p>文件名后缀为.sit的文件需要使用 <a href="#Utilities"><b>Stuffit Expander</b></a> 进行解压。如果无法解压，可以尝试使用更高版本的Stuffit Expander进行解压。			<br />此工具亦可解压大部分.bin和.hqx文件。如遇不能解压的.bin文件，请尝试使用<a href="#Utilities">MacBinary II+</a>解压。			<br /><b>注意：由于Mac文件系统的特殊性，.sit/.bin/.hqx文件不要在Windows下解压，否则拷贝到Mac上很可能无法正常使用。请将压缩档拷贝到老Mac中再在Mac系统中解压。</b>		</p>		<p>文件名以.toast或.cdr结尾的，大多数可以直接改为.iso进行刻录，建议在Mac下刻录。			<br />如需在Classic Mac中挂装这种光盘镜像，请使用<a href="#Utilities">Roxio Toast</a>工具。</p>		<p>软盘镜像有Disk Copy 4.2格式，Disk Copy 6格式和RAW格式。其中RAW格式即标准img格式，400K软盘，800K软盘和1440K软盘。Disk Copy 4.2格式会在RAW镜像的头部加上额外数据，使镜像变成409K，819K和1441K等非标准大小，对于1441K的镜像只需用十六进制编辑器删去前84字节内容即可转换回RAW格式。而Disk Copy 6格式（NDIF）的软盘镜像大小并不规则，只能使用Disk Copy 6进行挂载或写入。Disk Copy 4.2格式的软盘镜像不依赖resource			fork，即使只有data fork也能正常使用， Mini vMac模拟器也能直接使用Disk Copy 4.2镜像。但Disk Copy 6格式的镜像会将镜像的部分内容存入resource fork，因此只打包data fork会使Disk Copy 6镜像无效。</p>		<p>如需在PC和现代Mac（Intel）上写入Disk Copy 4.2格式的镜像，可以使用<a href="https://www.bigmessowires.com/2013/12/16/macintosh-diskcopy-4-2-floppy-image-converter/">此工具</a>将镜像转换成标准IMG格式。</p>		<p>小常识：苹果Classic软件中，文件名中的“CH”表示简体中文版，而“TA”表示繁体中文版。</p>		<p>资源均搜集自互联网。</p>		<br />		<h2><a name="Contents">目录</a></h2>		<ul>    		<li><a href="#netstore">网盘地址</li>			<li><a href="#SystemSoftware"><b>系统软件</b></a>			</li>			<li><a href="#System5">System 5</a>			</li>			<li><a href="#System6">System 6</a>			</li>			<li><a href="#System7">System 7 系列</a>			</li>			<li><a href="#MacOS8">Mac OS 8 系列</a>			</li>			<li><a href="#MacOS9">Mac OS 9.0.x</a>			</li>			<li><a href="#MacOS92">Mac OS 9.1/9.2.x</a>			</li>			<li><a href="#Update">软件更新</a>			</li>			<li><a href="#Utilities"><b>实用工具</b></a>			</li>			<li><a href="#Productivity"><b>生产力工具</b></a>			</li>			<li><a href="#Multimedia"><b>多媒体</b></a>			</li>			<li><a href="#Internet"><b>互联网工具</b></a>			</li>		</ul>		</p>		<br /><h2><a name="netstore"></a>网盘地址</h2>		<p>由于Mac OS 8和Mac OS 9的系统盘文件太大太多，以及一些应用软件太大，服务器支撑不了，资源已使用百度云、天翼云保存，请使用现代电脑下载并刻录。由于百度云链接失效速度太快，建议前往天翼云下载。</p>		<p>本站也在积极地将中文资源上传至Macintosh Garden和Macintosh Repository网站，这两个网站都是国外的老Mac软件集散地。现在本站已有部分软件能在这两个网站下载了，也欢迎前往这两个网站下载资源。这两个网站均支持http访问和https访问，如遇https链接无法访问时可以将https改为http。</p>		<p>网盘地址：			<ul>				<li>https://cloud.189.cn/t/ym2aMjfEzuU3 （天翼云镜像站，感谢网友@P EAS转存。建议切换到移动版UA可直接下载。）</li>				<li>System 6 文件夹 https://pan.baidu.com/s/1vjuRjpomqR9lSYQvVNIMyA?pwd=mach</li>				<li>System 7文件夹 https://pan.baidu.com/s/1qhparmu2Y76BgGJO-99ghA?pwd=mach</li>				<li>Mac OS 镜像和资源（非官方）文件夹 https://pan.baidu.com/s/1lSCLeIH2bGW1Bnnhspwb7w?pwd=mach</li>				<li>Mac OS 8.x_9.x 文件夹 https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach</li>				<li>Applications （应用程序）文件夹 https://pan.baidu.com/s/1VnavvO0cz4pO3BTRckI5Ig?pwd=mach</li>				<li>百度盘提取码均为mach，百度盘其他链接失效了……</li>			</ul>		</p>		<h2><a name="SystemSoftware">系统软件</a></h2>		<h3><a name="System5">System 5 繁体中文版</a></h3>		<p>Macintosh System Software 5 TA-1.2 繁体中文版：<a href="downloads/system/System5.1-TA.sit">Disk Copy 4.2格式</a>、<a href="downloads/system/TA-System5.1-IMG.zip">标准IMG格式</a>。System文件版本为4.3-TA1，Finder版本为6.0-TA1。内含三个800K软盘镜像。</p>		<p>适合机型：</p>		<ul>			<li>Macintosh 512Ke</li>			<li>Macintosh Plus</li>			<li>Macintosh SE（含FDHD 但不含SE/30）</li>			<li>Macintosh II（Mini vMac模拟的Macintosh II不支持，未知实际是否支持）</li>		</ul>		<p align="center">			<br /><a href="#Contents"><b>返回目录</b></a>		</p>		<br />		<h3><a name="System6">System 6 中文版</a></h3>		<table border="1">			<tr>				<td>名称</td>				<td>描述</td>			</tr>			<tr>				<td>System 6.0.3 简体中文版					<br /><a href="downloads/system/CH-6.0.3.sit">Disk Copy 4.2格式</a>					<br /><a href="downloads/system/CH-6.0.3-IMG.zip">标准IMG格式</a>				</td>				<td>System版本 中文6.0.3，Finder版本 中文6.1。</td>			</tr>			<tr>				<td>System 6.0.3 繁体中文版					<br /><a href="downloads/system/TA-6.0.3.sit">Disk Copy 4.2格式</a>					<br /><a href="downloads/system/TA-6.0.3-IMG.zip">标准IMG格式</a>				</td>				<td>System版本 TA-6.0.3，Finder版本 6.1。</td>			</tr>			<tr>				<td>System 6.0.4 繁体中文版					<br /><a href="downloads/system/TA-6.0.4.sit">Disk Copy 4.2格式</a>					<br /><a href="downloads/system/TA-6.0.4-IMG.zip">标准IMG格式</a>				</td>				<td>System版本 TA-6.0.4，Finder版本 6.1。</td>			</tr>			<tr>				<td>System 6.0.5 繁体中文版					<br /><a href="downloads/system/TA-6.0.5.sit">Disk Copy 4.2格式</a>					<br /><a href="downloads/system/TA-6.0.5-IMG.zip">标准IMG格式</a>				</td>				<td>System版本 TA-6.0.5，Finder版本 6.1。</td>			</tr>			<tr>				<td>System 6.0.6 繁体中文版					<br /><a href="downloads/system/TA-6.0.6.sit">Disk Copy 4.2格式</a>					<br /><a href="downloads/system/TA-6.0.6-IMG.zip">标准IMG格式</a>				</td>				<td>System版本 TA-6.0.6，Finder版本 TA-6.1.6。</td>			</tr>			<tr>				<td>System 6.0.7 简体中文版					<br /><a href="downloads/system/CH-6.0.7.sit">Disk Copy 4.2格式</a>					<br /><a href="downloads/system/CH-6.0.7-IMG.zip">标准IMG格式</a>				</td>				<td>System版本 中文6.0.7，Finder版本 中文6.1.7。</td>				<tr>					<td>System 6 繁体中文字库盘						<br /><a href="downloads/system/TA-Fonts.sit">Disk Copy 4.2格式</a>						<br /><a href="downloads/system/TA-Fonts-IMG.zip">标准IMG格式</a>					</td>					<td>含繁体中文字库和可选字库两套盘。</td>				</tr>		</table>		<p><b>提示：以上Disk Copy 4.2格式镜像，需要在Classic Mac中使用Disk Copy 4.2工具写入软盘。<br />标准IMG格式可以在PC上直接写入软驱，也可方便模拟器使用。<br />System 6最高可用于Macintosh IIsi和LC机型，最低需要Macintosh 512Ke。</b>		</p>		<p align="center">			<br /><a href="#Contents"><b>返回目录</b></a>		</p>		<br />		<h3><a  name="System7">System 7 中文版</a></h3>		<p><b>由于文件太大，部分文件请前往网盘下载。</b>		</p>		<table border="1">			<tr>				<td>名称</td>				<td>描述</td>			</tr>			<tr>				<td>System 7.1 简体版				<br /><a href="downloads/system/System_7.1_CH(img).zip">标准IMG格式</a>				<br /><a href="downloads/system/CH-7.1_DC42.sit">Disk Copy 4.2格式</a>				</td>				<td>Disk Copy 4.2格式需在Mac下写入磁盘。<br />标准img格式，可在PC上使用WinImage写入软盘。				<br />如需拷贝到硬盘安装，可以下载<a href="downloads/system/CH-7.1.2_expanded.sit">此SIT档</a>，解压后直接运行目录中的安装器即可。</td>			</tr>			<tr>				<td><a href="downloads/system/System7.1-TA.sit">System 7.1 繁体版</a></td>				<td>并非安装包，而是包括系统文件夹在内的多个磁盘镜像。</td>			</tr>			<tr>				<td><a href="downloads/system/System_7.1.2-CH.sit">System 7.1.2 简体版</a>				</td>				<td>软盘镜像取自Mac OS Anthology，Disk Copy格式。					<br />镜像限定初代预装7.1.2的Power Macintosh机型，					<br />而且<b>镜像应当写入到软盘才能安装</b>。					<br /><a href="/downloads/system/CH-7.1.2_expanded.sit">硬盘安装版SIT文件</a>。需要PPC机型才能安装，如果要用于68K,					<br />需要先安装中文版7.1再运行此安装器升级至7.1.2。（68040机型需要enabler。）</td>			</tr>			<tr>				<td><a href="downloads/system/System_7.1.2-TA.sit">System 7.1.2 繁体版</a>				</td>				<td>软盘镜像取自Mac OS Anthology，Disk Copy格式。					<br />镜像限定初代预装7.1.2的Power Mac机型，其他机型不建议使用。					<br /><a href="/downloads/system/TA-7.1.2_expanded.sit">硬盘安装版SIT文件</a>。需要PPC机型才能安装，如果要用于68K,					<br />需要先安装中文版7.1再运行此安装器升级至7.1.2。（68040机型需要enabler。）</td>			</tr>			<tr>				<td>System 7.5 简体版					<br /><a href="downloads/system/CH-Sys75_DC42.zip">Disk Copy 4.2格式</a>					<br /><a href="downloads/system/CH-Sys75_IMG.zip">标准IMG格式</a>				</td>				<td>软盘镜像，标准img，可写入软盘安装，也可用于模拟器（不推荐）。				<br />“系统磁盘1”卷标有问题，需要改为“系统磁盘 1”（“盘”和“1”之间加空格）。				<br /><a href="/downloads/system/CH-7.5_expanded.sit">硬盘安装版SIT文件</a>。</td>			</tr>			<tr>				<td>System 7.5 繁体版					<br /><a href="downloads/system/TA-Sys75_DC42.zip">Disk Copy 4.2格式</a>					<br /><a href="downloads/system/TA-Sys75_IMG.zip">标准IMG格式</a>				</td>				<td>软盘镜像，标准img，可写入软盘安装，也可用于模拟器（不推荐）。				<br /><a href="/downloads/system/TA-7.5-expanded.sit">硬盘安装版SIT文件</a>。</td>			</tr>						<tr>				<td>System 7.5.2简体版					<br /><a href="downloads/system/System7.5.2-CH.zip">标准IMG格式</a>				</td>				<td>软盘镜像，标准img，可写入软盘安装，适用于Power Macintosh 7500和8500。				<br /><a href="/downloads/system/CH-7.5.2-expanded.sit">硬盘安装版SIT文件</a>。</td>			</tr>			<tr>				<td>System 7.5.2 繁体版					<br /><a href="downloads/system/System7.5.2-TA_PM7200.zip">镜像一</a>					<br /><a href="downloads/system/System7.5.2-TA_PM9500.zip">镜像二</a>				</td>				<td>软盘镜像，标准img，可写入软盘安装。镜像一适用于Power Macintosh 7200和9500，				<br /><a href="/downloads/system/TA-7.5.2-PM7200-expanded.sit">硬盘安装版SIT文件</a>。				<br />镜像二适用于Power Macintosh 9500，<a href="/downloads/system/TA-7.5.2-PM9500-expanded.sit">硬盘安装版SIT文件</a>。</td>			</tr>			<tr>				<td><a href="downloads/system/System_7.5.3-CH.iso.zip">System 7.5.3 简体版</a>				</td>				<td>iso文件，仅有安装器，不能启动，需使用软盘启动后安装。					<br />下载：<a href="https://pan.baidu.com/s/1qhparmu2Y76BgGJO-99ghA?pwd=mach">网盘</a>  <b>Apple Mac OS 7.5.3 [Chinese-Simpl.] (CD)</b> 文件夹。</td>			</tr>			<tr>				<td><a href="downloads/system/System_7.5.3-TA.iso.zip">System 7.5.3 繁体版</a>				</td>				<td>iso文件，仅有安装器，不能启动，需使用软盘启动后安装。					<br />下载：<a href="https://pan.baidu.com/s/1qhparmu2Y76BgGJO-99ghA?pwd=mach">网盘</a>  <b>System_7.5.3-TA.iso.zip</b> 文件。</td>			</tr>			<tr>				<td>System 7.6.1 简体版</td>				<td>光盘镜像，没有系统文件夹，无法启动。					<br />下载：<a href="https://pan.baidu.com/s/1qhparmu2Y76BgGJO-99ghA?pwd=mach">网盘</a>  <b>System_7.6.1-CH.cdr.sit</b> 文件。</td>			</tr>			<tr>				<td>System 7.6.1 简体版</td>				<td>本站修改版本，光盘带Mac OS 8.1系统文件夹和7.6.1安装器，可启动。					<br />下载：<a href="https://pan.baidu.com/s/1lSCLeIH2bGW1Bnnhspwb7w?pwd=mach ">网盘</a>  <b>MacOS7.6.1CH with 8.1 system folder.zip</b> 文件。</td>			</tr>			<tr>				<td><a href="downloads/system/System_7.6-TA.zip">System 7.6 繁体版</a>				</td>				<td>System 7.6 繁体中文版ISO镜像，不能启动。</td>			</tr>			<tr>				<td>System 7.6.1 繁体版</td>				<td>不好意思，资源暂未找到。（Mac OS Anthology里也没有。）</td>			</tr>		</table>		<p><b>提示：Disk Copy格式的磁盘镜像需要在System 7到Mac OS 9.2.2中写入软盘。<br />以上System 7的官方光盘镜像均不带系统文件夹，无法从光盘启动，需要配合启动软盘使用。<br />Mini vMac模拟器最高支持到Mac OS 7.5.5，如果需要模拟7.6及更高版本，需要使用Basilisk II等其他68k Mac模拟器。<br />如果运行System 7.5.x安装器提示机型不对，在运行安装器后按住Option键再点击继续。</b>		</p>		<p align="center">			<br /><a href="#Contents"><b>返回目录</b></a>		</p>		<br />		<h3><a name="MacOS8">Mac OS 8 系列</a></h3>		<p><b>由于文件太大，请前往网盘下载。</b>		</p>		<table border="1">			<tr>				<td>名称</td>				<td>描述</td>			</tr>			<tr>				<td>Mac OS 8.0 简体中文版</td>				<td>光盘镜像取自Mac OS Anthology，不能启动。					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>Mac OS 8(SC)</b> 文件夹</td>			</tr>			<tr>				<td>Mac OS 8.0 繁体中文版</td>				<td>光盘镜像取自Mac OS Anthology，不能启动。					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>Mac OS 8(TC)</b> 文件夹</td>			</tr>			<tr>				<td>Mac OS 8.1 简体中文版</td>				<td>光盘镜像取自Mac OS Anthology，不能启动。					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>Mac OS 8.1(SC)</b> 文件夹</td>			</tr>			<tr>				<td>Mac OS 8.1 繁体中文版</td>				<td>光盘镜像取自Mac OS Anthology，不能启动。					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>Mac OS 8.1(SC)</b> 文件夹</td>			</tr>			<tr>				<td>Mac OS 8.1 简体中文版</td>				<td>Power Macintosh G3系统软件安装盘，可在各PowerPC机型上安装使用。					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>MacOS 8.1.CHS.PPC.iso</b> 文件</td>			</tr>			<tr>				<td>Mac OS 8.1 简体中文恢复盘					<br />68040版</td>				<td>本站修改的简体中文8.1系统，可以在m68k机型上使用。					<br />下载：<a href="https://pan.baidu.com/s/1lSCLeIH2bGW1Bnnhspwb7w?pwd=mach">网盘</a>  <b>Mac OS 8.1中文版 for 68k.rar</b> 文件。</td>			</tr>			<tr>				<td>Mac OS 8.5					<br />简体中文版					<br />繁体中文版</td>				<td>镜像取自Mac OS Anthology，不可启动，镜像也有些问题。					<br />简体镜像是“Internet 访问”安装出错，可以跳过，并手动拖动文件安装。					<br />繁体镜像问题更多，但也可以跳过。					<br />除非有特殊需求，建议直接使用8.6版，镜像正常。					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>Mac OS 8.5(Anthology)</b> 文件夹</td>			</tr>			<tr>				<td>Mac OS 8.5.1 简体中文版</td>				<td>Power Macintosh G3软件安装盘，可启动。					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>MacOS8.51CHS.7z</b> 文件</td>			</tr>			<tr>				<td>Mac OS 8.6					<br />简体中文版					<br />繁体中文版</td>				<td>镜像取自Mac OS Anthology，不可启动。					<br />镜像测试过，可以正常安装。					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>Mac OS 8.6(Anthology)</b> 文件夹</td>			</tr>			<tr>				<td>Mac OS 8.6 简体中文版</td>				<td>Power Macintosh G3软件安装盘，可启动。					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>MacOS 8.6.CHS.iso</b> 文件</td>			</tr>		</table>		<p><b>提示：中文版Mac OS 8.0/8.1均要求PowerPC处理器，也可以是从68k Mac升级的PowerPC。<br />实际上Mac OS 8.0/8.1也可以在68k Mac上运行，要求PowerPC处理器的原因是中文输入法不支持68k，表现为Finder加载后系统卡死。<br />使用System 7.6的中文输入法替换8.0/8.1的即可。<br />本站也做了一个支持68k Mac的简体版Mac OS 8.1方便大家在实体机和模拟器上使用，运行光盘中的“苹果软件重新安装”即可将68k系统镜像恢复至硬盘。</b>		</p>		<p align="center">			<br /><a href="#Contents"><b>返回目录</b></a>		</p>		<br />		<h3><a name="MacOS9">Mac OS 9.0中文版</a></h3>		<p><b>由于文件太大，请前往网盘下载。</b>		</p>		<table border="1">			<tr>				<td>名称</td>				<td>描述</td>			</tr>			<tr>				<td>Mac OS 9.0 简体中文版</td>				<td>Mac OS Anthology版本，不可启动。					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>待上传</b> 文件</td>			</tr>			<tr>				<td>Mac OS 9.0 简体中文版</td>				<td>iMac G3版，限iMac G3安装，内含简体ClarisWorks 4.0安装器。					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>Apple Mac OS 9.0 [Chinese-Simpl.] [iMac]</b> 文件夹					<br /><a href="http://macintoshgarden.org/apps/mac-os-90-904-update-90-imac-dv-ibook-g3-g4-agp-904-g4-cube-g4-gigabit-ethernet-pb-g3-firewire">前往Macintosh Garden下载</a>（第13个文件 iMacCH90CD_Inst.ZIP）</td>			</tr>			<tr>				<td>Mac OS 9.0.4 简体中文恢复盘</td>				<td>非安装盘，限Power Mac G4使用。					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>MAC_OS_9.0_CS.iso</b> 文件					<br /><a href="http://macintoshgarden.org/apps/mac-os-90-904-update-90-imac-dv-ibook-g3-g4-agp-904-g4-cube-g4-gigabit-ethernet-pb-g3-firewire">前往Macintosh Garden下载</a>（第34个文件 PMG4_9.0.4_CH.zip）</td>			</tr>			<tr>				<td>Mac OS 9.0.4 简体中文恢复盘</td>				<td>修改自Power Mac G4恢复盘，解除机型限制。					<br />下载：<a href="https://pan.baidu.com/s/1lSCLeIH2bGW1Bnnhspwb7w?pwd=mach">网盘</a>  <b>MacOS9.0.4中文恢复盘.zip</b> 文件</td>			</tr>			<tr>				<td>Mac OS 9.0.4 繁体中文安装盘</td>				<td>限Power Mac G4 Cube安装。					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>MacOS 9.0.TW.Install.iso</b> 文件。					<br /><a href="http://macintoshgarden.org/apps/mac-os-90-904-update-90-imac-dv-ibook-g3-g4-agp-904-g4-cube-g4-gigabit-ethernet-pb-g3-firewire">前往Macintosh Garden下载</a>（第29个文件 G4CubeTA904CD_Inst.ZIP）</td>			</tr>			<tr>				<td>Mac OS 9.0.4 繁体中文恢复盘</td>				<td>限Power Mac G4 Cube使用。					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>MacOS 9.0.TW.Restore.iso</b> 文件					<br /><a href="http://macintoshgarden.org/apps/mac-os-90-904-update-90-imac-dv-ibook-g3-g4-agp-904-g4-cube-g4-gigabit-ethernet-pb-g3-firewire">前往Macintosh Garden下载</a>（第35个文件 G4Cube9.0.4_Rest-TA.zip）</td>			</tr>			<tr>				<td>Mac OS 9 Combo 简体中文版</td>				<td>本站制作的Mac OS 9安装盘，带有Mac OS 9.0.4的系统文件夹。					<br />系统安装器是9.0.0的，附带9.0.4和9.1的更新档。					<br />下载：<a href="https://pan.baidu.com/s/1lSCLeIH2bGW1Bnnhspwb7w?pwd=mach">网盘</a>  <b>Mac OS 9 Combo(9.0-9.1).toast</b> 文件</td>			</tr>		</table>		<p><b>提示：SheepShaver最高兼容9.0.4系统。PowerPC G3之前的Mac也建议使用Mac OS 9.0.4版本，除非需要更新版本的软件支持才建议安装9.1版。</b>		</p>		<p align="center">			<br /><a href="#Contents"><b>返回目录</b></a>		</p>		<br />		<h3><a name="MacOS92">Mac OS 9.1/9.2 中文版</a></h3>		<p><b>由于文件太大，请前往网盘下载。</b>		</p>		<table border="1">			<tr>				<td>名称</td>				<td>描述</td>			</tr>			<tr>				<td>Mac OS 9.1 简体中文版</td>				<td>Mac OS Anthology版，可能会安装出错，不建议使用					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>Mac OS 9.1</b> 文件夹</td>			</tr>			<tr>				<td>Mac OS 9.1 繁体中文版</td>				<td>Mac OS Anthology版，可能会安装出错，不建议使用					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>Mac OS 9.1</b> 文件夹</td>			</tr>			<tr>				<td>Mac OS 9.1 简体中文修复版</td>				<td>基于网上的某个9.1镜像修复而来。					<br />可以启动，但安装某些组件时可能会出错，但可以跳过。					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>Mac OS 9.1中文版（修复）.7z</b> 文件</td>			</tr>			<tr>				<td>Mac OS 9.2.1 简体中文版</td>				<td>相当于零售版，取自Apple开发者CD订阅，可以启动。					<br />下载：<a href="https://pan.baidu.com/s/13OlDnPhPo4GNRuR-BYwcjQ?pwd=mach">网盘</a>  <b>9.2.1</b> 文件夹					<br /><a href="http://macintoshgarden.org/apps/mac-os-921-922-chinese">前往Macintosh Garden下载</a>（第1个文件 MacOS9.2.1-CH.zip）</td>			</tr>			<tr>				<td>Mac OS 9.2.1 繁体中文版</td>				<td>相当于零售版，取自Apple开发者CD订阅，可以启动。					<br />下载：<a href="https://pan.baidu.com/s/13OlDnPhPo4GNRuR-BYwcjQ?pwd=mach">网盘</a>  <b>9.2.1</b> 文件夹					<br /><a href="http://macintoshgarden.org/apps/mac-os-921-922-chinese">前往Macintosh Garden下载</a>（第2个文件 MacOS9.2.1-TA.zip）</td>			</tr>			<tr>				<td>Mac OS 9.2.2 简体中文版</td>				<td>Power Mac G4软件安装盘，但相对通用，大多数G3、G4机型都能使用。					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>Mac OS 9.2.2 简体中文版.iso</b> 文件					<br /><a href="http://macintoshgarden.org/apps/mac-os-921-922-chinese">前往Macintosh Garden下载</a>（第5个文件 Mac_OS_9.2.2_CHUniversal.zip）</td>			</tr>			<tr>				<td>Mac OS 9.2.2 简体中文版</td>				<td>Power Mac G4软件安装盘，机型限定版，仅限Power Mac G4系列安装。					<br />但附赠Norton Utilities、Tech Tools、Disk Warrior、Roxio Toast 5.1.3等实用工具。）					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>MacOS922CHS_Bootable.rar</b> 文件					<br /><a href="http://macintoshgarden.org/apps/mac-os-921-922-chinese">前往Macintosh Garden下载</a>（第6个文件 MacOS9.2.2.CH_.Install.zip）</td>			</tr>			<tr>				<td>Mac OS 9.2.2 简体中文版</td>				<td>eMac G4软件安装盘，有机型限制。					<br />部分组件比Power Mac G4盘的更新，附带iTunes 2.0.4中文版。					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>eMac 9.2.2原版(修复).rar</b> 文件					<br /><a href="http://macintoshgarden.org/apps/mac-os-921-922-chinese">前往Macintosh Garden下载</a>（第7个文件 eMac_Install_CD_SC.zip）</td>			</tr>			<tr>				<td>Mac OS 9.2.2 简体中文版</td>				<td>eMac G4软件安装盘，解除机型限制。					<br />下载：<a href="https://pan.baidu.com/s/1lSCLeIH2bGW1Bnnhspwb7w?pwd=mach">网盘</a>  <b>eMac Install CD 9.2.2其他机型可直装).zip</b> 文件</td>				<tr>					<td>Mac OS 9.2.2 简体中文版通用恢复盘</td>					<td>本站制作的恢复盘，通用于原生支持OS 9.2.2的机型，预装了一些常用软件，方便部署新机。						<br />下载：<a href="https://pan.baidu.com/s/1lSCLeIH2bGW1Bnnhspwb7w?pwd=mach">网盘</a>  <b>Mac OS 9.2.2 中文通用恢复盘_v3.5.zip</b> 文件</td>				</tr>		</table>		<p><b>提示：Mac OS 9.2.x要求原生配有PowerPC G3处理器的Mac电脑（初代PowerPC G3除外），G3之前的机型最高支持到Mac OS 9.1版本。<br />目前Mac OS 9.1版目前没有找到比较完美的镜像，因此建议从Mac OS 9.0.x版升级至9.1版，然后将Finder替换为Mac OS 9.2的Finder。因为9.2的Finder响应速度更快一些（其实Mac OS 9.0.x也兼容9.2的Finder）。<br />如果是G3、G4处理器的Mac，更建议安装Mac OS 9.2.2版，简体版本可以直接找解除机型限制的eMac版，繁体版本目前没有找到完整的9.2.2镜像，因此可以安装9.2.1版然后更新到9.2.2。</b>		</p>		<p align="center">			<br /><a href="#Contents"><b>返回目录</b></a>		</p>		<br />		<h3><a name="Update">软件更新</a></h3>		<p><b>更新档也可在<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>Mac OS 8.x_9.x的Update文件夹中找到。<br />部分文件由于太大，请前往网盘下载。</b>		</p>		<table border="1">			<tr>				<td>名称</td>				<td>描述</td>			</tr>			<tr>    			<td>2020年份补丁（非官方）</td>    			<td>Mac OS 9之前的版本，年份最高设置到2019年。<br />可以安装该补丁来将年份设置为2020年到2040年。<br /><a href="http://www.mactcp.org.nz/macos2020.html">补丁作者网站下载链接</a><br /><a href="http://macintoshgarden.org/apps/2020patch">Macintosh Garden下载链接</a></td>    		</tr>			<tr>				<td><a href="downloads/update/CH-Mac_OS_8.5.1_Update.smi.bin">Mac OS 8.5.1 简体更新档</a>				</td>				<td>需要已安装的简体中文版8.5				<br /><a href="downloads/update/macos8.5.1.txt">更新说明（英文）</a></td>			</tr>			<tr>				<td><a href="downloads/update/TA-Mac_OS_8.5.1_Update.smi.bin">Mac OS 8.5.1 繁体更新档</a>				</td>				<td>需要已安装的繁体中文版8.5				<br /><a href="downloads/update/macos8.5.1.txt">更新说明（英文）</a></td>			</tr>			<tr>				<td><a href="downloads/update/CH-Mac_OS_8.6_Update.smi.bin">Mac OS 8.6 简体更新档</a>				</td>				<td>需要已安装的简体中文版8.5或8.5.1					<br /><a href="downloads/update/macos8.6.html">更新说明（英文）</a>				</td>			</tr>			<tr>				<td><a href="downloads/update/TA-Mac_OS_8.6_Update.smi.bin">Mac OS 8.6 繁体更新档</a>				</td>				<td>需要已安装的繁体中文版8.5或8.5.1					<br /><a href="downloads/update/macos8.6.html">更新说明（英文）</a>				</td>			</tr>			<tr>				<td><a href="downloads/update/CH-Mac_OS_9.0.4_Update.smi.bin">Mac OS 9.0.4 简体更新档</a>				</td>				<td>需要已安装的简体中文版9.0-9.0.3</td>			</tr>			<tr>				<td><a href="downloads/update/TA-Mac_OS_9.0.4_Update.smi.bin">Mac OS 9.0.4 繁体更新档</a>				</td>				<td>需要已安装的繁体中文版9.0-9.0.3</td>			</tr>			<tr>				<td><a href="downloads/update/CH-MacOS9.1Update.smi.sit">Mac OS 9.1 简体更新档</a>				</td>				<td>需要已安装的简体中文版9.0.x					<br /><a href="downloads/update/macos9.1.txt">更新说明（英文）</a>				</td>			</tr>			<tr>				<td><a href="downloads/update/TA-MacOS9.1Update.smi.sit">Mac OS 9.1 繁体更新档</a>				</td>				<td>需要已安装的繁体中文版9.0.x					<br /><a href="downloads/update/macos9.1.txt">更新说明（英文）</a>				</td>			</tr>			<tr>				<td>Mac OS 9.2.1 简体更新档</td>				<td>需要已安装的简体中文版9.1				<br /><a href="downloads/update/macos9.2.1.html">更新说明（英文）</a>				<br />资源有问题，语言不对，现已撤下。</td>			</tr>			<tr>				<td>Mac OS 9.2.1 繁体更新档</td>				<td>需要已安装的繁体中文版9.1				<br />资源有问题，语言不对，现已撤下。</td>			</tr>			<tr>				<td><a href="downloads/update/Mac_OS_9.2.2_Update-CH.smi.bin">Mac OS 9.2.2 简体更新档</a>				</td>				<td>需要已安装的简体中文版9.2.1					<br /><a href="downloads/update/macos9.2.2.html">更新说明（英文）</a>				</td>			</tr>			<tr>				<td><a href="downloads/update/Mac_OS_9.2.2_Update-TA.smi.bin">Mac OS 9.2.2 繁体更新档</a>				</td>				<td>需要已安装的繁体中文版9.2.1					<br /><a href="downloads/update/macos9.2.2.txt">更新说明（英文）</a>				</td>			</tr>			<tr>				<td><a href="downloads/update/USB_Card_Support_1.4.1.smi.bin">USB扩展卡支持 1.4.1</a> 				</td>				<td>USB扩展卡驱动，需要带PCI或CardBus的Mac机型；					<br />在PCI或CardBus插槽上安装了USB卡则需要此更新；					<br />适用于Mac OS 8.6-9.0.4。Mac OS 9.1/9.2不能安装此更新。					<br />适用于Mac OS 8.6。Mac OS 9无需此更新。					<br /><a href="downloads/update/usbcard.txt">更新说明（英文）</a>				</td>			</tr>			<tr>				<td><a href="downloads/update/USB_Storage1.3.5.smi.bin">USB大容量存储设备支持 1.3.5</a> 				</td>				<td>USB移动硬盘和U盘的驱动，					<br />适用于Mac OS 8.6。Mac OS 9无需此更新。					<br /><a href="downloads/update/usbmass135.html">更新说明（英文）</a>				</td>			</tr>			<tr>				<td><a href="downloads/update/CarbonLib_104.hqx">CarbonLib 1.0.4 更新</a></td>				<td>最后兼容Mac OS 8.0/8.1的版本，部分应用程序可能需要。 </td>			</tr>			<tr>				<td><a href="downloads/update/CH-CarbonLib_1.6.smi.bin">CarbonLib 1.6 简体更新档</a> 				</td>				<td>适用于Mac OS 8.6至9.2.2</td>			</tr>			<tr>				<td><a href="downloads/update/TA-CarbonLib_1.6.smi.bin">CarbonLib 1.6 繁体更新档</a> 				</td>				<td>适用于Mac OS 8.6至9.2.2</td>			</tr>			<tr>				<td><a href="downloads/update/Authoring_Support1.1.9.smi.bin">Authoring Support 1.1.9</a> 				</td>				<td>增加了少数几款新刻录机支持，改进了光盘刻录稳定性。					<br />适用于Mac OS 9.2.2</td>			</tr>		</table>		<p align="center">			<br /><a href="#Contents"><b>返回目录</b></a>		</p>		<br />		<h2><a name="Utilities">实用工具</a></h2>		<table border="1">			<tr>				<td>名称</td>				<td>描述</td>			</tr>			<tr>				<td><a href="downloads/app/stuffit_expander_55.bin">Stuffit Expander 5.5</a>				</td>				<td>可以解压大多数.sit文件，该版本Stuffit Expander支持PPC和68k Mac，至少需要System 7.0系统。</td>			</tr>			<tr>				<td><a href="downloads/app/macbinary_ii_1.0.2.sit">MacBinary II+</a>				</td>				<td>用于解压MacBinary II格式的.bin文件。</td>				<tr>					<td><a href="downloads/app/CH-DiskCopy_6.3.3.sit">Disk Copy 6.3.3 <br />简体中文版</a>					</td>					<td>该版本在Mac OS 8.6和9.x中已自带。</td>				</tr>				<tr>					<td><a href="downloads/app/RoxioToastTi5.1.3.sit">Roxio Toast 5.1.3 <br />简体中文版</a>					</td>					<td>用于光盘刻录和光盘镜像制作，也可以挂载光盘镜像文件</td>				</tr>				<tr>					<td><a href="downloads/app/RoxioToast5.2C.sit">Roxio Toast 5.2 <br />简体中文版</a>					</td>					<td>需要Mac OS 9.2以上版本，此版本也可以用于Mac OS X。Carbon API应用程序，SIT档已删除英文语言包，换成中文。					此<a href="downloads/app/RoxioToast5.2C.zip">ZIP档</a>是原版，需要在Mac OS X下解压，含中文和英文语言包。</td>				</tr>				<tr>					<td><a href="downloads/app/Mactracker402.sit">MacTracker 4.0.2</a>					</td>					<td>Mac机型信息查询工具，此版自带初代Macintosh 128K到Power Mac G5 Late 2005的机型信息库，软件兼容Mac OS 8.5及更高版本。</td>				</tr>				<tr>					<td>Chinese Language Kit					<br /><a href="downloads/app/CLK-1.2.sit">1.2</a>					<br /><a href="downloads/app/CLK-2.0.sit">2.0</a></td>					<td>用于在非中文Mac OS中显示和输入中文。在简体中文或繁体中文系统中也能安装，用于显示和输入另一种中文。					<br />Chinese Language Kit 1.2支持System 7-7.6系统。而2.0最低需要System 7.6，不推荐在8.5及更高系统中安装。					<br />兼容68k和PPC Mac。其中2.0版本自带智能ABC输入法，可以替代OS 8.0/8.1自带的输入法，或让System 7.6用上智能ABC。					<br /><a href="http://macintoshgarden.org/apps/chinese-language-kit">前往Macintosh Garden下载</a></td>				</tr>		</table>		<p align="center">			<br /><a href="#Contents"><b>返回目录</b></a>		</p>		<br />		<h2><a name="Productivity">生产力</a></h2>		<table border="1">			<tr>				<td>名称</td>				<td>描述</td>			</tr>			<tr>				<td><a href="downloads/app/ClarisWorks_4.0-CH.sit">ClarisWorks 4.0 <br />简体中文版</a>				</td>				<td>支持68020及PowerPC Mac，需要System 7.1及更高版本。</td>			</tr>			<tr>				<td><a href="downloads/app/Appleworks6.2SC.sit">AppleWorks 6.2.8 <br />简体中文版</a>				</td>				<td>支持PowerPC Mac， 需要Mac OS 8.1及更高版本。</td>			</tr>			<tr>				<td>Microsoft Office 4.2.1</td>				<td>英文版，也是最后支持68k Mac的版本。					<br /><a href="http://macintoshgarden.org/apps/microsoft-office-42">前往Macintosh Garden下载</a>。</td>			</tr>			<tr>				<td>Microsoft Office 98</td>				<td>英文版，最后支持System 7.6的版本，要求PowerPC。					<br /><a href="http://macintoshgarden.org/apps/ms-office-98">前往Macintosh Garden下载</a>。</td>			</tr>			<tr>				<td>Microsoft Office 2001</td>				<td>英文版，最后支持Classic Mac OS的版本，需要 Mac OS 8.6 及更高版本。					<br /><a href="http://macintoshgarden.org/apps/ms-office-2001">前往Macintosh Garden下载</a>。</td>			</tr>			<tr>				<td><a href="downloads/app/PageMaker6.5c.sit">Adobe PageMaker 6.5 <br />简体中文版</a>				</td>				<td>请前往<a href="https://pan.baidu.com/s/1VnavvO0cz4pO3BTRckI5Ig?pwd=mach">网盘</a>下载，文件夹：Applications（应用程序）/一些中文app					<br />文件：<b>PageMaker6.5c.sit</b>				</td>			</tr>			<tr>				<td><a href="downloads/app/photoshop6.sit">Adobe Photoshop 6.0 <br />简体中文版</a>				</td>				<td>需要Mac OS 8.6及更高版本。					<br />请前往<a href="https://pan.baidu.com/s/1VnavvO0cz4pO3BTRckI5Ig?pwd=mach">网盘</a>下载，文件夹：Applications（应用程序）/一些中文app					<br />文件：<b>photoshop6.sit</b>				</td>			</tr>			<tr>				<td><a href="downloads/app/Illustrator10.sit">Adobe Illustrator 10.0.3 <br />繁体中文版</a>				</td>				<td>暂无描述。					<br />请前往<a href="https://pan.baidu.com/s/1VnavvO0cz4pO3BTRckI5Ig?pwd=mach">网盘</a>下载，文件夹：Applications（应用程序）/一些中文app					<br />文件：<b>Adobe Illustrator 10.0.3.sit</b>				</td>			</tr>			<tr>				<td><a href="downloads/app/Illustrator8.sit">Adobe Illustrator 8 <br />中文版</a>				</td>				<td>暂无描述。					<br />请前往<a href="https://pan.baidu.com/s/1VnavvO0cz4pO3BTRckI5Ig?pwd=mach">网盘</a>下载，文件夹：Applications（应用程序）/一些中文app					<br />文件：<b>Adobe Illustrator(R) 8.0.sit</b>				</td>			</tr>			<tr>				<td>Adobe出版工具</td>				<td>发布于2001年的Adobe出版工具集（中文版），包含以下组件：				<br />Acrobat 5				<br />Illustrator 8				<br />Illustrator 8 Tour				<br />PageMaker 6.5				<br />PageMaker Plus 6.5 (素材库)				<br />Photoshop 6				<br /><a href="http://macintoshgarden.org/apps/adobe-publishing-collection-simpchinese">前往 Macintosh Garden 下载</a>				<br /><a href="https://mega.nz/folder/uRlDkYJL#9HtRox7fWVKWLPQajbajDQ">前往 MEGA 网盘下载</a>				<br /><a href="https://archive.org/details/acrobat-5.0-c.iso">前往 Archive 下载</a></td>			<tr>				<td>Adobe Photoshop 7 <br />简体中文版</td>				<td>需要Mac OS 9.1及更高版本，同时兼容Mac OS X					<br />请前往<a href="https://pan.baidu.com/s/1VnavvO0cz4pO3BTRckI5Ig?pwd=mach">网盘</a>下载，文件夹：Applications（应用程序）/一些中文app					<br />文件：<b>Adobe Photoshop 7.sit</b>					<br />或前往<a href="http://macintoshgarden.org/apps/photoshop-7x">Macintosh Garden下载</a>（第7个文件）。</td>			</tr>			<tr>				<td>Adobe Acrobat Reader 4					<br /><a href="downloads/app/AcrobatReader4-CH.sit">简体中文版4.0</a>					<br /><a href="downloads/app/AcrobatReader4-TA.sit">繁体中文版4.0</a>					<br /><a href="downloads/app/AcrobatReader4.0.2SC.sit">简体中文4.0.2</a>					<br /><a href="downloads/app/ar405cht.bin">繁体中文版4.0.5</a>					<br /><a href="downloads/app/Acro4.0CJKFonts.sit">CJK字体包</a>				</td>				<td>Acrobat Reader 4安装器，要求System 7.1.2及更高版本，不兼容68k。</td>			</tr>			<tr>				<td>Adobe Acrobat Reader 5.0.5					<br /><a href="downloads/app/acrobatreader505ch.bin">简体中文版</a>					<br /><a href="downloads/app/acrobatreader505ta.bin">繁体中文版</a>				</td>				<td>Acrobat Reader 5.0.5安装器，要求Mac OS 8.6及更高版本，不兼容68k。</td>			</tr>			<tr>				<td><a href="downloads/app/AcrobatReader5.0-CH.sit">Adobe Acrobat Reader 5.0 简体中文版</a>					<br /><a href="downloads/app/ATM4.6.2.sit">Adobe Type Manager 4.6.2</a>				</td>				<td>Acrobat Reader 5是最后兼容Classic的版本，用于阅读PDF，要求Mac OS 8.6以上。					<br />Adobe Type Manager安装后可支持PostScript Type 1字体。					<br />请前往<a href="https://pan.baidu.com/s/1VnavvO0cz4pO3BTRckI5Ig?pwd=mach">网盘</a>下载，文件夹：Applications（应用程序）/一些中文app					<br />文件：<b>Adobe Software.sit</b>				</td>			</tr>			<tr>				<td><a href="downloads/app/FreeHand8CS.sit">FreeHand 8 <br />简体中文版</a>				</td>				<td>					<br />请前往<a href="https://pan.baidu.com/s/1VnavvO0cz4pO3BTRckI5Ig?pwd=mach">网盘</a>下载，文件夹：Applications（应用程序）/一些中文app					<br />文件：<b>PCI FreeHand 8CS.sit</b>				</td>			</tr>			<tr>				<td><a href="downloads/app/FreeHand10SC.sit">FreeHand 10 <br />简体中文版</a>				</td>				<td>需要Mac OS 9.1及更高版本，同时兼容Mac OS X。					<br />请前往<a href="https://pan.baidu.com/s/1VnavvO0cz4pO3BTRckI5Ig?pwd=mach">网盘</a>下载，文件夹：Applications（应用程序）/一些中文app					<br />文件：<b>Macromedia FreeHand 10 SC.sit</b>				</td>			</tr>			<tr>				<td>Macromedia MX 2002 Studio</td>				<td>目前只找到英文版，含Dreamweaver、Flash、Fireworks MX版本以及Freehand 10。					<br />是最后兼容Mac OS 9.1的版本，同时兼容Mac OS X。					<br /><a href="http://macintoshgarden.org/apps/macromedia-studio-mx">前往Macintosh Garden下载</a>。</td>			</tr>			<tr>				<td><a href="downloads/app/SinoType_TTF.sit">六款简体中文字体</a>				</td>				<td>早期Mac OS光盘附带的字体，分别是粗黑、粗楷、粗宋、隶书、新魏、细圆字体</td>				<tr>					<td>中文字体打包</td>					<td>在某工作室的PowerMac G4上发现的一堆中文艺术字库。						<br />建议在Mac OS 8.1以上系统中使用。						<br />由于文件太大，请在<a href="https://pan.baidu.com/s/1VnavvO0cz4pO3BTRckI5Ig?pwd=mach">网盘</a>中找到<b> Mac OS 9 中文字体(需Stuffit6).img.sit</b> 文件。						<br />需要使用Stuffit Expander 6解压，并使用Disk Copy 6.3挂装镜像。</td>				</tr>		</table>		<p align="center">			<br /><a href="#Contents"><b>返回目录</b></a>		</p>		<br />		<h2><a name="Multimedia">多媒体</a></h2>		<table border="1">			<tr>				<td>名称</td>				<td>描述</td>			</tr>			<tr>				<td>QuickTime 4.0.3					<br /><a href="downloads/app/QuickTime_4.0.3-CH.sit">简体中文版</a>					<br /><a href="downloads/app/QuickTime_4.0.3-TA.sit">繁体中文版</a>				</td>				<td>最后兼容68k Mac的版本，系统最低要求System 7.1。</td>			</tr>			<tr>				<td>QuickTime 4.1.2					<br /><a href="downloads/app/QuickTime-4.1.2-CH.smi.bin">简体中文版</a>					<br /><a href="downloads/app/QuickTime_4.1.2-TA.bin">繁体中文版</a>				</td>				<td>兼容System 7.5.5至Mac OS 9.1，要求PowerPC。</td>			</tr>			<tr>				<td>QuickTime 6.0.3</a>					<br /><a href="downloads/app/QuickTime_6.0.3-CH.bin">简体中文版</a>					<br /><a href="downloads/app/QuickTime_6.0.3-TA.bin">繁体中文版</a>				</td>				<td>Mac OS 8.6-9.2.2最后兼容的QuickTume版本。</td>			</tr>			<tr>				<td>iTunes 简体中文版					<br /><a href="downloads/app/iTunes_2.0.3-CH.sit">2.0.3</a>					<br /><a href="downloads/app/iTunes_2.0.4-CH.sit">2.0.4</a>				</td>				<td>中文版iTunes，用于播放音乐和同步iPod，要求至少Mac OS 9.0，刻录功能要求至少Mac OS 9.1。</td>			</tr>			<tr>				<td><a href="downloads/app/iMovie2.1.2.sit">iMovie 2.1.2</a></td>				<td>iMovie 2.1.2，苹果开发的剪辑软件。打包了简中、繁中、英语三种语言。要更换语言请见说明。				<br />此iMovie 2.1.2英文版可从Macintosh Garden获取，可使用Mac OS X 10.2自带的iMovie 2.1.2语言资源实现翻译。				<br />将OS X版本中的lproj文件夹内的Localized.rsrc更名为USEnglish，放入Languages文件夹即可实现翻译。</td>			</tr>			<tr>				<td><a href="downloads/app/ACDSee1.6.sit">ACDSee 1.6</a> 					<br />简体中文版</td>				<td>要求PowerPC Mac，兼容Mac OS 8.6及更高版本，要求QuickTime 4.0和Carbon Lib 1.3以上版本。					<br />参考序列号：32345678901234567890（注册名：P），可在“关于ACDSee”中注册。</td>			</tr>			<tr>				<td><a href="downloads/app/Kaleidoscope231US.bin">Kaleidoscope 2.3.1</a> 					<br />英文版</a>				</td>				<td>Classic Mac的第三方主题引擎，兼容68020和PowerPC处理器，System 7.0及更高版本系统。</td>			</tr>			<tr>				<td><a href="downloads/app/FlashPlayer7.sit">Flash Player 7</a></td>				<td>Flash独立播放器（中文）和浏览器插件。</td>			</tr>			<tr>				<td>HyperCard 播放程序				<br /><a href="downloads/app/HyperCardPlayer.sit">2.4.1 英文最新版</a>				<br /><a href="downloads/app/HypCrdPlyrCH.sit">2.3.5 简中版</a></td>				<td>HyperCard 可以说是在万维网出现之前，它是最成功的超媒体系统之一，极具交互性。				<br />Macintosh Garden上也有不少HyperCard作品。关于HyperCard，可以参考文章：				<br />《在万维网兴起之前，HyperCard做了所有事情》（<a href="https://zhuanlan.zhihu.com/p/101126044">https</a> | <a href="gopher://sdf.org:70/0/users/pengan/articles/2020/101126044.txt">Gopher页面</a>）				</td>			</tr>		</table>		<p align="center">			<br /><a href="#Contents"><b>返回目录</b></a>		</p>		<br />		<h2><a name="Internet">互联网</a></h2>		<table border="1">			<tr>				<td>名称</td>				<td>描述</td>			</tr>			<tr>				<td><a href="downloads/app/IE401-Full-Fat-128-img.sit">Internet Explorer 4.0.1</a>				</td>				<td>英文版，最后兼容68k Mac的版本，该下载是同时带68k二进制和PPC二进制的fat binary版本。					<br />需要使用Stuffit Expander解压并用Disk Copy 6.x挂装。</td>			</tr>			<tr>				<td><a href="downloads/app/IE517.sit">Internet Explorer 5.1.7 英文版</a> 					<br /><a href="downloads/app/IE5.1.7SC.sit">部分汉化包（简体）</a></td>				<td>IE最后一个支持Classic Mac OS的版本，最低需要Mac OS 8.0和PPC处理器。					<br />据说System 7.6安装了外观功能扩展之后也能使用。					<br /><a href="http://macintoshgarden.org/apps/internet-explorer-517">前往Macintosh Garden下载</a>					<br />汉化包并不完全，只有主界面汉化了，很多地方还没汉化。					<br />如果工具栏没有汉化，可以在“查看”中“”自定义工具栏“里重置工具栏。</td>			</tr>			<tr>				<td><a href="downloads/app/Comm4.08_Complete_US_68K.bin">Netscape Communicator 4.08</a>				</td>				<td>英文版，最后兼容68k Mac的版本。</td>			</tr>			<tr>				<td><a href="downloads/app/Classilla_9.3.3.sit">Classilla 9.3.3</a>				</td>				<td>支持现代https站但，但HTML引擎还是老版Mozilla的，不支持HTML5。</td>			</tr>			<tr>				<td><a href="downloads/app/Classilla_9.3.2.sit">Classilla 9.3.2</a>				</td>				<td>对SheepShaver模拟器兼容较好，但已经不支持大部分现代https站点了。</td>			</tr>			<tr>				<td><a href="downloads/app/Comm4.72_Complete_CH.bin">Netscape Communicator 4.72</a>					<br />简体中文版</td>				<td>Classic Mac上为数不多的中文版浏览器，需要PowerPC处理器。Mac OS 9.2.x已预装，无需再次安装。</td>			</tr>			<tr>				<td><a href="downloads/app/Comm4.72_Complete_TA.bin">Netscape Communicator 4.72</a>					<br />繁体中文版</td>				<td>Classic Mac上为数不多的中文版浏览器，需要PowerPC处理器。Mac OS 9.2.x已预装，无需再次安装。</td>			</tr>			<tr>				<td>iCab 浏览器					<br /><a href="downloads/app/iCab_Pre2.99b_SC_68k.sit">2.9.9简体(68K)</a>					<br /><a href="downloads/app/iCab_Pre2.99a_SC_PPC.sit">2.9.9简体(PPC)</a>					<br /><a href="downloads/app/iCab305_PPC_E.sit">3.0.5英文(PPC)</a>				</td>				<td>iCab 是一款共享软件，可以无限试用。					<br />2.9.9的68k版本于2006年更新，可以说是68k上比较新的浏览器了，要求System 7.5及更高版本。					<br />PPC Classic版最高3.0.5，于2008年初更新，要求Mac OS 8.5及更高版本。					<br />iCab 4.0之前的版本都是自有引擎，4.0版开始使用Mac OS X系统的WebKit。					<br />前往<a href="http://icab.de/download.html">官网icab.de下载</a>。</td>			</tr>			<tr>				<td><a href="downloads/app/OS9vnc.sit">VNC Server 3.5</a></td>				<td>Mac OS 9上的VNC服务端软件，可实现远程控制。					<br /><a href="http://macintoshgarden.org/apps/vnc-server-350">前往Macintosh Garden下载</a>					<br />Classic Mac上的VNC客户端可以使用<a href="http://macintoshgarden.org/apps/vncthing">VNCThing</a>。</td>			</tr>		</table>		<p>更多的Netscape浏览器，可以访问Netscape FTP的镜像站 http://ftp.nluug.nl/netscape/</p>		<p align="center">			<br /><a href="#Contents"><b>返回目录</b></a>		</p>		<br />		<hr>		<p align="center">			<img src="logo.gif">		</p>		<p align="center">Apple logo、Macintosh、Mac、Mac OS是Apple Inc.的商标。本站是非官方支持站点，与Apple Inc.无任何关系。			<br />感谢@Mation Wang制作Logo</p>	</body></html>
+<html lang="zh">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html" ; charset="gb2312" />
+		<title>软件指南 — Classic Mac 非官方支持</title>
+	</head>
+	<body>
+		
+<h1 align=center>Classic Mac 非官方支持站</h1>
+		<table align="center" border="0" cellspacing="8">
+			<tr>
+				<td><a href="index.html">主页</a>
+				</td>
+				<td><a href="beginner.html">入门</a>
+				</td>
+				<td><a href="hardware.html">硬件指南</a>
+				</td>
+				<td><a href="software.html">软件指南</a>
+				</td>
+				<td><a href="help.html">Mac帮助</a>
+				</td>
+				<td><a href="about.html">关于本站</a>
+				</td>
+			</tr>
+		</table>
+		
+<h2>软件指南</h2>
+		<p>中文Mac软件分享</p>
+		<p>文件名后缀为.sit的文件需要使用 <a href="#Utilities"><b>Stuffit Expander</b></a> 进行解压。如果无法解压，可以尝试使用更高版本的Stuffit Expander进行解压。
+			<br />此工具亦可解压大部分.bin和.hqx文件。如遇不能解压的.bin文件，请尝试使用<a href="#Utilities">MacBinary II+</a>解压。
+			<br /><b>注意：由于Mac文件系统的特殊性，.sit/.bin/.hqx文件不要在Windows下解压，否则拷贝到Mac上很可能无法正常使用。请将压缩档拷贝到老Mac中再在Mac系统中解压。</b>
+		</p>
+		<p>文件名以.toast或.cdr结尾的，大多数可以直接改为.iso进行刻录，建议在Mac下刻录。
+			<br />如需在Classic Mac中挂装这种光盘镜像，请使用<a href="#Utilities">Roxio Toast</a>工具。</p>
+		<p>软盘镜像有Disk Copy 4.2格式，Disk Copy 6格式和RAW格式。其中RAW格式即标准img格式，400K软盘，800K软盘和1440K软盘。Disk Copy 4.2格式会在RAW镜像的头部加上额外数据，使镜像变成409K，819K和1441K等非标准大小，对于1441K的镜像只需用十六进制编辑器删去前84字节内容即可转换回RAW格式。而Disk Copy 6格式（NDIF）的软盘镜像大小并不规则，只能使用Disk Copy 6进行挂载或写入。Disk Copy 4.2格式的软盘镜像不依赖resource
+			fork，即使只有data fork也能正常使用， Mini vMac模拟器也能直接使用Disk Copy 4.2镜像。但Disk Copy 6格式的镜像会将镜像的部分内容存入resource fork，因此只打包data fork会使Disk Copy 6镜像无效。</p>
+		<p>如需在PC和现代Mac（Intel）上写入Disk Copy 4.2格式的镜像，可以使用<a href="https://www.bigmessowires.com/2013/12/16/macintosh-diskcopy-4-2-floppy-image-converter/">此工具</a>将镜像转换成标准IMG格式。</p>
+		<p>小常识：苹果Classic软件中，文件名中的“CH”表示简体中文版，而“TA”表示繁体中文版。</p>
+		<p>资源均搜集自互联网。</p>
+		<br />
+		
+<h2><a name="Contents">目录</a></h2>
+		<ul>
+    		<li><a href="#netstore">网盘地址</li>
+			<li><a href="#SystemSoftware"><b>系统软件</b></a>
+			</li>
+			<li><a href="#System5">System 5</a>
+			</li>
+			<li><a href="#System6">System 6</a>
+			</li>
+			<li><a href="#System7">System 7 系列</a>
+			</li>
+			<li><a href="#MacOS8">Mac OS 8 系列</a>
+			</li>
+			<li><a href="#MacOS9">Mac OS 9.0.x</a>
+			</li>
+			<li><a href="#MacOS92">Mac OS 9.1/9.2.x</a>
+			</li>
+			<li><a href="#Update">软件更新</a>
+			</li>
+			<li><a href="#Utilities"><b>实用工具</b></a>
+			</li>
+			<li><a href="#Productivity"><b>生产力工具</b></a>
+			</li>
+			<li><a href="#Multimedia"><b>多媒体</b></a>
+			</li>
+			<li><a href="#Internet"><b>互联网工具</b></a>
+			</li>
+		</ul>
+		</p>
+		<br />
+<h2><a name="netstore"></a>网盘地址</h2>
+		<p>由于Mac OS 8和Mac OS 9的系统盘文件太大太多，以及一些应用软件太大，服务器支撑不了，资源已使用百度云、天翼云保存，请使用现代电脑下载并刻录。由于百度云链接失效速度太快，建议前往天翼云下载。</p>
+		<p>本站也在积极地将中文资源上传至Macintosh Garden和Macintosh Repository网站，这两个网站都是国外的老Mac软件集散地。现在本站已有部分软件能在这两个网站下载了，也欢迎前往这两个网站下载资源。这两个网站均支持http访问和https访问，如遇https链接无法访问时可以将https改为http。</p>
+		<p>网盘地址：
+			<ul>
+				<li>https://cloud.189.cn/t/ym2aMjfEzuU3 （天翼云镜像站，感谢网友@P EAS转存。建议切换到移动版UA可直接下载。）</li>
+				<li>System 6 文件夹 https://pan.baidu.com/s/1vjuRjpomqR9lSYQvVNIMyA?pwd=mach</li>
+				<li>System 7文件夹 https://pan.baidu.com/s/1qhparmu2Y76BgGJO-99ghA?pwd=mach</li>
+				<li>Mac OS 镜像和资源（非官方）文件夹 https://pan.baidu.com/s/1lSCLeIH2bGW1Bnnhspwb7w?pwd=mach</li>
+				<li>Mac OS 8.x_9.x 文件夹 https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach</li>
+				<li>Applications （应用程序）文件夹 https://pan.baidu.com/s/1VnavvO0cz4pO3BTRckI5Ig?pwd=mach</li>
+				<li>百度盘提取码均为mach，百度盘其他链接失效了……</li>
+			</ul>
+		</p>
+		
+<h2><a name="SystemSoftware">系统软件</a></h2>
+		
+<h3><a name="System5">System 5 繁体中文版</a></h3>
+		<p>Macintosh System Software 5 TA-1.2 繁体中文版：<a href="downloads/system/System5.1-TA.sit">Disk Copy 4.2格式</a>、<a href="downloads/system/TA-System5.1-IMG.zip">标准IMG格式</a>。System文件版本为4.3-TA1，Finder版本为6.0-TA1。内含三个800K软盘镜像。</p>
+		<p>适合机型：</p>
+		<ul>
+			<li>Macintosh 512Ke</li>
+			<li>Macintosh Plus</li>
+			<li>Macintosh SE（含FDHD 但不含SE/30）</li>
+			<li>Macintosh II（Mini vMac模拟的Macintosh II不支持，未知实际是否支持）</li>
+		</ul>
+		<p align="center">
+			<br /><a href="#Contents"><b>返回目录</b></a>
+		</p>
+		<br />
+		
+<h3><a name="System6">System 6 中文版</a></h3>
+		<table border="1">
+			<tr>
+				<td>名称</td>
+				<td>描述</td>
+			</tr>
+			<tr>
+				<td>System 6.0.3 简体中文版
+					<br /><a href="downloads/system/CH-6.0.3.sit">Disk Copy 4.2格式</a>
+					<br /><a href="downloads/system/CH-6.0.3-IMG.zip">标准IMG格式</a>
+				</td>
+				<td>System版本 中文6.0.3，Finder版本 中文6.1。</td>
+			</tr>
+			<tr>
+				<td>System 6.0.3 繁体中文版
+					<br /><a href="downloads/system/TA-6.0.3.sit">Disk Copy 4.2格式</a>
+					<br /><a href="downloads/system/TA-6.0.3-IMG.zip">标准IMG格式</a>
+				</td>
+				<td>System版本 TA-6.0.3，Finder版本 6.1。</td>
+			</tr>
+			<tr>
+				<td>System 6.0.4 繁体中文版
+					<br /><a href="downloads/system/TA-6.0.4.sit">Disk Copy 4.2格式</a>
+					<br /><a href="downloads/system/TA-6.0.4-IMG.zip">标准IMG格式</a>
+				</td>
+				<td>System版本 TA-6.0.4，Finder版本 6.1。</td>
+			</tr>
+			<tr>
+				<td>System 6.0.5 繁体中文版
+					<br /><a href="downloads/system/TA-6.0.5.sit">Disk Copy 4.2格式</a>
+					<br /><a href="downloads/system/TA-6.0.5-IMG.zip">标准IMG格式</a>
+				</td>
+				<td>System版本 TA-6.0.5，Finder版本 6.1。</td>
+			</tr>
+			<tr>
+				<td>System 6.0.6 繁体中文版
+					<br /><a href="downloads/system/TA-6.0.6.sit">Disk Copy 4.2格式</a>
+					<br /><a href="downloads/system/TA-6.0.6-IMG.zip">标准IMG格式</a>
+				</td>
+				<td>System版本 TA-6.0.6，Finder版本 TA-6.1.6。</td>
+			</tr>
+			<tr>
+				<td>System 6.0.7 简体中文版
+					<br /><a href="downloads/system/CH-6.0.7.sit">Disk Copy 4.2格式</a>
+					<br /><a href="downloads/system/CH-6.0.7-IMG.zip">标准IMG格式</a>
+				</td>
+				<td>System版本 中文6.0.7，Finder版本 中文6.1.7。</td>
+				<tr>
+					<td>System 6 繁体中文字库盘
+						<br /><a href="downloads/system/TA-Fonts.sit">Disk Copy 4.2格式</a>
+						<br /><a href="downloads/system/TA-Fonts-IMG.zip">标准IMG格式</a>
+					</td>
+					<td>含繁体中文字库和可选字库两套盘。</td>
+				</tr>
+		</table>
+		<p><b>提示：以上Disk Copy 4.2格式镜像，需要在Classic Mac中使用Disk Copy 4.2工具写入软盘。<br />
+标准IMG格式可以在PC上直接写入软驱，也可方便模拟器使用。<br />
+System 6最高可用于Macintosh IIsi和LC机型，最低需要Macintosh 512Ke。</b>
+		</p>
+		<p align="center">
+			<br /><a href="#Contents"><b>返回目录</b></a>
+		</p>
+		<br />
+		
+<h3><a  name="System7">System 7 中文版</a></h3>
+		<p><b>由于文件太大，部分文件请前往网盘下载。</b>
+		</p>
+		<table border="1">
+			<tr>
+				<td>名称</td>
+				<td>描述</td>
+			</tr>
+			<tr>
+				<td>System 7.1 简体版
+				<br /><a href="downloads/system/System_7.1_CH(img).zip">标准IMG格式</a>
+				<br /><a href="downloads/system/CH-7.1_DC42.sit">Disk Copy 4.2格式</a>
+				</td>
+				<td>Disk Copy 4.2格式需在Mac下写入磁盘。<br />标准img格式，可在PC上使用WinImage写入软盘。
+				<br />如需拷贝到硬盘安装，可以下载<a href="downloads/system/CH-7.1.2_expanded.sit">此SIT档</a>，解压后直接运行目录中的安装器即可。</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/system/System7.1-TA.sit">System 7.1 繁体版</a></td>
+				<td>并非安装包，而是包括系统文件夹在内的多个磁盘镜像。</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/system/System_7.1.2-CH.sit">System 7.1.2 简体版</a>
+				</td>
+				<td>软盘镜像取自Mac OS Anthology，Disk Copy格式。
+					<br />镜像限定初代预装7.1.2的Power Macintosh机型，
+					<br />而且<b>镜像应当写入到软盘才能安装</b>。
+					<br /><a href="/downloads/system/CH-7.1.2_expanded.sit">硬盘安装版SIT文件</a>。需要PPC机型才能安装，如果要用于68K,
+					<br />需要先安装中文版7.1再运行此安装器升级至7.1.2。（68040机型需要enabler。）</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/system/System_7.1.2-TA.sit">System 7.1.2 繁体版</a>
+				</td>
+				<td>软盘镜像取自Mac OS Anthology，Disk Copy格式。
+					<br />镜像限定初代预装7.1.2的Power Mac机型，其他机型不建议使用。
+					<br /><a href="/downloads/system/TA-7.1.2_expanded.sit">硬盘安装版SIT文件</a>。需要PPC机型才能安装，如果要用于68K,
+					<br />需要先安装中文版7.1再运行此安装器升级至7.1.2。（68040机型需要enabler。）</td>
+			</tr>
+			<tr>
+				<td>System 7.5 简体版
+					<br /><a href="downloads/system/CH-Sys75_DC42.zip">Disk Copy 4.2格式</a>
+					<br /><a href="downloads/system/CH-Sys75_IMG.zip">标准IMG格式</a>
+				</td>
+				<td>软盘镜像，标准img，可写入软盘安装，也可用于模拟器（不推荐）。
+				<br />“系统磁盘1”卷标有问题，需要改为“系统磁盘 1”（“盘”和“1”之间加空格）。
+				<br /><a href="/downloads/system/CH-7.5_expanded.sit">硬盘安装版SIT文件</a>。</td>
+			</tr>
+			<tr>
+				<td>System 7.5 繁体版
+					<br /><a href="downloads/system/TA-Sys75_DC42.zip">Disk Copy 4.2格式</a>
+					<br /><a href="downloads/system/TA-Sys75_IMG.zip">标准IMG格式</a>
+				</td>
+				<td>软盘镜像，标准img，可写入软盘安装，也可用于模拟器（不推荐）。
+				<br /><a href="/downloads/system/TA-7.5-expanded.sit">硬盘安装版SIT文件</a>。</td>
+			</tr>
+						<tr>
+				<td>System 7.5.2简体版
+					<br /><a href="downloads/system/System7.5.2-CH.zip">标准IMG格式</a>
+				</td>
+				<td>软盘镜像，标准img，可写入软盘安装，适用于Power Macintosh 7500和8500。
+				<br /><a href="/downloads/system/CH-7.5.2-expanded.sit">硬盘安装版SIT文件</a>。</td>
+			</tr>
+			<tr>
+				<td>System 7.5.2 繁体版
+					<br /><a href="downloads/system/System7.5.2-TA_PM7200.zip">镜像一</a>
+					<br /><a href="downloads/system/System7.5.2-TA_PM9500.zip">镜像二</a>
+				</td>
+				<td>软盘镜像，标准img，可写入软盘安装。镜像一适用于Power Macintosh 7200和9500，
+				<br /><a href="/downloads/system/TA-7.5.2-PM7200-expanded.sit">硬盘安装版SIT文件</a>。
+				<br />镜像二适用于Power Macintosh 9500，<a href="/downloads/system/TA-7.5.2-PM9500-expanded.sit">硬盘安装版SIT文件</a>。</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/system/System_7.5.3-CH.iso.zip">System 7.5.3 简体版</a>
+				</td>
+				<td>iso文件，仅有安装器，不能启动，需使用软盘启动后安装。
+					<br />下载：<a href="https://pan.baidu.com/s/1qhparmu2Y76BgGJO-99ghA?pwd=mach">网盘</a>  <b>Apple Mac OS 7.5.3 [Chinese-Simpl.] (CD)</b> 文件夹。</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/system/System_7.5.3-TA.iso.zip">System 7.5.3 繁体版</a>
+				</td>
+				<td>iso文件，仅有安装器，不能启动，需使用软盘启动后安装。
+					<br />下载：<a href="https://pan.baidu.com/s/1qhparmu2Y76BgGJO-99ghA?pwd=mach">网盘</a>  <b>System_7.5.3-TA.iso.zip</b> 文件。</td>
+			</tr>
+			<tr>
+				<td>System 7.6.1 简体版</td>
+				<td>光盘镜像，没有系统文件夹，无法启动。
+					<br />下载：<a href="https://pan.baidu.com/s/1qhparmu2Y76BgGJO-99ghA?pwd=mach">网盘</a>  <b>System_7.6.1-CH.cdr.sit</b> 文件。</td>
+			</tr>
+			<tr>
+				<td>System 7.6.1 简体版</td>
+				<td>本站修改版本，光盘带Mac OS 8.1系统文件夹和7.6.1安装器，可启动。
+					<br />下载：<a href="https://pan.baidu.com/s/1lSCLeIH2bGW1Bnnhspwb7w?pwd=mach ">网盘</a>  <b>MacOS7.6.1CH with 8.1 system folder.zip</b> 文件。</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/system/System_7.6-TA.zip">System 7.6 繁体版</a>
+				</td>
+				<td>System 7.6 繁体中文版ISO镜像，不能启动。</td>
+			</tr>
+			<tr>
+				<td>System 7.6.1 繁体版</td>
+				<td>不好意思，资源暂未找到。（Mac OS Anthology里也没有。）</td>
+			</tr>
+		</table>
+		<p><b>提示：Disk Copy格式的磁盘镜像需要在System 7到Mac OS 9.2.2中写入软盘。<br />
+以上System 7的官方光盘镜像均不带系统文件夹，无法从光盘启动，需要配合启动软盘使用。<br />
+Mini vMac模拟器最高支持到Mac OS 7.5.5，如果需要模拟7.6及更高版本，需要使用Basilisk II等其他68k Mac模拟器。<br />
+如果运行System 7.5.x安装器提示机型不对，在运行安装器后按住Option键再点击继续。
+</b>
+		</p>
+		<p align="center">
+			<br /><a href="#Contents"><b>返回目录</b></a>
+		</p>
+		<br />
+		
+<h3><a name="MacOS8">Mac OS 8 系列</a></h3>
+		<p><b>由于文件太大，请前往网盘下载。</b>
+		</p>
+		<table border="1">
+			<tr>
+				<td>名称</td>
+				<td>描述</td>
+			</tr>
+			<tr>
+				<td>Mac OS 8.0 简体中文版</td>
+				<td>光盘镜像取自Mac OS Anthology，不能启动。
+					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>Mac OS 8(SC)</b> 文件夹</td>
+			</tr>
+			<tr>
+				<td>Mac OS 8.0 繁体中文版</td>
+				<td>光盘镜像取自Mac OS Anthology，不能启动。
+					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>Mac OS 8(TC)</b> 文件夹</td>
+			</tr>
+			<tr>
+				<td>Mac OS 8.1 简体中文版</td>
+				<td>光盘镜像取自Mac OS Anthology，不能启动。
+					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>Mac OS 8.1(SC)</b> 文件夹</td>
+			</tr>
+			<tr>
+				<td>Mac OS 8.1 繁体中文版</td>
+				<td>光盘镜像取自Mac OS Anthology，不能启动。
+					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>Mac OS 8.1(SC)</b> 文件夹</td>
+			</tr>
+			<tr>
+				<td>Mac OS 8.1 简体中文版</td>
+				<td>Power Macintosh G3系统软件安装盘，可在各PowerPC机型上安装使用。
+					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>MacOS 8.1.CHS.PPC.iso</b> 文件</td>
+			</tr>
+			<tr>
+				<td>Mac OS 8.1 简体中文恢复盘
+					<br />68040版</td>
+				<td>本站修改的简体中文8.1系统，可以在m68k机型上使用。
+					<br />下载：<a href="https://pan.baidu.com/s/1lSCLeIH2bGW1Bnnhspwb7w?pwd=mach">网盘</a>  <b>Mac OS 8.1中文版 for 68k.rar</b> 文件。</td>
+			</tr>
+			<tr>
+				<td>Mac OS 8.5
+					<br />简体中文版
+					<br />繁体中文版</td>
+				<td>镜像取自Mac OS Anthology，不可启动，镜像也有些问题。
+					<br />简体镜像是“Internet 访问”安装出错，可以跳过，并手动拖动文件安装。
+					<br />繁体镜像问题更多，但也可以跳过。
+					<br />除非有特殊需求，建议直接使用8.6版，镜像正常。
+					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>Mac OS 8.5(Anthology)</b> 文件夹</td>
+			</tr>
+			<tr>
+				<td>Mac OS 8.5.1 简体中文版</td>
+				<td>Power Macintosh G3软件安装盘，可启动。
+					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>MacOS8.51CHS.7z</b> 文件</td>
+			</tr>
+			<tr>
+				<td>Mac OS 8.6
+					<br />简体中文版
+					<br />繁体中文版</td>
+				<td>镜像取自Mac OS Anthology，不可启动。
+					<br />镜像测试过，可以正常安装。
+					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>Mac OS 8.6(Anthology)</b> 文件夹</td>
+			</tr>
+			<tr>
+				<td>Mac OS 8.6 简体中文版</td>
+				<td>Power Macintosh G3软件安装盘，可启动。
+					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>MacOS 8.6.CHS.iso</b> 文件</td>
+			</tr>
+		</table>
+		<p><b>提示：中文版Mac OS 8.0/8.1均要求PowerPC处理器，也可以是从68k Mac升级的PowerPC。<br />实际上Mac OS 8.0/8.1也可以在68k Mac上运行，要求PowerPC处理器的原因是中文输入法不支持68k，表现为Finder加载后系统卡死。<br />使用System 7.6的中文输入法替换8.0/8.1的即可。<br />本站也做了一个支持68k Mac的简体版Mac OS 8.1方便大家在实体机和模拟器上使用，运行光盘中的“苹果软件重新安装”即可将68k系统镜像恢复至硬盘。</b>
+		</p>
+		<p align="center">
+			<br /><a href="#Contents"><b>返回目录</b></a>
+		</p>
+		<br />
+		
+<h3><a name="MacOS9">Mac OS 9.0中文版</a></h3>
+		<p><b>由于文件太大，请前往网盘下载。</b>
+		</p>
+		<table border="1">
+			<tr>
+				<td>名称</td>
+				<td>描述</td>
+			</tr>
+			<tr>
+				<td>Mac OS 9.0 简体中文版</td>
+				<td>Mac OS Anthology版本，不可启动。
+					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>待上传</b> 文件</td>
+			</tr>
+			<tr>
+				<td>Mac OS 9.0 简体中文版</td>
+				<td>iMac G3版，限iMac G3安装，内含简体ClarisWorks 4.0安装器。
+					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>Apple Mac OS 9.0 [Chinese-Simpl.] [iMac]</b> 文件夹
+					<br /><a href="http://macintoshgarden.org/apps/mac-os-90-904-update-90-imac-dv-ibook-g3-g4-agp-904-g4-cube-g4-gigabit-ethernet-pb-g3-firewire">前往Macintosh Garden下载</a>（第13个文件 iMacCH90CD_Inst.ZIP）</td>
+			</tr>
+			<tr>
+				<td>Mac OS 9.0.4 简体中文恢复盘</td>
+				<td>非安装盘，限Power Mac G4使用。
+					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>MAC_OS_9.0_CS.iso</b> 文件
+					<br /><a href="http://macintoshgarden.org/apps/mac-os-90-904-update-90-imac-dv-ibook-g3-g4-agp-904-g4-cube-g4-gigabit-ethernet-pb-g3-firewire">前往Macintosh Garden下载</a>（第34个文件 PMG4_9.0.4_CH.zip）</td>
+			</tr>
+			<tr>
+				<td>Mac OS 9.0.4 简体中文恢复盘</td>
+				<td>修改自Power Mac G4恢复盘，解除机型限制。
+					<br />下载：<a href="https://pan.baidu.com/s/1lSCLeIH2bGW1Bnnhspwb7w?pwd=mach">网盘</a>  <b>MacOS9.0.4中文恢复盘.zip</b> 文件</td>
+			</tr>
+			<tr>
+				<td>Mac OS 9.0.4 繁体中文安装盘</td>
+				<td>限Power Mac G4 Cube安装。
+					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>MacOS 9.0.TW.Install.iso</b> 文件。
+					<br /><a href="http://macintoshgarden.org/apps/mac-os-90-904-update-90-imac-dv-ibook-g3-g4-agp-904-g4-cube-g4-gigabit-ethernet-pb-g3-firewire">前往Macintosh Garden下载</a>（第29个文件 G4CubeTA904CD_Inst.ZIP）</td>
+			</tr>
+			<tr>
+				<td>Mac OS 9.0.4 繁体中文恢复盘</td>
+				<td>限Power Mac G4 Cube使用。
+					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>MacOS 9.0.TW.Restore.iso</b> 文件
+					<br /><a href="http://macintoshgarden.org/apps/mac-os-90-904-update-90-imac-dv-ibook-g3-g4-agp-904-g4-cube-g4-gigabit-ethernet-pb-g3-firewire">前往Macintosh Garden下载</a>（第35个文件 G4Cube9.0.4_Rest-TA.zip）</td>
+			</tr>
+			<tr>
+				<td>Mac OS 9 Combo 简体中文版</td>
+				<td>本站制作的Mac OS 9安装盘，带有Mac OS 9.0.4的系统文件夹。
+					<br />系统安装器是9.0.0的，附带9.0.4和9.1的更新档。
+					<br />下载：<a href="https://pan.baidu.com/s/1lSCLeIH2bGW1Bnnhspwb7w?pwd=mach">网盘</a>  <b>Mac OS 9 Combo(9.0-9.1).toast</b> 文件</td>
+			</tr>
+		</table>
+		<p><b>提示：SheepShaver最高兼容9.0.4系统。PowerPC G3之前的Mac也建议使用Mac OS 9.0.4版本，除非需要更新版本的软件支持才建议安装9.1版。</b>
+		</p>
+		<p align="center">
+			<br /><a href="#Contents"><b>返回目录</b></a>
+		</p>
+		<br />
+		
+<h3><a name="MacOS92">Mac OS 9.1/9.2 中文版</a></h3>
+		<p><b>由于文件太大，请前往网盘下载。</b>
+		</p>
+		<table border="1">
+			<tr>
+				<td>名称</td>
+				<td>描述</td>
+			</tr>
+			<tr>
+				<td>Mac OS 9.1 简体中文版</td>
+				<td>Mac OS Anthology版，可能会安装出错，不建议使用
+					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>Mac OS 9.1</b> 文件夹</td>
+			</tr>
+			<tr>
+				<td>Mac OS 9.1 繁体中文版</td>
+				<td>Mac OS Anthology版，可能会安装出错，不建议使用
+					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>Mac OS 9.1</b> 文件夹</td>
+			</tr>
+			<tr>
+				<td>Mac OS 9.1 简体中文修复版</td>
+				<td>基于网上的某个9.1镜像修复而来。
+					<br />可以启动，但安装某些组件时可能会出错，但可以跳过。
+					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>Mac OS 9.1中文版（修复）.7z</b> 文件</td>
+			</tr>
+			<tr>
+				<td>Mac OS 9.2.1 简体中文版</td>
+				<td>相当于零售版，取自Apple开发者CD订阅，可以启动。
+					<br />下载：<a href="https://pan.baidu.com/s/13OlDnPhPo4GNRuR-BYwcjQ?pwd=mach">网盘</a>  <b>9.2.1</b> 文件夹
+					<br /><a href="http://macintoshgarden.org/apps/mac-os-921-922-chinese">前往Macintosh Garden下载</a>（第1个文件 MacOS9.2.1-CH.zip）</td>
+			</tr>
+			<tr>
+				<td>Mac OS 9.2.1 繁体中文版</td>
+				<td>相当于零售版，取自Apple开发者CD订阅，可以启动。
+					<br />下载：<a href="https://pan.baidu.com/s/13OlDnPhPo4GNRuR-BYwcjQ?pwd=mach">网盘</a>  <b>9.2.1</b> 文件夹
+					<br /><a href="http://macintoshgarden.org/apps/mac-os-921-922-chinese">前往Macintosh Garden下载</a>（第2个文件 MacOS9.2.1-TA.zip）</td>
+			</tr>
+			<tr>
+				<td>Mac OS 9.2.2 简体中文版</td>
+				<td>Power Mac G4软件安装盘，但相对通用，大多数G3、G4机型都能使用。
+					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>Mac OS 9.2.2 简体中文版.iso</b> 文件
+					<br /><a href="http://macintoshgarden.org/apps/mac-os-921-922-chinese">前往Macintosh Garden下载</a>（第5个文件 Mac_OS_9.2.2_CHUniversal.zip）</td>
+			</tr>
+			<tr>
+				<td>Mac OS 9.2.2 简体中文版</td>
+				<td>Power Mac G4软件安装盘，机型限定版，仅限Power Mac G4系列安装。
+					<br />但附赠Norton Utilities、Tech Tools、Disk Warrior、Roxio Toast 5.1.3等实用工具。）
+					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>MacOS922CHS_Bootable.rar</b> 文件
+					<br /><a href="http://macintoshgarden.org/apps/mac-os-921-922-chinese">前往Macintosh Garden下载</a>（第6个文件 MacOS9.2.2.CH_.Install.zip）</td>
+			</tr>
+			<tr>
+				<td>Mac OS 9.2.2 简体中文版</td>
+				<td>eMac G4软件安装盘，有机型限制。
+					<br />部分组件比Power Mac G4盘的更新，附带iTunes 2.0.4中文版。
+					<br />下载：<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>  <b>eMac 9.2.2原版(修复).rar</b> 文件
+					<br /><a href="http://macintoshgarden.org/apps/mac-os-921-922-chinese">前往Macintosh Garden下载</a>（第7个文件 eMac_Install_CD_SC.zip）</td>
+			</tr>
+			<tr>
+				<td>Mac OS 9.2.2 简体中文版</td>
+				<td>eMac G4软件安装盘，解除机型限制。
+					<br />下载：<a href="https://pan.baidu.com/s/1lSCLeIH2bGW1Bnnhspwb7w?pwd=mach">网盘</a>  <b>eMac Install CD 9.2.2其他机型可直装).zip</b> 文件</td>
+				<tr>
+					<td>Mac OS 9.2.2 简体中文版通用恢复盘</td>
+					<td>本站制作的恢复盘，通用于原生支持OS 9.2.2的机型，预装了一些常用软件，方便部署新机。
+						<br />下载：<a href="https://pan.baidu.com/s/1lSCLeIH2bGW1Bnnhspwb7w?pwd=mach">网盘</a>  <b>Mac OS 9.2.2 中文通用恢复盘_v3.5.zip</b> 文件</td>
+				</tr>
+		</table>
+		<p><b>提示：Mac OS 9.2.x要求原生配有PowerPC G3处理器的Mac电脑（初代PowerPC G3除外），G3之前的机型最高支持到Mac OS 9.1版本。<br />目前Mac OS 9.1版目前没有找到比较完美的镜像，因此建议从Mac OS 9.0.x版升级至9.1版，然后将Finder替换为Mac OS 9.2的Finder。因为9.2的Finder响应速度更快一些（其实Mac OS 9.0.x也兼容9.2的Finder）。<br />如果是G3、G4处理器的Mac，更建议安装Mac OS 9.2.2版，简体版本可以直接找解除机型限制的eMac版，繁体版本目前没有找到完整的9.2.2镜像，因此可以安装9.2.1版然后更新到9.2.2。</b>
+		</p>
+		<p align="center">
+			<br /><a href="#Contents"><b>返回目录</b></a>
+		</p>
+		<br />
+		
+<h3><a name="Update">软件更新</a></h3>
+		<p><b>更新档也可在<a href="https://pan.baidu.com/s/1yG25JJxM0JOkd2emGtowag?pwd=mach">网盘</a>Mac OS 8.x_9.x的Update文件夹中找到。<br />部分文件由于太大，请前往网盘下载。</b>
+		</p>
+		<table border="1">
+			<tr>
+				<td>名称</td>
+				<td>描述</td>
+			</tr>
+			<tr>
+    			<td>2020年份补丁（非官方）</td>
+    			<td>Mac OS 9之前的版本，年份最高设置到2019年。<br />可以安装该补丁来将年份设置为2020年到2040年。<br /><a href="http://www.mactcp.org.nz/macos2020.html">补丁作者网站下载链接</a><br /><a href="http://macintoshgarden.org/apps/2020patch">Macintosh Garden下载链接</a></td>
+    		</tr>
+			<tr>
+				<td><a href="downloads/update/CH-Mac_OS_8.5.1_Update.smi.bin">Mac OS 8.5.1 简体更新档</a>
+				</td>
+				<td>需要已安装的简体中文版8.5
+				<br /><a href="downloads/update/macos8.5.1.txt">更新说明（英文）</a></td>
+			</tr>
+			<tr>
+				<td><a href="downloads/update/TA-Mac_OS_8.5.1_Update.smi.bin">Mac OS 8.5.1 繁体更新档</a>
+				</td>
+				<td>需要已安装的繁体中文版8.5
+				<br /><a href="downloads/update/macos8.5.1.txt">更新说明（英文）</a></td>
+			</tr>
+			<tr>
+				<td><a href="downloads/update/CH-Mac_OS_8.6_Update.smi.bin">Mac OS 8.6 简体更新档</a>
+				</td>
+				<td>需要已安装的简体中文版8.5或8.5.1
+					<br /><a href="downloads/update/macos8.6.html">更新说明（英文）</a>
+				</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/update/TA-Mac_OS_8.6_Update.smi.bin">Mac OS 8.6 繁体更新档</a>
+				</td>
+				<td>需要已安装的繁体中文版8.5或8.5.1
+					<br /><a href="downloads/update/macos8.6.html">更新说明（英文）</a>
+				</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/update/CH-Mac_OS_9.0.4_Update.smi.bin">Mac OS 9.0.4 简体更新档</a>
+				</td>
+				<td>需要已安装的简体中文版9.0-9.0.3</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/update/TA-Mac_OS_9.0.4_Update.smi.bin">Mac OS 9.0.4 繁体更新档</a>
+				</td>
+				<td>需要已安装的繁体中文版9.0-9.0.3</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/update/CH-MacOS9.1Update.smi.sit">Mac OS 9.1 简体更新档</a>
+				</td>
+				<td>需要已安装的简体中文版9.0.x
+					<br /><a href="downloads/update/macos9.1.txt">更新说明（英文）</a>
+				</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/update/TA-MacOS9.1Update.smi.sit">Mac OS 9.1 繁体更新档</a>
+				</td>
+				<td>需要已安装的繁体中文版9.0.x
+					<br /><a href="downloads/update/macos9.1.txt">更新说明（英文）</a>
+				</td>
+			</tr>
+			<tr>
+				<td>Mac OS 9.2.1 简体更新档</td>
+				<td>需要已安装的简体中文版9.1
+				<br /><a href="downloads/update/macos9.2.1.html">更新说明（英文）</a>
+				<br />资源有问题，语言不对，现已撤下。</td>
+			</tr>
+			<tr>
+				<td>Mac OS 9.2.1 繁体更新档</td>
+				<td>需要已安装的繁体中文版9.1
+				<br />资源有问题，语言不对，现已撤下。</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/update/Mac_OS_9.2.2_Update-CH.smi.bin">Mac OS 9.2.2 简体更新档</a>
+				</td>
+				<td>需要已安装的简体中文版9.2.1
+					<br /><a href="downloads/update/macos9.2.2.html">更新说明（英文）</a>
+				</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/update/Mac_OS_9.2.2_Update-TA.smi.bin">Mac OS 9.2.2 繁体更新档</a>
+				</td>
+				<td>需要已安装的繁体中文版9.2.1
+					<br /><a href="downloads/update/macos9.2.2.txt">更新说明（英文）</a>
+				</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/update/USB_Card_Support_1.4.1.smi.bin">USB扩展卡支持 1.4.1</a> 
+				</td>
+				<td>USB扩展卡驱动，需要带PCI或CardBus的Mac机型；
+					<br />在PCI或CardBus插槽上安装了USB卡则需要此更新；
+					<br />适用于Mac OS 8.6-9.0.4。Mac OS 9.1/9.2不能安装此更新。
+					<br />适用于Mac OS 8.6。Mac OS 9无需此更新。
+					<br /><a href="downloads/update/usbcard.txt">更新说明（英文）</a>
+				</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/update/USB_Storage1.3.5.smi.bin">USB大容量存储设备支持 1.3.5</a> 
+				</td>
+				<td>USB移动硬盘和U盘的驱动，
+					<br />适用于Mac OS 8.6。Mac OS 9无需此更新。
+					<br /><a href="downloads/update/usbmass135.html">更新说明（英文）</a>
+				</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/update/CarbonLib_104.hqx">CarbonLib 1.0.4 更新</a></td>
+				<td>最后兼容Mac OS 8.0/8.1的版本，部分应用程序可能需要。 </td>
+			</tr>
+			<tr>
+				<td><a href="downloads/update/CH-CarbonLib_1.6.smi.bin">CarbonLib 1.6 简体更新档</a> 
+				</td>
+				<td>适用于Mac OS 8.6至9.2.2</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/update/TA-CarbonLib_1.6.smi.bin">CarbonLib 1.6 繁体更新档</a> 
+				</td>
+				<td>适用于Mac OS 8.6至9.2.2</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/update/Authoring_Support1.1.9.smi.bin">Authoring Support 1.1.9</a> 
+				</td>
+				<td>增加了少数几款新刻录机支持，改进了光盘刻录稳定性。
+					<br />适用于Mac OS 9.2.2</td>
+			</tr>
+		</table>
+		<p align="center">
+			<br /><a href="#Contents"><b>返回目录</b></a>
+		</p>
+		<br />
+		
+<h2><a name="Utilities">实用工具</a></h2>
+		<table border="1">
+			<tr>
+				<td>名称</td>
+				<td>描述</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/app/stuffit_expander_55.bin">Stuffit Expander 5.5</a>
+				</td>
+				<td>可以解压大多数.sit文件，该版本Stuffit Expander支持PPC和68k Mac，至少需要System 7.0系统。</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/app/macbinary_ii_1.0.2.sit">MacBinary II+</a>
+				</td>
+				<td>用于解压MacBinary II格式的.bin文件。</td>
+				<tr>
+					<td><a href="downloads/app/CH-DiskCopy_6.3.3.sit">Disk Copy 6.3.3 <br />简体中文版</a>
+					</td>
+					<td>该版本在Mac OS 8.6和9.x中已自带。</td>
+				</tr>
+				<tr>
+					<td><a href="downloads/app/RoxioToastTi5.1.3.sit">Roxio Toast 5.1.3 <br />简体中文版</a>
+					</td>
+					<td>用于光盘刻录和光盘镜像制作，也可以挂载光盘镜像文件</td>
+				</tr>
+				<tr>
+					<td><a href="downloads/app/RoxioToast5.2C.sit">Roxio Toast 5.2 <br />简体中文版</a>
+					</td>
+					<td>需要Mac OS 9.2以上版本，此版本也可以用于Mac OS X。Carbon API应用程序，SIT档已删除英文语言包，换成中文。
+					此<a href="downloads/app/RoxioToast5.2C.zip">ZIP档</a>是原版，需要在Mac OS X下解压，含中文和英文语言包。</td>
+				</tr>
+				<tr>
+					<td><a href="downloads/app/Mactracker402.sit">MacTracker 4.0.2</a>
+					</td>
+					<td>Mac机型信息查询工具，此版自带初代Macintosh 128K到Power Mac G5 Late 2005的机型信息库，软件兼容Mac OS 8.5及更高版本。</td>
+				</tr>
+				<tr>
+					<td>Chinese Language Kit
+					<br /><a href="downloads/app/CLK-1.2.sit">1.2</a>
+					<br /><a href="downloads/app/CLK-2.0.sit">2.0</a></td>
+					<td>用于在非中文Mac OS中显示和输入中文。在简体中文或繁体中文系统中也能安装，用于显示和输入另一种中文。
+					<br />Chinese Language Kit 1.2支持System 7-7.6系统。而2.0最低需要System 7.6，不推荐在8.5及更高系统中安装。
+					<br />兼容68k和PPC Mac。其中2.0版本自带智能ABC输入法，可以替代OS 8.0/8.1自带的输入法，或让System 7.6用上智能ABC。
+					<br /><a href="http://macintoshgarden.org/apps/chinese-language-kit">前往Macintosh Garden下载</a></td>
+				</tr>
+		</table>
+		<p align="center">
+			<br /><a href="#Contents"><b>返回目录</b></a>
+		</p>
+		<br />
+		
+<h2><a name="Productivity">生产力</a></h2>
+		<table border="1">
+			<tr>
+				<td>名称</td>
+				<td>描述</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/app/ClarisWorks_4.0-CH.sit">ClarisWorks 4.0 <br />简体中文版</a>
+				</td>
+				<td>支持68020及PowerPC Mac，需要System 7.1及更高版本。</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/app/Appleworks6.2SC.sit">AppleWorks 6.2.8 <br />简体中文版</a>
+				</td>
+				<td>支持PowerPC Mac， 需要Mac OS 8.1及更高版本。</td>
+			</tr>
+			<tr>
+				<td>Microsoft Office 4.2.1</td>
+				<td>英文版，也是最后支持68k Mac的版本。
+					<br /><a href="http://macintoshgarden.org/apps/microsoft-office-42">前往Macintosh Garden下载</a>。</td>
+			</tr>
+			<tr>
+				<td>Microsoft Office 98</td>
+				<td>英文版，最后支持System 7.6的版本，要求PowerPC。
+					<br /><a href="http://macintoshgarden.org/apps/ms-office-98">前往Macintosh Garden下载</a>。</td>
+			</tr>
+			<tr>
+				<td>Microsoft Office 2001</td>
+				<td>英文版，最后支持Classic Mac OS的版本，需要 Mac OS 8.6 及更高版本。
+					<br /><a href="http://macintoshgarden.org/apps/ms-office-2001">前往Macintosh Garden下载</a>。</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/app/PageMaker6.5c.sit">Adobe PageMaker 6.5 <br />简体中文版</a>
+				</td>
+				<td>请前往<a href="https://pan.baidu.com/s/1VnavvO0cz4pO3BTRckI5Ig?pwd=mach">网盘</a>下载，文件夹：Applications（应用程序）/一些中文app
+					<br />文件：<b>PageMaker6.5c.sit</b>
+				</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/app/photoshop6.sit">Adobe Photoshop 6.0 <br />简体中文版</a>
+				</td>
+				<td>需要Mac OS 8.6及更高版本。
+					<br />请前往<a href="https://pan.baidu.com/s/1VnavvO0cz4pO3BTRckI5Ig?pwd=mach">网盘</a>下载，文件夹：Applications（应用程序）/一些中文app
+					<br />文件：<b>photoshop6.sit</b>
+				</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/app/Illustrator10.sit">Adobe Illustrator 10.0.3 <br />繁体中文版</a>
+				</td>
+				<td>暂无描述。
+					<br />请前往<a href="https://pan.baidu.com/s/1VnavvO0cz4pO3BTRckI5Ig?pwd=mach">网盘</a>下载，文件夹：Applications（应用程序）/一些中文app
+					<br />文件：<b>Adobe Illustrator 10.0.3.sit</b>
+				</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/app/Illustrator8.sit">Adobe Illustrator 8 <br />中文版</a>
+				</td>
+				<td>暂无描述。
+					<br />请前往<a href="https://pan.baidu.com/s/1VnavvO0cz4pO3BTRckI5Ig?pwd=mach">网盘</a>下载，文件夹：Applications（应用程序）/一些中文app
+					<br />文件：<b>Adobe Illustrator(R) 8.0.sit</b>
+				</td>
+			</tr>
+			<tr>
+				<td>Adobe出版工具</td>
+				<td>发布于2001年的Adobe出版工具集（中文版），包含以下组件：
+				<br />Acrobat 5
+				<br />Illustrator 8
+				<br />Illustrator 8 Tour
+				<br />PageMaker 6.5
+				<br />PageMaker Plus 6.5 (素材库)
+				<br />Photoshop 6
+				<br /><a href="http://macintoshgarden.org/apps/adobe-publishing-collection-simpchinese">前往 Macintosh Garden 下载</a>
+				<br /><a href="https://mega.nz/folder/uRlDkYJL#9HtRox7fWVKWLPQajbajDQ">前往 MEGA 网盘下载</a>
+				<br /><a href="https://archive.org/details/acrobat-5.0-c.iso">前往 Archive 下载</a></td>
+			<tr>
+				<td>Adobe Photoshop 7 <br />简体中文版</td>
+				<td>需要Mac OS 9.1及更高版本，同时兼容Mac OS X
+					<br />请前往<a href="https://pan.baidu.com/s/1VnavvO0cz4pO3BTRckI5Ig?pwd=mach">网盘</a>下载，文件夹：Applications（应用程序）/一些中文app
+					<br />文件：<b>Adobe Photoshop 7.sit</b>
+					<br />或前往<a href="http://macintoshgarden.org/apps/photoshop-7x">Macintosh Garden下载</a>（第7个文件）。</td>
+			</tr>
+			<tr>
+				<td>Adobe Acrobat Reader 4
+					<br /><a href="downloads/app/AcrobatReader4-CH.sit">简体中文版4.0</a>
+					<br /><a href="downloads/app/AcrobatReader4-TA.sit">繁体中文版4.0</a>
+					<br /><a href="downloads/app/AcrobatReader4.0.2SC.sit">简体中文4.0.2</a>
+					<br /><a href="downloads/app/ar405cht.bin">繁体中文版4.0.5</a>
+					<br /><a href="downloads/app/Acro4.0CJKFonts.sit">CJK字体包</a>
+				</td>
+				<td>Acrobat Reader 4安装器，要求System 7.1.2及更高版本，不兼容68k。</td>
+			</tr>
+			<tr>
+				<td>Adobe Acrobat Reader 5.0.5
+					<br /><a href="downloads/app/acrobatreader505ch.bin">简体中文版</a>
+					<br /><a href="downloads/app/acrobatreader505ta.bin">繁体中文版</a>
+				</td>
+				<td>Acrobat Reader 5.0.5安装器，要求Mac OS 8.6及更高版本，不兼容68k。</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/app/AcrobatReader5.0-CH.sit">Adobe Acrobat Reader 5.0 简体中文版</a>
+					<br /><a href="downloads/app/ATM4.6.2.sit">Adobe Type Manager 4.6.2</a>
+				</td>
+				<td>Acrobat Reader 5是最后兼容Classic的版本，用于阅读PDF，要求Mac OS 8.6以上。
+					<br />Adobe Type Manager安装后可支持PostScript Type 1字体。
+					<br />请前往<a href="https://pan.baidu.com/s/1VnavvO0cz4pO3BTRckI5Ig?pwd=mach">网盘</a>下载，文件夹：Applications（应用程序）/一些中文app
+					<br />文件：<b>Adobe Software.sit</b>
+				</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/app/FreeHand8CS.sit">FreeHand 8 <br />简体中文版</a>
+				</td>
+				<td>
+					<br />请前往<a href="https://pan.baidu.com/s/1VnavvO0cz4pO3BTRckI5Ig?pwd=mach">网盘</a>下载，文件夹：Applications（应用程序）/一些中文app
+					<br />文件：<b>PCI FreeHand 8CS.sit</b>
+				</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/app/FreeHand10SC.sit">FreeHand 10 <br />简体中文版</a>
+				</td>
+				<td>需要Mac OS 9.1及更高版本，同时兼容Mac OS X。
+					<br />请前往<a href="https://pan.baidu.com/s/1VnavvO0cz4pO3BTRckI5Ig?pwd=mach">网盘</a>下载，文件夹：Applications（应用程序）/一些中文app
+					<br />文件：<b>Macromedia FreeHand 10 SC.sit</b>
+				</td>
+			</tr>
+			<tr>
+				<td>Macromedia MX 2002 Studio</td>
+				<td>目前只找到英文版，含Dreamweaver、Flash、Fireworks MX版本以及Freehand 10。
+					<br />是最后兼容Mac OS 9.1的版本，同时兼容Mac OS X。
+					<br /><a href="http://macintoshgarden.org/apps/macromedia-studio-mx">前往Macintosh Garden下载</a>。</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/app/SinoType_TTF.sit">六款简体中文字体</a>
+				</td>
+				<td>早期Mac OS光盘附带的字体，分别是粗黑、粗楷、粗宋、隶书、新魏、细圆字体</td>
+				<tr>
+					<td>中文字体打包</td>
+					<td>在某工作室的PowerMac G4上发现的一堆中文艺术字库。
+						<br />建议在Mac OS 8.1以上系统中使用。
+						<br />由于文件太大，请在<a href="https://pan.baidu.com/s/1VnavvO0cz4pO3BTRckI5Ig?pwd=mach">网盘</a>中找到<b> Mac OS 9 中文字体(需Stuffit6).img.sit</b> 文件。
+						<br />需要使用Stuffit Expander 6解压，并使用Disk Copy 6.3挂装镜像。</td>
+				</tr>
+		</table>
+		<p align="center">
+			<br /><a href="#Contents"><b>返回目录</b></a>
+		</p>
+		<br />
+		
+<h2><a name="Multimedia">多媒体</a></h2>
+		<table border="1">
+			<tr>
+				<td>名称</td>
+				<td>描述</td>
+			</tr>
+			<tr>
+				<td>QuickTime 4.0.3
+					<br /><a href="downloads/app/QuickTime_4.0.3-CH.sit">简体中文版</a>
+					<br /><a href="downloads/app/QuickTime_4.0.3-TA.sit">繁体中文版</a>
+				</td>
+				<td>最后兼容68k Mac的版本，系统最低要求System 7.1。</td>
+			</tr>
+			<tr>
+				<td>QuickTime 4.1.2
+					<br /><a href="downloads/app/QuickTime-4.1.2-CH.smi.bin">简体中文版</a>
+					<br /><a href="downloads/app/QuickTime_4.1.2-TA.bin">繁体中文版</a>
+				</td>
+				<td>兼容System 7.5.5至Mac OS 9.1，要求PowerPC。</td>
+			</tr>
+			<tr>
+				<td>QuickTime 6.0.3</a>
+					<br /><a href="downloads/app/QuickTime_6.0.3-CH.bin">简体中文版</a>
+					<br /><a href="downloads/app/QuickTime_6.0.3-TA.bin">繁体中文版</a>
+				</td>
+				<td>Mac OS 8.6-9.2.2最后兼容的QuickTume版本。</td>
+			</tr>
+			<tr>
+				<td>iTunes 简体中文版
+					<br /><a href="downloads/app/iTunes_2.0.3-CH.sit">2.0.3</a>
+					<br /><a href="downloads/app/iTunes_2.0.4-CH.sit">2.0.4</a>
+				</td>
+				<td>中文版iTunes，用于播放音乐和同步iPod，要求至少Mac OS 9.0，刻录功能要求至少Mac OS 9.1。</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/app/iMovie2.1.2.sit">iMovie 2.1.2</a></td>
+				<td>iMovie 2.1.2，苹果开发的剪辑软件。打包了简中、繁中、英语三种语言。要更换语言请见说明。
+				<br />此iMovie 2.1.2英文版可从Macintosh Garden获取，可使用Mac OS X 10.2自带的iMovie 2.1.2语言资源实现翻译。
+				<br />将OS X版本中的lproj文件夹内的Localized.rsrc更名为USEnglish，放入Languages文件夹即可实现翻译。</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/app/ACDSee1.6.sit">ACDSee 1.6</a> 
+					<br />简体中文版</td>
+				<td>要求PowerPC Mac，兼容Mac OS 8.6及更高版本，要求QuickTime 4.0和Carbon Lib 1.3以上版本。
+					<br />参考序列号：32345678901234567890（注册名：P），可在“关于ACDSee”中注册。</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/app/Kaleidoscope231US.bin">Kaleidoscope 2.3.1</a> 
+					<br />英文版</a>
+				</td>
+				<td>Classic Mac的第三方主题引擎，兼容68020和PowerPC处理器，System 7.0及更高版本系统。</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/app/FlashPlayer7.sit">Flash Player 7</a></td>
+				<td>Flash独立播放器（中文）和浏览器插件。</td>
+			</tr>
+			<tr>
+				<td>HyperCard 播放程序
+				<br /><a href="downloads/app/HyperCardPlayer.sit">2.4.1 英文最新版</a>
+				<br /><a href="downloads/app/HypCrdPlyrCH.sit">2.3.5 简中版</a></td>
+				<td>HyperCard 可以说是在万维网出现之前，它是最成功的超媒体系统之一，极具交互性。
+				<br />Macintosh Garden上也有不少HyperCard作品。关于HyperCard，可以参考文章：
+				<br />《在万维网兴起之前，HyperCard做了所有事情》（<a href="https://zhuanlan.zhihu.com/p/101126044">https</a> | <a href="gopher://sdf.org:70/0/users/pengan/articles/2020/101126044.txt">Gopher页面</a>）
+				</td>
+			</tr>
+		</table>
+		<p align="center">
+			<br /><a href="#Contents"><b>返回目录</b></a>
+		</p>
+		<br />
+		
+<h2><a name="Internet">互联网</a></h2>
+		<table border="1">
+			<tr>
+				<td>名称</td>
+				<td>描述</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/app/IE401-Full-Fat-128-img.sit">Internet Explorer 4.0.1</a>
+				</td>
+				<td>英文版，最后兼容68k Mac的版本，该下载是同时带68k二进制和PPC二进制的fat binary版本。
+					<br />需要使用Stuffit Expander解压并用Disk Copy 6.x挂装。</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/app/IE517.sit">Internet Explorer 5.1.7 英文版</a> 
+					<br /><a href="downloads/app/IE5.1.7SC.sit">部分汉化包（简体）</a></td>
+				<td>IE最后一个支持Classic Mac OS的版本，最低需要Mac OS 8.0和PPC处理器。
+					<br />据说System 7.6安装了外观功能扩展之后也能使用。
+					<br /><a href="http://macintoshgarden.org/apps/internet-explorer-517">前往Macintosh Garden下载</a>
+					<br />汉化包并不完全，只有主界面汉化了，很多地方还没汉化。
+					<br />如果工具栏没有汉化，可以在“查看”中“”自定义工具栏“里重置工具栏。</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/app/Comm4.08_Complete_US_68K.bin">Netscape Communicator 4.08</a>
+				</td>
+				<td>英文版，最后兼容68k Mac的版本。</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/app/Classilla_9.3.3.sit">Classilla 9.3.3</a>
+				</td>
+				<td>支持现代https站但，但HTML引擎还是老版Mozilla的，不支持HTML5。</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/app/Classilla_9.3.2.sit">Classilla 9.3.2</a>
+				</td>
+				<td>对SheepShaver模拟器兼容较好，但已经不支持大部分现代https站点了。</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/app/Comm4.72_Complete_CH.bin">Netscape Communicator 4.72</a>
+					<br />简体中文版</td>
+				<td>Classic Mac上为数不多的中文版浏览器，需要PowerPC处理器。Mac OS 9.2.x已预装，无需再次安装。</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/app/Comm4.72_Complete_TA.bin">Netscape Communicator 4.72</a>
+					<br />繁体中文版</td>
+				<td>Classic Mac上为数不多的中文版浏览器，需要PowerPC处理器。Mac OS 9.2.x已预装，无需再次安装。</td>
+			</tr>
+			<tr>
+				<td>iCab 浏览器
+					<br /><a href="downloads/app/iCab_Pre2.99b_SC_68k.sit">2.9.9简体(68K)</a>
+					<br /><a href="downloads/app/iCab_Pre2.99a_SC_PPC.sit">2.9.9简体(PPC)</a>
+					<br /><a href="downloads/app/iCab305_PPC_E.sit">3.0.5英文(PPC)</a>
+				</td>
+				<td>iCab 是一款共享软件，可以无限试用。
+					<br />2.9.9的68k版本于2006年更新，可以说是68k上比较新的浏览器了，要求System 7.5及更高版本。
+					<br />PPC Classic版最高3.0.5，于2008年初更新，要求Mac OS 8.5及更高版本。
+					<br />iCab 4.0之前的版本都是自有引擎，4.0版开始使用Mac OS X系统的WebKit。
+					<br />前往<a href="http://icab.de/download.html">官网icab.de下载</a>。</td>
+			</tr>
+			<tr>
+				<td><a href="downloads/app/OS9vnc.sit">VNC Server 3.5</a></td>
+				<td>Mac OS 9上的VNC服务端软件，可实现远程控制。
+					<br /><a href="http://macintoshgarden.org/apps/vnc-server-350">前往Macintosh Garden下载</a>
+					<br />Classic Mac上的VNC客户端可以使用<a href="http://macintoshgarden.org/apps/vncthing">VNCThing</a>。</td>
+			</tr>
+		</table>
+		<p>更多的Netscape浏览器，可以访问Netscape FTP的镜像站 http://ftp.nluug.nl/netscape/</p>
+		<p align="center">
+			<br /><a href="#Contents"><b>返回目录</b></a>
+		</p>
+		<br />
+		<hr>
+		<p align="center">
+			<img src="logo.gif">
+		</p>
+		<p align="center">Apple logo、Macintosh、Mac、Mac OS是Apple Inc.的商标。本站是非官方支持站点，与Apple Inc.无任何关系。
+			<br />感谢@Mation Wang制作Logo</p>
+	</body>
+
+</html>

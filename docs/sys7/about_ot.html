@@ -1,1 +1,391 @@
-<HTML lang=zh><HEAD><meta http-equiv="Content-Type" content="text/html" ; charset="gb2312" /><TITLE>关于 Open Transport 1.1.1</TITLE></HEAD><BODY> <BR><BR><STRONG>关于 Open Transport 1.1.1</STRONG><BR><BR><BR><STRONG>简介</STRONG><BR>这份文稿包含关于 Open Transport 的兼容性、附加软件以及对非苹果软件已知问题解决方案的信息。要获取关于如何使用 Open Transport 的控制板（“AppleTalk”和“TCP/IP”）的说明，请查看“Mac OS 使用指南”下的网络标题，当 Finder 为现用时，“Mac OS 使用指南”在“指南”菜单下面。要获取关于 Open Transport 的附加技术信息，请查看“OT 1.1.1 技术信息”文件。<BR><BR><BR><STRONG>内容</STRONG><BR>网络接口选项<BR>一般兼容性<BR>苹果产品兼容性更新<BR>拨号网络连通性－TCP/IP<BR>对 SLIP 和 PPP 配置的提示<BR>Open Transport 1.1.1 里的新内容－概述<BR>Open Transport 1.1.1 里的新内容－AppleTalk<BR>Open Transport 1.1.1 里的新内容－TCP/IP<BR>已知的局限性和其它问题<BR><BR><BR><STRONG>网络接口选项</STRONG><BR>Open Transport 1.1.1 支持 PCI 总线、NuBus、通讯插槽和 PC 卡网络接口卡，还有内建 LocalTalk、以太网和令牌环（Token Ring）网络适配器。对于没有扩充选项的计算机，Open Transport 1.1.1 也支持 SCSI 附属网络适配器。可用于 Open Transport 的非苹果网络接口选件包括 Fast Ethernet、ATM 和 FDDI。<BR><BR><BR><STRONG>一般兼容性</STRONG><BR>Open Transport 与以下兼容：<BR>·Apple Computer, Inc. 指定使用 AppleTalk 的现有应用程序<BR>·Apple Computer, Inc. 指定使用 TCP/IP 的现有应用程序<BR>·在“选配器”中选定的现有设备（比如打印机）<BR>·用于 Mac OS 的现有 NuBus 网络接口卡<BR><BR>不用升级网络上的其它计算机，运行 Open Transport 的计算机就可以加入到现有的 AppleTalk 或 TCP/IP 网络。<BR><BR><BR><STRONG>苹果电脑产品兼容性更新</STRONG><BR>·装有 Open Transport 的计算机在启动过程中，At Ease 版本 2.x 或 3.x 可能遇到问题。苹果电脑已发布一个更新实用程序（“At Ease Basic OT Updater”），您可以在 Internet 和所选在线服务的苹果软件更新（Apple Software Update）节点上找到。如果正在使用 At Ease for Workgroups，应该将它升级为版本 3.0.2。<BR><BR>·苹果 PCI 令牌环卡（Apple PCI Token Ring Card）（M3904Z/A）要求 Open Transport 1.1 或以后版本。苹果 PCI 令牌环卡与 Power Macintosh 7500、8500 和 9500 计算机兼容；与 7200/75 和 7200/90 计算机不兼容。<BR><BR>·苹果 LaserWriter Bridge 和 LocalTalk Bridge 2.1f2 或以后版本与 Open Transport 兼容。<BR><BR>·苹果 Internet 邮件服务器 1.1（Apple Internet Mail Server 1.1）或以后软件与 Open Transport 1.1 及以后软件兼容。<BR><BR>·苹果远程访问（Apple Remote Access, ARA）多端口服务器（Multiport Server） 2.1、ARA 客户（ARA Client） 2.0.1 以及 ARA 个人服务器（ARA Personal Server） 2.0.1 与 Open Transport 1.1 及以后版本兼容。<BR><BR>·苹果基于 PCI 的 Workgroup 服务器（应用程序、AppleShare 和 Internet）与 Open Transport 1.1 兼容。<BR><BR>·运行当前版本苹果 IP 网关（Apple IP Gateway）和 AppleTalk Internet 路由器（Apple Internet Router）的计算机一定不要更新到 Open Transport；这些产品基于传统网络。然而，这些产品确实可以与使用传统网络或 Open Transport 网络的计算机进行互操作。苹果还没有宣布关于这些产品将来版本的计划。<BR><BR>·苹果的 MacTCP Ping 与 Open Transport 不兼容；没有计划更新。 Dartmouth 公<BR>司的 MacPing，网址为 <STRONG>&lt;ftp://ftp.dartmouth.edu&gt;</STRONG>、 Neon Software 公司的 OTTool，网址为 <STRONG>&lt;ftp://ftp.neon.com&gt;</STRONG> 以及 Peter N. Lewis &amp; Stairways Software 公<BR>司的 Mac TCP Watcher v2.0，网址为 <STRONG>&lt;ftp://ftp.share.com&gt;</STRONG>，是 Open Transport <BR>兼容的替代产品。<BR><BR>·ZapTCP 与 Open Transport 不兼容。<BR><BR><STRONG>拨号网络连通性－TCP/IP</STRONG><BR>要使用调制解调器连接到 TCP/IP 网络（包括 Internet），Open Transport 支持被称为“MDEV”的扩展。串行线接口协议（Serial Line Interface Protocol, SLIP）和点对点协议（Point to Point Protocol, PPP）连通性就是以这种方式提供的。并非全部 MDEV 的所有版本与 Open Transport 1.1 及以后版本兼容。<BR><BR>Mac OS 7.6S 里提供了苹果版 PPP 1.0，它是为能与 Open Transport 一起工作而特别设计的 。以下的非苹果的 MDEV 也与 Open Transport 兼容，如果得到正确安装，这些 MDEV 会出现在“TCP/IP”控制板的“连接经由”按动式菜单中。<BR><BR>·FreePPP－1.0.5 或以后版本<BR>FreePPP 是一个共享软件，可在 Internet 上找到它，通常位于 comm/tcp/conn 目录中的“info-mac”镜像网点。info-mac 镜像网点列表当前可在以下网址找到： <STRONG>&lt;http://www.pht.com/info-mac/mirror-list.html&gt;</STRONG><BR>目前可找到 FreePPP 的一些节点包括： <STRONG>&lt;ftp://mirrors.aol.com/pub/info-mac/comm/tcp/conn/&gt;</STRONG> 和 <STRONG>&lt;ftp://mirror.apple.com/mirrors/Info-Mac.Archive/comm/tcp/conn/&gt;</STRONG>。<BR>在打开虚拟内存（包括 RAM Doubler）运行 2.5 版本以前的 FreePPP 可能会遇到问题。如果您在打开虚拟内存时使用 FreePPP 遇到问题，请更新到 FreePPP 2.5，或者关闭虚拟内存再使用 FreePPP。FreePPP 的目前版本是 2.5rf。<BR><BR>·MacPPP－2.1.4 或以后版本（推荐 MacPPP 2.5）<BR>打开虚拟内存（包括 RAM Doubler）运行 2.5 版本以前的 MacPPP 可能会遇到问题。如果在打开虚拟内存时使用 MacPPP 遇到问题，请更新到 MacPPP 2.5，或者关闭虚拟内存再使用 MacPPP。<BR><BR>·InterPPP－1.2.9 或以后版本；InterPPP II－1.1 或以后版本<BR>InterPPP 和 InterPPP II 是商业软件产品。<BR><BR>·MacSLIP－3.03 或以后版本<BR>MacSLIP 是由 Hyde Park Software 公司开发的商业软件。要获取更多细节，请查看 MacSLIP Web 页，网址为 <STRONG>&lt;http//www.zilker.net/~hydepark/&gt;</STRONG><BR><BR>·Sonic PPP－1.0.2 或以后版本<BR>Sonic PPP 是由 Sonic Systems, Inc. 公司开发的商业软件。要获取更多细节，请查看 Sonic Systems Web 页面，网址为 <STRONG>&lt;http//www.sonicsys.com/&gt;</STRONG><BR><BR>·NTS PPP－2.0 或以后版本<BR>NTS PPP 是由 Network Telesystems, Inc. 公司开发的商业软件。要获取更多细节，请查看 Network Telesystems Web 页面，网址为 <STRONG>&lt;http//www.ntsi.com/&gt;</STRONG><BR><BR>·SAT/SAGEM PPP－1.02b1 或以后版本<BR>SAT/SAGEM PPP 是由 SAT/SAGEM 公司开发的商业软件。要获取更多细节，请查看 SAGEM Web 页面，网址为 <STRONG>&lt;http//www.satusa.com/&gt;</STRONG><BR><BR>·LeoTCP－2.0.1 或以后版本<BR>LeoTCP 是由 Hermstedt GmbH 公司开发的商业软件。<BR><BR>·T-Online CSLIP－1.0.3 或以后版本<BR>T-Online CSLIP 是由 Computer Consulting GbR 公司开发的商业软件。要获取更多细节，请与 format network &amp; communication 公司联系，网址为 info@format.de。<BR><BR>·密立根大学的 ISDN PPP －2.0.6 或以后版本<BR><BR>·OT/PPP－版本 1.0f1c9 或以后版本<BR><BR>除了以上这些，还有大量其它的 MDEV（例子包括那些来自 Pacer、FCR 和 Tribe 公司的 MDEV），对于 Open Transport 来说，它们互相之间没有区别。安装后，在“连接经由”按动式菜单里都出现为“TCP/IP”。<BR><BR><BR><STRONG>对 SLIP 和 PPP 配置的提示</STRONG><BR><BR>·已知一些 MDEV 与其它 MDEV 不兼容。如果您遇到问题，请移走停用的 MDEV，使在同一时间内计算机上只安装一个 MDEV。<BR><BR>·电话拨入 TCP/IP 网络或 Internet 服务提供者（Internet Service Provider, ISP）的用户可能被分配路由器（网关）地址，这一地址不是他们本地子网的一部分，对 MacTCP 来说这是一个可以接受但技术上无效的配置。Open Transport 用户不必给路由器地址或子网屏蔽输入数值；Open Transport TCP/IP 会自动为这些栏目产生正确的数值。在非平常情况下，可以使用“TCP/IP”控制板的管理员模式来改写这些提供的数值。<BR><BR>·如果在 SLIP 或 PPP 上使用 BootP 用于接口配置，并且如果 BootP 返回另外的预设路由器地址，Open Transport 会自动将那些地址加入到预设路由器列表中。<BR><BR>·如果在以前配置过 MacTCP 用于服务器配置的计算机上安装了 Open Transport，最初配置方法（在“TCP/IP”控制板“配置”按动式菜单中的选择）会设置为使用 BootP 服务器。这种预设对您可能不是适当的选择；请验证。<BR><BR>·如果计算机以前配置为 MacTCP“服务器”寻址，并且您在安装 Open Transport 后使用 PPP 或 SLIP 遇到连接困难，请执行以下步骤：<BR><BR>⒈打开“TCP/IP”控制板。<BR>⒉从“配置”按动式菜单选取“使用 PPP 服务器”或“使用 SLIP”。<BR>⒊关闭“TCP/IP”控制板，有提示时将更改存储下来。<BR>⒋尝试再次连接。<BR><BR>·如果计算机以前配置为 MacTCP“手动”寻址，并且您在安装 Open Transport 后使用 PPP 或 SLIP 遇到连接困难，请执行以下步骤：<BR><BR>⒈打开“TCP/IP”控制板。<BR>⒉从“配置”按动式菜单选取“手动”。<BR>⒊核对在“地址”栏键入了正确的 IP 地址。<BR>⒋关闭“TCP/IP”控制板，有提示时将更改存储下来。<BR>⒌打开随 SLIP 或 PPP 软件提供的配置实用程序，并核对在适当的位置也反映了正确的 IP 地址。请参考随 SLIP 或 PPP 软件提供的手册，以获取关于如何键入 IP 地址以及如何存储更新过的配置的进一步的信息。<BR>⒍尝试再次连接。<BR><BR><CITE>注意：</CITE>在 MacPPP 的“ConfigPPP”控制板里，这个设置输入在 IPCP 对话框里。请参考随 MacPPP 或 FreePPP 的手册以获取附加信息。<BR><BR><STRONG>Open Transport 1.1.1 里的新内容－概述</STRONG><BR><BR>·改进了内存管理。在基于 PowerPC 的计算机上，内存不再有碎片。在打开了“仅在需要时载入”选项的 68030 或 68040 计算机上，TCP 应用程序结束后的两分钟内，内存不会整合。<BR><BR>·增强了打开和关闭终点的性能。这在作为繁忙的 Web 服务器的 Mac OS 计算机上特别明显。<BR><BR>·Open Transport 现在注册和注销 CRM 系列驱动程序。<BR><BR>·DOS 兼容卡的 NuBus 版本与 Open Transport 1.1.1 兼容。<BR><BR>·LocalTalk 驱动程序的红外兼容版本现在已安装在所有机型上。以前这些驱动程序只安装在便携计算机上。<BR><BR><BR><STRONG>Open Transport 1.1.1 里的新内容－AppleTalk</STRONG><BR><BR>·AppleTalk 现在正确处理 LocalTalk 上的 Phase I RTMP 包。过去在使用 EtherPrint、TeleBridge 和其它非苹果厂商的促进技术时会产生问题。<BR><BR>·已修正了关于 PowerBook Duo 的问题。在连接着 Ethernet MicroDock 时，从睡眠唤醒时 AppleTalk 会连接在错误的端口上。<BR><BR>·已修正了 ARA 兼容性方面的问题，Open Transport 有时不能从服务器得到完整的区域列表。<BR><BR>·已修正了 ARA 兼容性方面的一些问题，数据包不按正确的路由发送，使 ARA 客户看不见连接到服务器本地电缆的计算机。<BR><BR>·在使用 ADEV 时，Open Transport 要从 ADEV 请求一个特别地址。有些 ADEV 返回没有错误，但修改了低位内存以指示一个与请求不同的地址。Open Transport 现在挑选那个不同的地址并使用它（但是，如果打开了“用户定义”选项，AppleTalk 不会打开）。<BR><BR>·一些用于远程局域网到局域网（LAN-to-LAN）连通性的 Ethernet-ISDN 网桥在没有进行数据传输时会中断连接，而在有信息需要传输时会要求拨号。如果用户的局域网不包括 AppleTalk 路由器，每次连接中断时都会出现一条信息。请使用“AppleTalk 选项”（AppleTalk Options）控制板来修正这个问题。打开该控制板，打开“抑制与路由器相关的警告”（Suppress router-related alerts）选项，然后关闭控制板。<BR><BR><BR><STRONG>Open Transport 1.1.1 里的新内容－TCP/IP</STRONG><BR><BR><CITE>服务器的专门修正和增强</CITE><BR>·已改进了打开和关闭 TCP 终点的性能。这种改进在短时期连接的大容量服务器（例如 Web 服务器）上非常显著。<BR><BR>·在 OT 1.1 里，有时 TCP 连接不能重新使用，结果服务器应用程序不能接收到来的连接。已修正了这个问题。<BR><BR>·已修正了繁忙的 TCP 服务器有时每 4 分钟时间内有大约 30 秒接收不到新到来连接的问题。<BR><BR>·已修正了在使用主机文件并且 TCP/IP 被设置为“仅在需要时载入”时发生的内存不足问题。以前，当 TCP/IP 退出时，主机文件入口（entries）没有正确地从内存中删除。<BR><BR>·引进了一个更好的 DNR 高速缓存限制算法。在 DNR 被繁忙使用的任何时候，使用不超过 15 分钟的入口（Entries）现在会被清除。<BR><BR><CITE>其它 TCP/IP 修正和增强</CITE><BR>·Open Transport 的 MacTCP 兼容性现在表现在 TCPSend 调用中的 pushFlag 参数，这种兼容性对一些随赠的应用程序是要求的，以与老的、不一致的主机正确通讯。不过，原生性 OT API 现在和将来都 不会直接控制 TCP pushFlag。<BR><BR>·现在，在“地址”（Address）和“替身”（Alias）高速缓存里的入口（Entries）到达“死亡时间”时就被清除，而不是在超过这一时刻被清除。TCP/IP 也不再高速缓存零存活时间的资源记录。<BR><BR>·DNR 现在更坚定支持服务负载平衡方案。它不再直接映射替身与有替身的主机的 IP 地址。<BR><BR>·在处理 DHCP 服务器时，现在 Open Tansport 首先尝试“整个”数据包，然后再试“短”数据包。<BR><BR>·已修正了长时间租用 DHCP 的超时问题。以前，如果租用超过 24 天，那么 TCP/IP 会在几小时内中断连接。<BR><BR>·已修正了当连接的一端关闭“tcp”终点，而另一端同时中断连接时产生的问题。<BR><BR>·已修正了当有效的回答被错误地当作截断时，DNR SysInfo 请求会偶尔失败的问题。<BR><BR>·已修正了正在清除 DNR 地址高速缓存时偶然发生的死机问题。<BR><BR>·已修正了解译不好的名称有时返回没有错误，而实际上已出错的问题。<BR><BR>·已修正了使用 TCPNoCopyRcv 的应用程序通过 MacTCP 兼容性接口呼叫而发生的死机问题。死机是由于应用程序给出的缓冲区很小；或由于接收太多入站数据将大部分入站缓冲区空间填满，导致 MacTCP 兼容性接口内存不够。<BR><BR>·已修正了在 MacTCP 模拟模式里打开解译器时发生内存不足的问题。<BR><BR>·Open Transport 1.1.1 与 NuBus 令牌环（Token Ring）适配器兼容。为确保与现有的 NuBus 令牌环驱动程序兼容，Open Transport TCP/IP 人为地加进了 1500 字节的 MTU。这一限制应该在将来的发布中修正。<BR><BR>·如果潜在的流由于流量控制而被阻塞，Open Transport 的 MacTCP 模拟器现在可能中断这里的连接。当要中断流量控制的连接时，使用原生性 Open Transport API 的应用程序在发出中断连接前必须发出 I_FLUSH ioctl。<BR><BR>·“WhatRoute”－新的 Open Transport/TCP 跟踪路由程序，现在可以在 <STRONG>&lt;http://crash.ihug.co.nz/~bryanc/&gt; </STRONG>得到。最新版本的 Mac TCP Watcher（版本 2.0），其网址为 <STRONG>&lt;ftp://ftp.share.com/peterlewis/&gt;</STRONG>，现在也支持这个跟踪路由。<BR><BR><BR><STRONG>已知的局限性和其它问题</STRONG><BR><BR>·在 PowerBook 190 上，“AppleTalk”控制板分开显示打印机端口和调制解调器端口。只有在“AppleTalk”控制板中选择调制解调器端口，LocalTalk 才能正常工作。<BR><BR>·当连接着 Dock 并被闲置时，使 PowerBook Duo 计算机屏幕变暗的软件与 Open Transport 不兼容。请使用非苹果屏幕保护程序，不要用苹果提供的。<BR><BR>·在一些情况下，在 PowerBook 190 上用“AppleTalk”控制板中“连接经由”按动式菜单配置使用红外线端口，网络服务可能在一次睡眠／唤醒或重新启动后不能用。如果发生这种情况，请尝试让计算机睡眠并再次唤醒它，或使用“AppleTalk”控制板临时选择调制解调器／打印机端口后，再切换回红外线端口。<BR><BR>·在 IIfx 或 Quadra 950 上，Open Transport 只能使用“串行开关”控制板中的“兼容模式”设置。不要为 LocalTalk 使用“更快模式”设置。<BR><BR>·在 68030 和 68040 计算机上，更改 AppleTalk 配置可能导致运行 Meeting Maker 3.5 或 3.5.1 的系统死机。这发生在更改 AppleTalk  连接、关闭 AppleTalk、或者允许或不允许苹果远程访问（Apple Remote Access）连接时。这种问题也发生在传统网络上。苹果正在与 ON Technology 联系以解决这个问题。<BR><BR>·Open Transport 通常比 MacTCP 需要更多内存（RAM）。要有效地使用内存，您应尝试以下几点：<BR>－重新命名或重定一个或多个非苹果系统功能扩展（INIT）的次序，以改变计算机启动时内存分配的顺序。如果使用来自 Global Village 的功能扩展，请尝试重新命名那些功能扩展以使它们最后载入。<BR>－尤其在基于 PowerPC 计算机上，请打开虚拟内存。<BR><BR>·当 TCP/IP 被设置为“仅在需要时载入”（在控制板的“选项”窗口中）时，如果当前没有使用 TCP/IP，Open Transport 工作站发出“乒声”（pinging） 将失败。要确保计算机在任何时间是可发出“乒声”（pingable）的的，请关闭“仅在需要时载入”选项（打开“TCP/IP”控制板并点按“选项”按钮，然后点按“仅在需要时载入”注记框以移走“X”）并重新启动计算机。<BR><BR>·当 TCP/IP 被设置为“仅在需要时载入”（在控制板的“选项”窗口中）时，第一个打开的 TCP/IP 应用程序将把 Open Transport 载入内存。一些早期的应用程序不能使 Open Transport 载入，然后报告错误，与 MacTCP 未安装时遇到的错误相似。如果出现这个问题，请关闭“仅在需要时载入”选项（打开“TCP/IP”控制板并点按“选项”按钮，然后点按“仅在需要时载入”注记框以移走“X”）并重新启动计算机。<BR><BR>·“TCP/IP”控制板能够从 DHCP 和 BootP 服务器上获得并利用多个网关和名称服务器地址。然而，当前它只会显示第一个。这应该在将来的发布中修正。<BR><BR>·通常情况下，使用调制解调器时您应打开“TCP/IP”控制板中的“仅在需要时载入”选项。如果 TCP/IP 总被载入，调制解调器会在机器启动时就试图开始拨号连接，一些 MDEV 需要的系统堆内存比启动时能给出的更多，这会导致计算机死机。而且，一些 Internet 服务提供者是按连接时间计费的，因此您可能要为连接付费，即使您没在使用它。<BR><BR>·如果使用 MacSLIP，同样地您应该不配置“MacSLIP”控制板在系统启动时初始化 MacSLIP。如上面提到的，它需要的系统堆内存可能比启动时能给出的更多，这会导致计算机死机。<BR><BR>·如果您打开虚拟内存使用 MacSLIP 时遇到问题，增加虚拟内存大小可能会得到较好结果。（请使用“存储器”控制板来增加虚拟内存。）<BR><BR>·如果正在使用 Netscape，建议使用 16MB 或更多的内建内存（RAM）。<BR><BR>·一些基于 MacTCP 的应用程序不能正常使用，除非 MacTCP DNR 文件在“系统文件夹”根目录下的原始位置。在安装或配置 Open Transport 后不要删除这个文件。<BR><BR>·如果按照网络管理员的指示，或者如果您肯定网络段上的所有其它站（包括您的 IP 路由器）也配置使用 802.3 而不是 Ethernet 版本 2.0 成帧方案，就应该在“TCP/IP”控制板中只指定使用 802.3 成帧方案。<BR><BR>·Claris Emailer 版本 1.1 v3 或以后版本与 Open Transport 1.1.1 兼容。早期版本的 Claris Emailer 可能与 Open Transport 的“仅在需要时载入”配置选项不兼容。如果您经历了退出 Emailer  2~3 分钟后系统死机，请关闭“仅在需要时载入”选项。（打开“TCP/IP”控制板并点按“选项”按钮，然后点按“仅在需要时载入”注记框以移走“X”）<BR><BR>·当前版本的 MacTraceRoute Ethernet LAP 不能在运行 Open Transport 的计算机上工作。<BR><BR>·NFS/Share 版本 1.4.4 或以后版本与 Open Transport 兼容。<BR><BR>·当使用为 NetwareIP 服务而配置的 Netware Client 版本 5.11 时，第一个登录可能产生“Netware Configuration”错误信息。要避免这种错误，请打开“NetwareIP”控制板并将 Domain SAP Server (DSS) Retry Attempts 下的值从 1 改为 2。您也可以更改OpenTransport 的“TCP/IP”控制板以总是将 TCP/IP 载入内存（打开“TCP/IP”控制板并点按“选项”按钮，然后点按“仅在需要时载入”注记框以移走“X”）。<BR><BR>·eXodus 5.2.2 及以后版本与 Open Transport 兼容。<BR><BR>·Anarchie 1.6 以前的版本与 Open Transport 一起使用时有数据破坏问题。请确保您使用的是 Anarchie 1.6 或以后版本。<BR><BR>·如果“苹果远程访问”（Apple Remote Access, ARA）用户在没有路由、扩展的（Ethernet）网络上，并且本地网上的设备与远程网上的设备有相同的网络号，用户将看不到本地设备。这个问题可以由安装一个路由器来得到修正。另一个解决方案是要清除 ARA 计算机上的 PRAM。（在启动计算机时同时按住 Control、Option 和 P 键）。清除 PRAM 会使计算机用新的网络号启动，而这个号应该不会与远程网络号产生冲突。<BR><BR>·Daemon 1.0.0 &amp; Daemon Killer 1.0 与 Open Transport 不兼容。<BR><BR>·MudDweller 1.2 与 Open Transport 不完全兼容。您可以打开新的连接，但是“重新连接”选项不能正常工作。<BR><BR>·如果 Open Transport TCP/IP 被配置为使用 MacIP，而被选择的区域没有 MacIP 服务器，NetPresenz 开启期间系统会死机。<BR><BR>·当前版本的 VersaTerm SLIP 与 Open Transport 不兼容。<BR><BR>·当 TCP/IP 配置为“仅在需要时载入”（在控制板的“选项”窗口中）时，来自 Sassafras Software 公司的旧版本 KeyServer 软件包就会产生问题。请与 Sassafras 联系以获取最新修订版本，网址为 <STRONG>&lt;http://www.sassafras.com&gt;</STRONG>。<BR><BR>·Open Transport 1.1.1、LocalTalk Bridge 2.1f2、Global Village Toolbox 和 GlobalFax 功能扩展组合在一起会导致死机。解决方案是将 LocalTalk Bridge 文件移进“功能扩展”文件夹，将它重新命名为“aLocalTalk Bridge”。您可以制作替身并随意重新命名替身。请将替身放入您想要的任何地方，包括“控制板”文件夹。这将允许 LocalTalk Bridge 在 Global Village 之前下载，从而避免导致死机。<BR><BR>·要与 Open Transport 一起使用 CSI Hurdler 串行卡，请与 CSI 联系以获取一份它们的预置文件修补程序。这将使这块卡与 Open Transport 1.1.1 兼容。<BR><BR>·使用传统 AppleTalk 时在网络上安装 Open Transport 1.1.1 后，请打开 Open Transport 1.1.1 的“AppleTalk”控制板。如果您没有使用红外设备，请打开“连接经由”按动式菜单并选定“串行端口”。<BR><BR>·目前正式发布的 MPW shell 在虚拟内存打开和 Open Transport 下使用时会使系统死机。当使用 MPW shell 和 Open Transport 时，请关掉虚拟内存。 ETO #21 预发布的 MPW shell 版本 3.4.2b2 修正了这个问题。<BR><BR><BR><BR>� 1997 Apple Computer, Inc.  All rights reserved.<BR>� 1997 苹果电脑国际有限公司，版权所有。<BR><BR>苹果、苹果标记、Apple、AppleShare、AppleTalk、LaserWriter、LocalTalk、MacTCP、Performa、Power Macintosh、PowerBook 和 PowerBook Duo 是 Apple Computer, Inc. 在美国和其它国家的注册商标。At Ease 是 Apple Computer, Inc. 的商标。NuBus 是 Texas Instruments 的商标。PowerPC 是国际商用机器公司的商标，授权方可使用。<BR><BR>更新于 10/14/96</BODY></HTML>
+<HTML lang=zh>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html" ; charset="gb2312" />
+<TITLE>关于 Open Transport 1.1.1</TITLE>
+</HEAD>
+<BODY>
+ <BR>
+<BR>
+<STRONG>关于 Open Transport 1.1.1</STRONG>
+<BR>
+<BR>
+<BR>
+<STRONG>简介</STRONG>
+<BR>
+这份文稿包含关于 Open Transport 的兼容性、附加软件以及对非苹果软件已知问题解决方案的信息。要获取关于如何使用 
+Open Transport 的控制板（“AppleTalk”和“TCP/IP”）的说明，请查看“Mac OS 使用指南”下的网络标题，当 
+Finder 为现用时，“Mac OS 使用指南”在“指南”菜单下面。要获取关于 Open Transport 的附加技术信息，请查看“OT 1.1.1 技术信息”文件。<BR>
+<BR>
+<BR>
+<STRONG>内容</STRONG>
+<BR>
+网络接口选项<BR>
+一般兼容性<BR>
+苹果产品兼容性更新<BR>
+拨号网络连通性－TCP/IP<BR>
+对 SLIP 和 PPP 配置的提示<BR>
+Open Transport 1.1.1 里的新内容－概述<BR>
+Open Transport 1.1.1 里的新内容－AppleTalk<BR>
+Open Transport 1.1.1 里的新内容－TCP/IP<BR>
+已知的局限性和其它问题<BR>
+<BR>
+<BR>
+<STRONG>网络接口选项</STRONG>
+<BR>
+Open Transport 1.1.1 支持 PCI 总线、NuBus、通讯插槽和 PC 卡网络接口卡，还有内建 LocalTalk、以太网和令牌环（Token 
+Ring）网络适配器。对于没有扩充选项的计算机，Open Transport 1.1.1 也支持 SCSI 附属网络适配器。可用于 
+Open Transport 的非苹果网络接口选件包括 Fast Ethernet、ATM 和 FDDI。<BR>
+<BR>
+<BR>
+<STRONG>一般兼容性</STRONG>
+<BR>
+Open Transport 与以下兼容：<BR>
+·Apple Computer, Inc. 指定使用 AppleTalk 的现有应用程序<BR>
+·Apple Computer, Inc. 指定使用 TCP/IP 的现有应用程序<BR>
+·在“选配器”中选定的现有设备（比如打印机）<BR>
+·用于 Mac OS 的现有 NuBus 网络接口卡<BR>
+<BR>
+不用升级网络上的其它计算机，运行 Open Transport 的计算机就可以加入到现有的 AppleTalk 
+或 TCP/IP 网络。<BR>
+<BR>
+<BR>
+<STRONG>苹果电脑产品兼容性更新</STRONG>
+<BR>
+·装有 Open Transport 的计算机在启动过程中，At Ease 版本 2.x 或 3.x 可能遇到问题。苹果电脑已发布一个更新实用程序（“At 
+Ease Basic OT Updater”），您可以在 Internet 和所选在线服务的苹果软件更新（Apple 
+Software Update）节点上找到。如果正在使用 At Ease for Workgroups，应该将它升级为版本 3.0.2。<BR>
+<BR>
+·苹果 PCI 令牌环卡（Apple PCI Token Ring Card）（M3904Z/A）要求 Open Transport 1.1 
+或以后版本。苹果 PCI 令牌环卡与 Power Macintosh 7500、8500 和 9500 计算机兼容；与 
+7200/75 和 7200/90 计算机不兼容。<BR>
+<BR>
+·苹果 LaserWriter Bridge 和 LocalTalk Bridge 2.1f2 或以后版本与 Open Transport 兼容。<BR>
+<BR>
+·苹果 Internet 邮件服务器 1.1（Apple Internet Mail Server 1.1）或以后软件与 Open 
+Transport 1.1 及以后软件兼容。<BR>
+<BR>
+·苹果远程访问（Apple Remote Access, ARA）多端口服务器（Multiport Server） 2.1、ARA 
+客户（ARA Client） 2.0.1 以及 ARA 个人服务器（ARA Personal Server） 2.0.1 与 Open 
+Transport 1.1 及以后版本兼容。<BR>
+<BR>
+·苹果基于 PCI 的 Workgroup 服务器（应用程序、AppleShare 和 Internet）与 Open Transport 
+1.1 兼容。<BR>
+<BR>
+·运行当前版本苹果 IP 网关（Apple IP Gateway）和 AppleTalk Internet 路由器（Apple 
+Internet Router）的计算机一定不要更新到 Open Transport；这些产品基于传统网络。然而，这些产品确实可以与使用传统网络或 
+Open Transport 网络的计算机进行互操作。苹果还没有宣布关于这些产品将来版本的计划。<BR>
+<BR>
+·苹果的 MacTCP Ping 与 Open Transport 不兼容；没有计划更新。 Dartmouth 公<BR>
+司的 MacPing，网址为 <STRONG>&lt;ftp://ftp.dartmouth.edu&gt;</STRONG>
+、 Neon Software 公司的 OTTool，网址为 <STRONG>&lt;ftp://ftp.neon.com&gt;</STRONG>
+ 以及 Peter N. Lewis &amp; Stairways Software 公<BR>
+司的 Mac TCP Watcher v2.0，网址为 <STRONG>&lt;ftp://ftp.share.com&gt;</STRONG>
+，是 Open Transport <BR>
+兼容的替代产品。<BR>
+<BR>
+·ZapTCP 与 Open Transport 不兼容。<BR>
+<BR>
+<STRONG>拨号网络连通性－TCP/IP</STRONG>
+<BR>
+要使用调制解调器连接到 TCP/IP 网络（包括 Internet），Open Transport 支持被称为“MDEV”的扩展。串行线接口协议（Serial 
+Line Interface Protocol, SLIP）和点对点协议（Point to Point Protocol, PPP）连通性就是以这种方式提供的。并非全部 
+MDEV 的所有版本与 Open Transport 1.1 及以后版本兼容。<BR>
+<BR>
+Mac OS 7.6S 里提供了苹果版 PPP 1.0，它是为能与 Open Transport 一起工作而特别设计的 
+。以下的非苹果的 MDEV 也与 Open Transport 兼容，如果得到正确安装，这些 MDEV 会出现在“TCP/IP”控制板的“连接经由”按动式菜单中。<BR>
+<BR>
+·FreePPP－1.0.5 或以后版本<BR>
+FreePPP 是一个共享软件，可在 Internet 上找到它，通常位于 comm/tcp/conn 目录中的“info-mac”镜像网点。info-mac 
+镜像网点列表当前可在以下网址找到： <STRONG>&lt;http://www.pht.com/info-mac/mirror-list.html&gt;</STRONG>
+<BR>
+目前可找到 FreePPP 的一些节点包括： <STRONG>&lt;ftp://mirrors.aol.com/pub/info-mac/comm/tcp/conn/&gt;</STRONG>
+ 和 <STRONG>&lt;ftp://mirror.apple.com/mirrors/Info-Mac.Archive/comm/tcp/conn/&gt;</STRONG>
+。<BR>
+在打开虚拟内存（包括 RAM Doubler）运行 2.5 版本以前的 FreePPP 可能会遇到问题。如果您在打开虚拟内存时使用 
+FreePPP 遇到问题，请更新到 FreePPP 2.5，或者关闭虚拟内存再使用 FreePPP。FreePPP 的目前版本是 
+2.5rf。<BR>
+<BR>
+·MacPPP－2.1.4 或以后版本（推荐 MacPPP 2.5）<BR>
+打开虚拟内存（包括 RAM Doubler）运行 2.5 版本以前的 MacPPP 可能会遇到问题。如果在打开虚拟内存时使用 
+MacPPP 遇到问题，请更新到 MacPPP 2.5，或者关闭虚拟内存再使用 MacPPP。<BR>
+<BR>
+·InterPPP－1.2.9 或以后版本；InterPPP II－1.1 或以后版本<BR>
+InterPPP 和 InterPPP II 是商业软件产品。<BR>
+<BR>
+·MacSLIP－3.03 或以后版本<BR>
+MacSLIP 是由 Hyde Park Software 公司开发的商业软件。要获取更多细节，请查看 MacSLIP 
+Web 页，网址为 <STRONG>&lt;http//www.zilker.net/~hydepark/&gt;</STRONG>
+<BR>
+<BR>
+·Sonic PPP－1.0.2 或以后版本<BR>
+Sonic PPP 是由 Sonic Systems, Inc. 公司开发的商业软件。要获取更多细节，请查看 Sonic 
+Systems Web 页面，网址为 <STRONG>&lt;http//www.sonicsys.com/&gt;</STRONG>
+<BR>
+<BR>
+·NTS PPP－2.0 或以后版本<BR>
+NTS PPP 是由 Network Telesystems, Inc. 公司开发的商业软件。要获取更多细节，请查看 
+Network Telesystems Web 页面，网址为 <STRONG>&lt;http//www.ntsi.com/&gt;</STRONG>
+<BR>
+<BR>
+·SAT/SAGEM PPP－1.02b1 或以后版本<BR>
+SAT/SAGEM PPP 是由 SAT/SAGEM 公司开发的商业软件。要获取更多细节，请查看 SAGEM Web 
+页面，网址为 <STRONG>&lt;http//www.satusa.com/&gt;</STRONG>
+<BR>
+<BR>
+·LeoTCP－2.0.1 或以后版本<BR>
+LeoTCP 是由 Hermstedt GmbH 公司开发的商业软件。<BR>
+<BR>
+·T-Online CSLIP－1.0.3 或以后版本<BR>
+T-Online CSLIP 是由 Computer Consulting GbR 公司开发的商业软件。要获取更多细节，请与 
+format network &amp; communication 公司联系，网址为 info@format.de。<BR>
+<BR>
+·密立根大学的 ISDN PPP －2.0.6 或以后版本<BR>
+<BR>
+·OT/PPP－版本 1.0f1c9 或以后版本<BR>
+<BR>
+除了以上这些，还有大量其它的 MDEV（例子包括那些来自 Pacer、FCR 和 Tribe 公司的 MDEV），对于 
+Open Transport 来说，它们互相之间没有区别。安装后，在“连接经由”按动式菜单里都出现为“TCP/IP”。<BR>
+<BR>
+<BR>
+<STRONG>对 SLIP 和 PPP 配置的提示</STRONG>
+<BR>
+<BR>
+·已知一些 MDEV 与其它 MDEV 不兼容。如果您遇到问题，请移走停用的 MDEV，使在同一时间内计算机上只安装一个 
+MDEV。<BR>
+<BR>
+·电话拨入 TCP/IP 网络或 Internet 服务提供者（Internet Service Provider, ISP）的用户可能被分配路由器（网关）地址，这一地址不是他们本地子网的一部分，对 
+MacTCP 来说这是一个可以接受但技术上无效的配置。Open Transport 用户不必给路由器地址或子网屏蔽输入数值；Open Transport TCP/IP 会自动为这些栏目产生正确的数值。在非平常情况下，可以使用“TCP/IP”控制板的管理员模式来改写这些提供的数值。<BR>
+<BR>
+·如果在 SLIP 或 PPP 上使用 BootP 用于接口配置，并且如果 BootP 返回另外的预设路由器地址，Open 
+Transport 会自动将那些地址加入到预设路由器列表中。<BR>
+<BR>
+·如果在以前配置过 MacTCP 用于服务器配置的计算机上安装了 Open Transport，最初配置方法（在“TCP/IP”控制板“配置”按动式菜单中的选择）会设置为使用 
+BootP 服务器。这种预设对您可能不是适当的选择；请验证。<BR>
+<BR>
+·如果计算机以前配置为 MacTCP“服务器”寻址，并且您在安装 Open Transport 后使用 PPP 
+或 SLIP 遇到连接困难，请执行以下步骤：<BR>
+<BR>
+⒈打开“TCP/IP”控制板。<BR>
+⒉从“配置”按动式菜单选取“使用 PPP 服务器”或“使用 SLIP”。<BR>
+⒊关闭“TCP/IP”控制板，有提示时将更改存储下来。<BR>
+⒋尝试再次连接。<BR>
+<BR>
+·如果计算机以前配置为 MacTCP“手动”寻址，并且您在安装 Open Transport 后使用 PPP 
+或 SLIP 遇到连接困难，请执行以下步骤：<BR>
+<BR>
+⒈打开“TCP/IP”控制板。<BR>
+⒉从“配置”按动式菜单选取“手动”。<BR>
+⒊核对在“地址”栏键入了正确的 IP 地址。<BR>
+⒋关闭“TCP/IP”控制板，有提示时将更改存储下来。<BR>
+⒌打开随 SLIP 或 PPP 软件提供的配置实用程序，并核对在适当的位置也反映了正确的 IP 地址。请参考随 
+SLIP 或 PPP 软件提供的手册，以获取关于如何键入 IP 地址以及如何存储更新过的配置的进一步的信息。<BR>
+⒍尝试再次连接。<BR>
+<BR>
+<CITE>注意：</CITE>
+在 MacPPP 的“ConfigPPP”控制板里，这个设置输入在 IPCP 对话框里。请参考随 MacPPP 或 
+FreePPP 的手册以获取附加信息。<BR>
+<BR>
+<STRONG>Open Transport 1.1.1 里的新内容－概述</STRONG>
+<BR>
+<BR>
+·改进了内存管理。在基于 PowerPC 的计算机上，内存不再有碎片。在打开了“仅在需要时载入”选项的 
+68030 或 68040 计算机上，TCP 应用程序结束后的两分钟内，内存不会整合。<BR>
+<BR>
+·增强了打开和关闭终点的性能。这在作为繁忙的 Web 服务器的 Mac OS 计算机上特别明显。<BR>
+<BR>
+·Open Transport 现在注册和注销 CRM 系列驱动程序。<BR>
+<BR>
+·DOS 兼容卡的 NuBus 版本与 Open Transport 1.1.1 兼容。<BR>
+<BR>
+·LocalTalk 驱动程序的红外兼容版本现在已安装在所有机型上。以前这些驱动程序只安装在便携计算机上。<BR>
+<BR>
+<BR>
+<STRONG>Open Transport 1.1.1 里的新内容－AppleTalk</STRONG>
+<BR>
+<BR>
+·AppleTalk 现在正确处理 LocalTalk 上的 Phase I RTMP 包。过去在使用 EtherPrint、TeleBridge 
+和其它非苹果厂商的促进技术时会产生问题。<BR>
+<BR>
+·已修正了关于 PowerBook Duo 的问题。在连接着 Ethernet MicroDock 时，从睡眠唤醒时 
+AppleTalk 会连接在错误的端口上。<BR>
+<BR>
+·已修正了 ARA 兼容性方面的问题，Open Transport 有时不能从服务器得到完整的区域列表。<BR>
+<BR>
+·已修正了 ARA 兼容性方面的一些问题，数据包不按正确的路由发送，使 ARA 客户看不见连接到服务器本地电缆的计算机。<BR>
+<BR>
+·在使用 ADEV 时，Open Transport 要从 ADEV 请求一个特别地址。有些 ADEV 返回没有错误，但修改了低位内存以指示一个与请求不同的地址。Open 
+Transport 现在挑选那个不同的地址并使用它（但是，如果打开了“用户定义”选项，AppleTalk 
+不会打开）。<BR>
+<BR>
+·一些用于远程局域网到局域网（LAN-to-LAN）连通性的 Ethernet-ISDN 网桥在没有进行数据传输时会中断连接，而在有信息需要传输时会要求拨号。如果用户的局域网不包括 
+AppleTalk 路由器，每次连接中断时都会出现一条信息。请使用“AppleTalk 选项”（AppleTalk 
+Options）控制板来修正这个问题。打开该控制板，打开“抑制与路由器相关的警告”（Suppress router-related 
+alerts）选项，然后关闭控制板。<BR>
+<BR>
+<BR>
+<STRONG>Open Transport 1.1.1 里的新内容－TCP/IP</STRONG>
+<BR>
+<BR>
+<CITE>服务器的专门修正和增强</CITE>
+<BR>
+·已改进了打开和关闭 TCP 终点的性能。这种改进在短时期连接的大容量服务器（例如 Web 
+服务器）上非常显著。<BR>
+<BR>
+·在 OT 1.1 里，有时 TCP 连接不能重新使用，结果服务器应用程序不能接收到来的连接。已修正了这个问题。<BR>
+<BR>
+·已修正了繁忙的 TCP 服务器有时每 4 分钟时间内有大约 30 秒接收不到新到来连接的问题。<BR>
+<BR>
+·已修正了在使用主机文件并且 TCP/IP 被设置为“仅在需要时载入”时发生的内存不足问题。以前，当 
+TCP/IP 退出时，主机文件入口（entries）没有正确地从内存中删除。<BR>
+<BR>
+·引进了一个更好的 DNR 高速缓存限制算法。在 DNR 被繁忙使用的任何时候，使用不超过 15 
+分钟的入口（Entries）现在会被清除。<BR>
+<BR>
+<CITE>其它 TCP/IP 修正和增强</CITE>
+<BR>
+·Open Transport 的 MacTCP 兼容性现在表现在 TCPSend 调用中的 pushFlag 参数，这种兼容性对一些随赠的应用程序是要求的，以与老的、不一致的主机正确通讯。不过，原生性 
+OT API 现在和将来都 不会直接控制 TCP pushFlag。<BR>
+<BR>
+·现在，在“地址”（Address）和“替身”（Alias）高速缓存里的入口（Entries）到达“死亡时间”时就被清除，而不是在超过这一时刻被清除。TCP/IP 
+也不再高速缓存零存活时间的资源记录。<BR>
+<BR>
+·DNR 现在更坚定支持服务负载平衡方案。它不再直接映射替身与有替身的主机的 IP 地址。<BR>
+<BR>
+·在处理 DHCP 服务器时，现在 Open Tansport 首先尝试“整个”数据包，然后再试“短”数据包。<BR>
+<BR>
+·已修正了长时间租用 DHCP 的超时问题。以前，如果租用超过 24 天，那么 TCP/IP 会在几小时内中断连接。<BR>
+<BR>
+·已修正了当连接的一端关闭“tcp”终点，而另一端同时中断连接时产生的问题。<BR>
+<BR>
+·已修正了当有效的回答被错误地当作截断时，DNR SysInfo 请求会偶尔失败的问题。<BR>
+<BR>
+·已修正了正在清除 DNR 地址高速缓存时偶然发生的死机问题。<BR>
+<BR>
+·已修正了解译不好的名称有时返回没有错误，而实际上已出错的问题。<BR>
+<BR>
+·已修正了使用 TCPNoCopyRcv 的应用程序通过 MacTCP 兼容性接口呼叫而发生的死机问题。死机是由于应用程序给出的缓冲区很小；或由于接收太多入站数据将大部分入站缓冲区空间填满，导致 
+MacTCP 兼容性接口内存不够。<BR>
+<BR>
+·已修正了在 MacTCP 模拟模式里打开解译器时发生内存不足的问题。<BR>
+<BR>
+·Open Transport 1.1.1 与 NuBus 令牌环（Token Ring）适配器兼容。为确保与现有的 NuBus 
+令牌环驱动程序兼容，Open Transport TCP/IP 人为地加进了 1500 字节的 MTU。这一限制应该在将来的发布中修正。<BR>
+<BR>
+·如果潜在的流由于流量控制而被阻塞，Open Transport 的 MacTCP 模拟器现在可能中断这里的连接。当要中断流量控制的连接时，使用原生性 
+Open Transport API 的应用程序在发出中断连接前必须发出 I_FLUSH ioctl。<BR>
+<BR>
+·“WhatRoute”－新的 Open Transport/TCP 跟踪路由程序，现在可以在 <STRONG>&lt;http://crash.ihug.co.nz/~bryanc/&gt; </STRONG>
+得到。最新版本的 Mac TCP Watcher（版本 2.0），其网址为 <STRONG>&lt;ftp://ftp.share.com/peterlewis/&gt;</STRONG>
+，现在也支持这个跟踪路由。<BR>
+<BR>
+<BR>
+<STRONG>已知的局限性和其它问题</STRONG>
+<BR>
+<BR>
+·在 PowerBook 190 上，“AppleTalk”控制板分开显示打印机端口和调制解调器端口。只有在“AppleTalk”控制板中选择调制解调器端口，LocalTalk 
+才能正常工作。<BR>
+<BR>
+·当连接着 Dock 并被闲置时，使 PowerBook Duo 计算机屏幕变暗的软件与 Open Transport 
+不兼容。请使用非苹果屏幕保护程序，不要用苹果提供的。<BR>
+<BR>
+·在一些情况下，在 PowerBook 190 上用“AppleTalk”控制板中“连接经由”按动式菜单配置使用红外线端口，网络服务可能在一次睡眠／唤醒或重新启动后不能用。如果发生这种情况，请尝试让计算机睡眠并再次唤醒它，或使用“AppleTalk”控制板临时选择调制解调器／打印机端口后，再切换回红外线端口。<BR>
+<BR>
+·在 IIfx 或 Quadra 950 上，Open Transport 只能使用“串行开关”控制板中的“兼容模式”设置。不要为 
+LocalTalk 使用“更快模式”设置。<BR>
+<BR>
+·在 68030 和 68040 计算机上，更改 AppleTalk 配置可能导致运行 Meeting Maker 3.5 或 
+3.5.1 的系统死机。这发生在更改 AppleTalk  连接、关闭 AppleTalk、或者允许或不允许苹果远程访问（Apple 
+Remote Access）连接时。这种问题也发生在传统网络上。苹果正在与 ON Technology 联系以解决这个问题。<BR>
+<BR>
+·Open Transport 通常比 MacTCP 需要更多内存（RAM）。要有效地使用内存，您应尝试以下几点：<BR>
+－重新命名或重定一个或多个非苹果系统功能扩展（INIT）的次序，以改变计算机启动时内存分配的顺序。如果使用来自 
+Global Village 的功能扩展，请尝试重新命名那些功能扩展以使它们最后载入。<BR>
+－尤其在基于 PowerPC 计算机上，请打开虚拟内存。<BR>
+<BR>
+·当 TCP/IP 被设置为“仅在需要时载入”（在控制板的“选项”窗口中）时，如果当前没有使用 
+TCP/IP，Open Transport 工作站发出“乒声”（pinging） 将失败。要确保计算机在任何时间是可发出“乒声”（pingable）的的，请关闭“仅在需要时载入”选项（打开“TCP/IP”控制板并点按“选项”按钮，然后点按“仅在需要时载入”注记框以移走“X”）并重新启动计算机。<BR>
+<BR>
+·当 TCP/IP 被设置为“仅在需要时载入”（在控制板的“选项”窗口中）时，第一个打开的 
+TCP/IP 应用程序将把 Open Transport 载入内存。一些早期的应用程序不能使 Open Transport 
+载入，然后报告错误，与 MacTCP 未安装时遇到的错误相似。如果出现这个问题，请关闭“仅在需要时载入”选项（打开“TCP/IP”控制板并点按“选项”按钮，然后点按“仅在需要时载入”注记框以移走“X”）并重新启动计算机。<BR>
+<BR>
+·“TCP/IP”控制板能够从 DHCP 和 BootP 服务器上获得并利用多个网关和名称服务器地址。然而，当前它只会显示第一个。这应该在将来的发布中修正。<BR>
+<BR>
+·通常情况下，使用调制解调器时您应打开“TCP/IP”控制板中的“仅在需要时载入”选项。如果 
+TCP/IP 总被载入，调制解调器会在机器启动时就试图开始拨号连接，一些 MDEV 需要的系统堆内存比启动时能给出的更多，这会导致计算机死机。而且，一些 
+Internet 服务提供者是按连接时间计费的，因此您可能要为连接付费，即使您没在使用它。<BR>
+<BR>
+·如果使用 MacSLIP，同样地您应该不配置“MacSLIP”控制板在系统启动时初始化 MacSLIP。如上面提到的，它需要的系统堆内存可能比启动时能给出的更多，这会导致计算机死机。<BR>
+<BR>
+·如果您打开虚拟内存使用 MacSLIP 时遇到问题，增加虚拟内存大小可能会得到较好结果。（请使用“存储器”控制板来增加虚拟内存。）<BR>
+<BR>
+·如果正在使用 Netscape，建议使用 16MB 或更多的内建内存（RAM）。<BR>
+<BR>
+·一些基于 MacTCP 的应用程序不能正常使用，除非 MacTCP DNR 文件在“系统文件夹”根目录下的原始位置。在安装或配置 
+Open Transport 后不要删除这个文件。<BR>
+<BR>
+·如果按照网络管理员的指示，或者如果您肯定网络段上的所有其它站（包括您的 IP 路由器）也配置使用 
+802.3 而不是 Ethernet 版本 2.0 成帧方案，就应该在“TCP/IP”控制板中只指定使用 802.3 
+成帧方案。<BR>
+<BR>
+·Claris Emailer 版本 1.1 v3 或以后版本与 Open Transport 1.1.1 兼容。早期版本的 Claris 
+Emailer 可能与 Open Transport 的“仅在需要时载入”配置选项不兼容。如果您经历了退出 
+Emailer  2~3 分钟后系统死机，请关闭“仅在需要时载入”选项。（打开“TCP/IP”控制板并点按“选项”按钮，然后点按“仅在需要时载入”注记框以移走“X”）<BR>
+<BR>
+·当前版本的 MacTraceRoute Ethernet LAP 不能在运行 Open Transport 的计算机上工作。<BR>
+<BR>
+·NFS/Share 版本 1.4.4 或以后版本与 Open Transport 兼容。<BR>
+<BR>
+·当使用为 NetwareIP 服务而配置的 Netware Client 版本 5.11 时，第一个登录可能产生“Netware 
+Configuration”错误信息。要避免这种错误，请打开“NetwareIP”控制板并将 Domain SAP 
+Server (DSS) Retry Attempts 下的值从 1 改为 2。您也可以更改OpenTransport 的“TCP/IP”控制板以总是将 TCP/IP 载入内存（打开“TCP/IP”控制板并点按“选项”按钮，然后点按“仅在需要时载入”注记框以移走“X”）。<BR>
+<BR>
+·eXodus 5.2.2 及以后版本与 Open Transport 兼容。<BR>
+<BR>
+·Anarchie 1.6 以前的版本与 Open Transport 一起使用时有数据破坏问题。请确保您使用的是 
+Anarchie 1.6 或以后版本。<BR>
+<BR>
+·如果“苹果远程访问”（Apple Remote Access, ARA）用户在没有路由、扩展的（Ethernet）网络上，并且本地网上的设备与远程网上的设备有相同的网络号，用户将看不到本地设备。这个问题可以由安装一个路由器来得到修正。另一个解决方案是要清除 
+ARA 计算机上的 PRAM。（在启动计算机时同时按住 Control、Option 和 P 键）。清除 PRAM 会使计算机用新的网络号启动，而这个号应该不会与远程网络号产生冲突。<BR>
+<BR>
+·Daemon 1.0.0 &amp; Daemon Killer 1.0 与 Open Transport 不兼容。<BR>
+<BR>
+·MudDweller 1.2 与 Open Transport 不完全兼容。您可以打开新的连接，但是“重新连接”选项不能正常工作。<BR>
+<BR>
+·如果 Open Transport TCP/IP 被配置为使用 MacIP，而被选择的区域没有 MacIP 服务器，NetPresenz 
+开启期间系统会死机。<BR>
+<BR>
+·当前版本的 VersaTerm SLIP 与 Open Transport 不兼容。<BR>
+<BR>
+·当 TCP/IP 配置为“仅在需要时载入”（在控制板的“选项”窗口中）时，来自 Sassafras 
+Software 公司的旧版本 KeyServer 软件包就会产生问题。请与 Sassafras 联系以获取最新修订版本，网址为 
+<STRONG>&lt;http://www.sassafras.com&gt;</STRONG>
+。<BR>
+<BR>
+·Open Transport 1.1.1、LocalTalk Bridge 2.1f2、Global Village Toolbox 和 GlobalFax 
+功能扩展组合在一起会导致死机。解决方案是将 LocalTalk Bridge 文件移进“功能扩展”文件夹，将它重新命名为“aLocalTalk 
+Bridge”。您可以制作替身并随意重新命名替身。请将替身放入您想要的任何地方，包括“控制板”文件夹。这将允许 LocalTalk Bridge 在 Global Village 
+之前下载，从而避免导致死机。<BR>
+<BR>
+·要与 Open Transport 一起使用 CSI Hurdler 串行卡，请与 CSI 联系以获取一份它们的预置文件修补程序。这将使这块卡与 
+Open Transport 1.1.1 兼容。<BR>
+<BR>
+·使用传统 AppleTalk 时在网络上安装 Open Transport 1.1.1 后，请打开 Open Transport 
+1.1.1 的“AppleTalk”控制板。如果您没有使用红外设备，请打开“连接经由”按动式菜单并选定“串行端口”。<BR>
+<BR>
+·目前正式发布的 MPW shell 在虚拟内存打开和 Open Transport 下使用时会使系统死机。当使用 
+MPW shell 和 Open Transport 时，请关掉虚拟内存。 ETO #21 预发布的 MPW shell 版本 
+3.4.2b2 修正了这个问题。<BR>
+<BR>
+<BR>
+<BR>
+� 1997 Apple Computer, Inc.  All rights reserved.<BR>
+� 1997 苹果电脑国际有限公司，版权所有。<BR>
+<BR>
+苹果、苹果标记、Apple、AppleShare、AppleTalk、LaserWriter、LocalTalk、MacTCP、Performa、Power 
+Macintosh、PowerBook 和 PowerBook Duo 是 Apple Computer, Inc. 在美国和其它国家的注册商标。At 
+Ease 是 Apple Computer, Inc. 的商标。NuBus 是 Texas Instruments 的商标。PowerPC 是国际商用机器公司的商标，授权方可使用。<BR>
+<BR>
+更新于 10/14/96
+</BODY>
+</HTML>
