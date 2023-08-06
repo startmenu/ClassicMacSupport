@@ -12,15 +12,61 @@
 <div>
   <div align="center">
     <p class="header_style">Mac OS X 专区</p>
-    <p class="nav_bar"><a href="index.html">使用技巧</a>	| <a href="osxsys.html">Mac OS X 操作系统</a> | <a href="osxapps.html">软件分享</a> | <a href="/index.html">返回主站</a></p>
+    <p class="nav_bar"><a href="index.html">使用技巧</a>	| <a href="osxsys.html">Mac OS X 操作系统</a> | <a href="osxapps.html">软件分享</a> | <a href="../index.html">返回主站</a></p>
   </div>
 </div>
-<h2>Mac OS X 使用技巧</h2>
-<p>欢迎访问 Mac OS X 专区！</p>
+<h3>欢迎访问 Mac OS X 专区！</h3>
+<p>建议使用Safari 1.0、Internet Explorer for Mac 5.1及更新版本的浏览器访问，分辨率建议1024x768或更高。</p>
 <br />
 <p>网页建设中，敬请期待。不定期更新… </p>
-<p>可以先到 <a href="osxsys.html">Mac OS X 操作系统</a> 页面逛逛，里面有关于10.0到10.6系统的资源。也可以到 <a href="osxapps.html">软件分享</a> 页面逛逛，挑选合适的软件。</p>
-<br />
-<p>建议使用Safari 1.0或Internet Explorer for Mac 5.1或更新版本的浏览器访问，分辨率建议1024x768或更高。</p>
+<p><a href="osxsys.html">Mac OS X 操作系统</a> 页面中有关于10.0到10.6系统的资源。
+<br /> <a href="osxapps.html">软件分享</a> 页面中有Mac OS X软件，多数是苹果和微软系列的软件。</p>
+<a href="macbookxl.png"><img src="macbook.png" style="display:block;margin:auto;"></a>
+<h2>Mac OS X 使用技巧</h2>
+<h3>在不支持的G4机型上安装Mac OS X Leopard 10.5</h3>
+<p>Mac OS X Leopard 10.5系统要求至少867MHz以上的PowerPC G4处理器，但实际上只要是G4处理器的Mac就能运行。但是在G3机型上是无法启动10.5安装盘的，因为10.5系统的二进制文件在编译时使用了AltiVec指令集，这一指令集需要G4、G5才支持。
+配备G4处理器的机型可以启动10.5的安装盘，但10.5安装器脚本添加了867MHz限制，如果是低于867MHz的机型则无法安装。</p><br />
+<p>要在这些不受支持的G4机型上安装Leopard 10.5，有两种思路——修改安装器脚本和通过OpenFirmware命令修改本机处理器频率信息。</p><br />
+<p>第一种思路，修改安装器脚本。具体修改方法可以参考MacRumors上的帖子：<a href="https://forums.macrumors.com/threads/guide-install-leopard-on-unsupported-macs.371302/">Guide: Install Leopard on unsupported Macs</a>。当然也可以使用已经改好的安装盘镜像，如<a href="https://pan.baidu.com/s/1nNLkFCbt_QJLv3KiqEUMlA?pwd=mach">网盘链接</a>中的Mac OS X 10.5 Lite.cdr镜像。</p> <br />
+<p>第二种思路，则需要输入OpenFirmware命令来进行。开机按住Command-Option-O-F键进入OpenFirmware，然后插入安装光盘。通过输入命令来改变处理器频率信息，这并不是超频，只是改信息。</p><br />
+<p>单CPU的机型，输入以下命令：</p>
+<table border=0>
+dev /cpus/PowerPC,G4@0 <br />
+d# 867000000 encode-int " clock-frequency" property <br/>
+boot cd:,\\:tbxi 
+</table>
+<p>双CPU的系统，输入以下命令：</p>
+<table border=0>
+dev /cpus/PowerPC,G4@0 <br />
+d# 867000000 encode-int " clock-frequency" property dev /cpus/PowerPC,G4@1 <br />
+d# 867000000 encode-int " clock-frequency" property boot cd:,\\:tbxi
+</table>
+<p>输入完成后会从安装光盘启动，继续完成安装即可。</p>
+<p>安装完毕之后，一些ATI Rage显卡的机型可能没有图形加速。可以安装<a href="https://parrotgeek.com/npf/10.5_rage.html">这个补丁</a>来恢复支持。</p><br />
+<p>完整教程可参考：<a href="https://forums.macrumors.com/attachments/leopard-for-unsupported-macs-installation-and-setup-guide-pdf.686245/">Leopard for unsupported Macs - installation and setup guide.pdf</a></p>
+
+<hr>
+<h3>在不受支持的机型上安装Mac OS X 10.0-10.4</h3>
+<p>Mac OS X 10.0-10.4要求至少G3处理器，但其实在G3之前的机型上也可以安装，当然，这需要借助XPostFacto。XPostFacto现在对于个人用户来说已经免费了，可以在Other World Computing的网站找到。</p><br />
+<p>XPostFacto需要运行在Mac OS 9.x上。它支持Power Macintosh 7300-9600、PowerBook 2400/3400等603、604 CPU的电脑安装Mac OS X 10.0-10.2（10.3和10.4需要升级G3或G4处理器），让初代iMac、iBook、Wallstreet G3等不支持的机型安装Mac OS X 10.3和10.4。</p>
+<p>XPostFacto下载和文档（英文）：<a href="https://eshop.macsales.com/OSXCenter/XPostFacto/Framework.cfm?page=XPostFacto3.html">Other World Computing's XPostFacto 4</a></p>
+
+<hr>
+<h3>在不受支持的Mac上安装OS X 10.8-10.11</h3>
+<p>OS X 10.8开始陆续淘汰旧Mac，基本上要求2007年中到2008年的Mac才支持，但也有一些大冤种的Mac设备（如2008年初代MacBook Air）无缘Mountain Lion。而从10.8开始到10.11，苹果并没有提高要求，原生支持10.8的机型基本都支持10.11。</p><br />
+<p>苹果在Mountain Lion淘汰的旧机型主要有两类：一类是采用Intel GMA集成显卡的机型，另一类是32位UEFI的设备。Intel GMA950和X3100显卡在Lion 10.7上已经非常卡了，从Launchpad的动画中就能看出，而初代Air大冤种就采用了GMA X3100显卡。第二类是历史原因导致的，2006年初的Mac因为采用了32位Core Duo处理器，其EFI固件也是32位。32位EFI的Mac即使是配备了64位处理器也最高运行到Lion系统，这代系统还有32位内核和内核扩展，上层的架构则都是64位。但2006年末的Mac基本都配备了64位Core 2处理器，苹果却还是提供32位EFI，这让纯64位内核的OS X 10.8无法运行。直到2007年中的Mac才适配64位EFI。</p><br />
+<p>如果要在这些不受支持的机型上运行OS X 10.8，32位机型需要先升级64位，内存至少升级到2GB。然后使用<a href="https://osxhackers.net/macpostfactor/">MacPostFactor</a>软件进行安装。虽然MacPostFactor能安装上10.8-10.11系统，但一些机型可能没有显卡和无线驱动。而另一款软件，<a href="https://parrotgeek.com/npf/">NeXPostFacto</a>，可以让Intel GMA显卡和ATI X1300/1600/1900的机型安装10.8系统并获得显卡驱动，让ATI X1300/1600/1900的机型安装10.9并有显卡驱动。</p><br />
+<p>苹果在10.12系统之后继续淘汰旧机型，比如10.12需要支持SSE4的CPU（45nm Core 2），Mojave要求支持Metal的显卡等等，这些就不在这里介绍了。</p>
+
+<hr>
+<h3>多个Mac OS X版本与一个Windows并存</h3>
+<p>早期Intel Mac虽然可以通过Boot Camp安装Windows，但Boot Camp只支持单分区，如果对Mac硬盘进行了分区，则Boot Camp无法安装Windows。这也就导致了通过Boot Camp，只能一个Mac OS X和一个Windows并存，且只有两个分区。</p><br />
+<p>这是因为苹果采用了EFI固件和GUID分区表，而当时Windows对EFI和GUID支持较差，苹果采用了妥协的办法。苹果通过EFI固件模拟BIOS以运行Windows，通过GUID/MBR混合让Windows访问磁盘。这种混合分区表灵活性差，最多只支持3个分区，还不支持扩展分区，需要通过gdisk工具进行创建，比较麻烦。预留好分区，安装好两个（或以上）版本的Mac OS X后，用gdisk修改混合分区表，安装Windows。</p>
+<p>关于混合分区表和gdisk工具的使用，可以参考：<a href="https://zhuanlan.zhihu.com/p/352999865">EFI · 混合分区表 · Windows</a></p><br />
+<p>如果不使用混合分区表，也可以使用传统的MBR分区表，只是Mac OS X不能在MBR上安装。因此要先预留好足够的分区，安装完不同版本Mac OS X，然后启动Windows PE光盘，使用分区工具对硬盘分区进行调整，但不能破坏Mac OS X分区。这样GPT分区表就会变成MBR分区，继续安装Windows就行了。</p>
+<p>不过这样做的话，Mac OS X就不能安装更新了，也不能升级版本，因为Mac OS X会拒绝在MBR分区上安装。</p>
+
+<hr>
+<p>先更新到这，不定期更新…… </p>
 </body>
 </html>
