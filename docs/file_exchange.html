@@ -58,6 +58,7 @@
 <h3>现代Mac与老Mac磁盘交换文件</h3>
 
             <p>现代Mac大多直接支持老Mac磁盘，但同样建议使用 HFS+（Mac OS 扩展格式） 文件系统。</p>
+            <p>Mac OS X 10.0-10.5虽然支持读取HFS标准格式，但不建议写入，因为容易出错。Mac OS X 10.6-10.14中，HFS标准格式只有只读支持，10.15开始移除了HFS标准格式的支持。如果需要在新版macOS支持HFS标准格式，可以自行设置<a href="https://www.emaculation.com/forum/viewtopic.php?t=11705">FUSE-HFS</a>。</p>
             <br />
             <hr>
             <p align="center">
