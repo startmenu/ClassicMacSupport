@@ -1,6 +1,9 @@
 
 # Chinese System Software in ADC CDs
 
+## Chinese
+* 6.0.3  v1-1.0  Developer CD (III)
+
 ## Chinese, Simplified
 * 6.0.7  v1-1.0  Dev.CD Mar 92, Dev.CD Feb 92, Dev.CD Jan 92
 * 7.1  v1-1.0 beta  Dev.CD Apr 93
