@@ -53,13 +53,19 @@
                 <br>如果是SCSI硬盘，则PC上需要装有SCSI卡，再使用HFVExplorer、TransMac、MacDrive等软件读写。
                 <br>如果是IDE硬盘，则可以安装在PC上，或借助易驱线（IDE to USB）、硬盘盒等设备连接，再配合上述软件读写。
                 <br>有USB的Mac机型，可以直接使用U盘交换文件，Mac OS 8.0/8.1支持FAT32，但支持不是很好，建议使用Mac OS 9系统访问FAT32的U盘。交换文件时，同样建议使用BinHex或Stuffit将Mac文件打包处理。
-                <br>如果使用老Mac笔记本，有PCMCIA插槽的机型，推荐使用CF卡+PCMCIA CF卡套，对于Oldworld ROM机型来说，甚至可以从PCMCIA的CF卡启动。而且CF卡在PC上也有多种多样的读卡器可以支持，配合上述软件可以轻松交换文件。</p>
+                <br>如果使用老Mac笔记本，有PCMCIA插槽的机型，推荐使用CF卡+PCMCIA CF卡套，对于Oldworld ROM机型来说，甚至可以从PCMCIA的CF卡启动（前提是CF卡在初始化时安装了Mac OS磁盘驱动）。而且CF卡在PC上也有多种多样的读卡器可以支持，配合上述软件可以轻松交换文件。</p>
             
 <h3>现代Mac与老Mac磁盘交换文件</h3>
 
             <p>现代Mac大多直接支持老Mac磁盘，但同样建议使用 HFS+（Mac OS 扩展格式） 文件系统。</p>
             <p>Mac OS X 10.0-10.5虽然支持读取HFS标准格式，但不建议写入，因为容易出错。Mac OS X 10.6-10.14中，HFS标准格式只有只读支持，10.15开始移除了HFS标准格式的支持。如果需要在新版macOS支持HFS标准格式，可以自行设置<a href="https://www.emaculation.com/forum/viewtopic.php?t=11705">FUSE-HFS</a>。</p>
             <br />
+            
+<h3>使用网络交换文件</h3>
+            <p>如果老Mac能连接上局域网，还可以搭建FTP服务器用于交换数据。除此之外，一些NAS还带有AFP协议的访问，可以在苹果菜单的“选配器(Chooser)”里找到AppleShare，输入IP地址访问共享文件。也可以在现代Linux系统中使用Netatalk搭建自己的AppleTalk网络，用于文件和打印机共享。</p>
+            
+<h3>使用CF卡或SCSI交换文件</h3>
+            <p>前文提到老Mac笔记本可以使用PCMCIA读卡器配合CF卡实现文件交换。CF卡还可以转接为IDE设备，充当Mac的内置硬盘。需要交换文件时可拆下CF卡，在现代电脑中用读卡器交换文件。对于使用SCSI的老Mac，内置SCSI硬盘本身也已经不好找了。此时可以用SCSI2SD、BlueSCSI、RaSCSI等设备，用SD卡充当SCSI硬盘。这些设备有外置式（DB25或HDI-30）和内置式，选够时需要区分清楚。这类SCSI硬件功能更为广泛，除了可以模拟SCSI硬盘，还能够用镜像模拟光驱，有些甚至支持通过无线网络管理卡上的文件，甚至可以将WIFI用作老Mac的有线网。对于这些设备，有需求可以自行查阅资料。</p>
             <hr>
             <p align="center">
                 <img src="../logo.gif">

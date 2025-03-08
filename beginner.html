@@ -61,9 +61,11 @@
         <br />
 
 <h2>Mac OS的启动和文件夹结构</h2>
-<p>早期System非常简单，只需要一个System文件和一个Finder就能启动，这两个文件通常位于系统文件夹（System folder）内。Macintosh的ROM在启动自检后通过后播放启动声音。然后根据分区头部两个扇区中记录的的System和Finder信息寻找有效的系统文件夹，找到后显示happy mac图标并启动系统。如果自检失败，有些型号则会播放死机声音，显示sad mac图标并显示错误代码。如果系统文件夹损坏，则显示破损的系统文件夹图标。如果没有找到有效的系统文件夹，则显示闪烁问号的软盘图标，让用户插入可以启动的软盘或光盘。</p>
+<p>早期System非常简单，只需要一个System文件和一个Finder就能启动，这两个文件通常位于系统文件夹（System folder）内。Macintosh的ROM在启动自检后通过后播放启动声音。然后读取APM分区表中的前七八个分区里记录的Mac OS磁盘驱动用以识别和使用磁盘，再根据启动分区头部两个扇区中记录的的System和Finder信息寻找有效的系统文件夹，找到后显示happy mac图标并启动系统。如果自检失败，有些型号则会播放死机声音，显示sad mac图标并显示错误代码。如果系统文件夹损坏，则显示破损的系统文件夹图标。如果没有找到有效的系统文件夹，则显示闪烁问号的软盘图标，让用户插入可以启动的软盘或光盘。Mac OS X不需要Mac OS磁盘驱动就能启动；但如果磁盘的分区表里没有Mac OS磁盘驱动，Classic系统是无法启动的。</p>
 
 <p>Macintosh ROM除了充当固件，启动系统和自检硬件，ROM内还包括Macintosh Toolbox，包含用于实现图形界面的基本驱动，各种Manager和基础库等部分。Macintosh Toolbox启动后会自动检查内存，查找和初始化硬件设备，再之后就是启动系统文件夹了。</p>
+
+<p>Mac的固件分为Oldworld ROM和New World ROM。区别是Oldworld固件直接是Macintosh Toolbox固件，而New World ROM是OpenFirmware固件。使用New World ROM的机型，启动时读取系统文件夹内的Mac OS ROM文件，读取其中的Macintosh Toolbox以兼容Classic Mac OS。早期采用PCI总线的PowerPC Oldworld机型，固件中也有一个最简化的OpenFirmware环境用于初始化PCI设备，初始化之后便直接引导ROM中的Macintosh Toolbox以支持Mac OS。</p>
 
 <p>早期Macintosh System的目录结构比较简单，磁盘根目录下一般就是一个系统文件夹，存放系统文件。根分区下可能还有其他文件和文件夹，可能是安装了应用程序也可能是用户存放了数据。System 6及之前的版本，各种功能扩展、控制板等文件是直接放在系统文件夹下的。而字体和桌面附件是位于System文件内的，需要使用Font/DA Mover来增删。</p>
 
@@ -86,7 +88,7 @@
         <br />
         
 <h2>与现代PC/Mac进行文件交换</h2>
-        <p>正是因为Classic Mac文件系统与众不同，Mac与PC进行文件交换时比较麻烦。<br /> 请参考：<a href="docs/file_exchange.html">文件交换指南</a> 。</p>
+        <p>正是因为Classic Mac文件系统与众不同，老Mac与现代电脑进行文件交换时比较麻烦。除了使用光盘和U盘，更老的型号还可以用CF卡和局域网来共享文件。进阶玩家还可以试试SCSI2SD、BlueSCSI等板卡。<br /> 请参考：<a href="docs/file_exchange.html">文件交换指南</a> 。</p>
         <br />
 
 <h2>Classic Mac的字体支持</h2>
