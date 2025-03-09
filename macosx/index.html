@@ -25,9 +25,16 @@
 <h2>Mac OS X 使用技巧</h2>
 <h3>给旧系统的iCal增加农历和节假日</h3>
 <p>2002年7月17日，苹果发布了iCal日历软件，在Mac OS X Jaguar 10.2平台首发，后来成为10.3系统的一部分。而且Mac OS X 10.2.8和10.3.9最新可用iCal 1.5.5。但是早期版本的Mac OS X日历软件默认没有农历支持，也没有法定节假日提示。这需要自行导入或订阅日历才能解决。</p>
+<br />
 <p>农历日历可以在GitHub中找到<a href="https://github.com/infinet/lunar-calendar">infinet/lunar-calendar</a>项，导入仓库中的ics文件。导入时建议选择新建日历，而不是合并到默认的家庭或工作日历中。</p>
-<p>节假日日历，在新版macOS中是默认订阅苹果官方日历的。例如中国大陆节假日的订阅地址是：https://calendars.icloud.com/holidays/cn_zh.ics/ <br />如果旧版本iCal不支持订阅日历，可以下载下来手动导入。</p>
-<p>除了这些，也可以自行订阅一些公共日历，例如天文日历等等。虽然早期版本iCal并不太符合国人的使用习惯，但至少有了这些日历订阅，我们可以实现部分新版macOS日历app的功能。</p>
+<br />
+<p>节假日日历，在新版macOS中是默认订阅苹果官方日历的。例如中国大陆节假日的订阅地址是：https://calendars.icloud.com/holidays/cn_zh.ics/ <br />如果旧版本iCal不支持订阅日历，可以下载下来手动导入。</p><br />
+<p>除了这些，也可以自行订阅一些公共日历，例如天文日历等等。</p>
+<br />
+<p>iCal在Mac OS X 10.5及以后的版本中，Dock图标会自动显示当天的日期，而更早版本的Mac则默认显示Jul 17，即iCal发布的日期。如果在10.2-10.4系统的Dock图标中iCal显示当天日期，可以在“系统预置”中找到“帐户”设置，再找到“启动项目”（10.2系统中的启动项目直接在系统预置的主页），在列表添加iCal，再钩选名称前面的“隐藏”，这样每次登录后就会在后台运行iCal，让Dock的日历图标显示当前系统日期了。</p>
+<br /><p>虽然早期版本iCal并不太符合国人的使用习惯，但至少有了这些日历订阅和技巧，我们可以实现部分新版macOS日历app的功能。这也算是“削足适履”适应早期Mac OS X吧。</p>
+
+<hr>
 
 <h3>手动获取Mac OS X更新包</h3>
 <p>Mac OS X的在线更新，目前至少需要Mac OS X Tiger 10.4，更早的版本已经无法获得更新了。虽然在线更新比较方便，但有时候也会需要获得更新的安装包供离线使用的情况。</p>
@@ -43,6 +50,7 @@
     <li><a href="https://support.apple.com/docs/mac/135555">El Capitan 10.11</a></li>
 </ul>
 <p>也可以查看苹果CDN资源页面的索引文件，里面分了不同系统版本的索引，找到相应的版本下载下来，用文本编辑器查看即可（文件好像是XML格式的）。传送门：<a href="https://theapplewiki.com/wiki/Software_Update">Software Update - The Apple Wiki</a>。这个页面中虽然列出了早期10.0-10.3的链接，但实际上还是无法使用的。</p>
+<hr>
 
 <h3>在不支持的G4机型上安装Mac OS X Leopard 10.5</h3>
 <p>Mac OS X Leopard 10.5系统要求至少867MHz以上的PowerPC G4处理器，但实际上只要是G4处理器的Mac就能运行。但是在G3机型上是无法启动10.5安装盘的，因为10.5系统的二进制文件在编译时使用了AltiVec指令集，这一指令集需要G4、G5才支持。
@@ -60,9 +68,10 @@ boot cd:,\\:tbxi
 <table border=0>
 dev /cpus/PowerPC,G4@0 <br />
 d# 867000000 encode-int " clock-frequency" property dev /cpus/PowerPC,G4@1 <br />
-d# 867000000 encode-int " clock-frequency" property boot cd:,\\:tbxi
+d# 867000000 encode-int " clock-frequency" property <br />
+boot cd:,\\:tbxi
 </table>
-<p>输入完成后会从安装光盘启动，继续完成安装即可。</p>
+<p>输入完成后会从安装光盘启动，继续完成安装即可。如果不想通过输入命令来操作，也可以先安装旧版Mac OS X，用Leopard Assistant来帮你修改nvram参数。</p>
 <p>安装完毕之后，一些ATI Rage显卡的机型可能没有图形加速。可以安装<a href="https://parrotgeek.com/npf/10.5_rage.html">这个补丁</a>来恢复支持。</p><br />
 <p>完整教程可参考：<a href="https://forums.macrumors.com/attachments/leopard-for-unsupported-macs-installation-and-setup-guide-pdf.686245/">Leopard for unsupported Macs - installation and setup guide.pdf</a></p>
 
